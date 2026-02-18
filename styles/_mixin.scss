@@ -1,0 +1,19 @@
+@mixin font($ff,$f,$w) {
+  font-family: $ff;
+  font-size: $f;
+  font-weight: $w;
+}
+
+@mixin position($fd,$jc,$ac,$ai: flex-start) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin size($w,$h) {
+  width: $w;
+  height: $h;
+}
+
+// @include modules.
