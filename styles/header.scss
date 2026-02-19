@@ -1,0 +1,149 @@
+@use "_variables" as v;
+@use "_mixin" as m;
+
+header {
+  @include m.size(100%, 110px);
+  @include m.font(v.$ff-m, v.$fz, 600);
+  line-height: 150%;
+  background-color: v.$bg-orange-col;
+  @include m.position(row, center, center, center);
+}
+
+.header-container {
+  position: relative;
+  @include m.position(row, space-between, center, center);
+  @include m.size(calc(1400px / 1920px)*100%, 50px);
+  @media screen and (max-width: v.$desktop-small) {
+    @include m.size(calc(1000px / 1200px)*100%, 110px);
+  }
+
+  @media screen and (max-width: v.$tablet) {
+    @include m.size( 100%, 110px);
+  }
+
+  @media screen and (max-width: v.$mobile) {
+  }
+}
+
+.header-content {
+  @include m.position(row, center, center, center);
+  gap: 65px;
+
+  @media screen and (max-width: v.$tablet) {
+    gap: 0;
+    margin-right: 50px;
+  }
+
+  @media screen and (max-width: v.$mobile) {
+    margin-right: 36px;
+  }
+}
+
+.navigation-menu ul,
+.social-media-icons ul {
+  @include m.position(row, center, center, center);
+  gap: 50px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media screen and (max-width: v.$desktop-small) {
+    gap: 30px;
+  }
+
+  @media screen and (max-width: v.$tablet) {
+    display: none;
+  }
+}
+
+.social-media-icons ul {
+  gap: 30px;
+}
+
+.navigation-menu ul li{
+  text-transform: uppercase;
+}
+
+.highlighted {
+  color: v.$bg-blue-col;
+}
+
+.logo {
+  @media screen and (max-width: v.$tablet) {
+    margin-left: 20px;
+  }
+}
+
+//burger menu
+
+.burger-container {
+  position: relative;
+  display: none;
+  z-index: 1100;
+  @media screen and (max-width: v.$tablet) {
+    @include m.size(30px, 30px);
+    @include m.position(column, space-between, center, center);
+  }
+}
+
+.burger-toggle {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 2;
+  transition: 0.5s ease;
+}
+
+.burger-toggle:checked ~ .burger-line:nth-child(2) {
+  transform: rotate(45deg) translate(10px, 10px);
+  background: white;
+}
+
+.burger-toggle:checked ~ .burger-line:nth-child(3) {
+  opacity: 0;
+}
+
+.burger-toggle:checked ~ .burger-line:nth-child(4) {
+  transform: rotate(-45deg) translate(8px, -8px);
+  background: white;
+}
+
+.burger-toggle:checked ~ .burger-line {
+  width: 40px;
+}
+
+.header-content:has(.burger-toggle:checked) .side-menu {
+  right: 0;
+}
+
+.burger-line {
+  background-color: v.$main-col;
+  @include m.size(100%, 2.5px);
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  z-index: 1000;
+  @include m.size(310px, 754px);
+  transition: 0.3s ease;
+  background-color: v.$bg-purple-col;
+
+  .side-navigation-menu {
+    display: none;
+    @media screen and (max-width: v.$tablet) {
+      @include m.position(column, center, center, center);
+      gap: 50px;
+      padding: 0;
+      margin-top: 150px;
+      list-style: none;
+      text-transform: uppercase;
+      color: v.$white-col;}
+    }
+
+    @media screen and (max-width: v.$mobile) {
+      gap: 40px;
+      margin-top: 130px;
+    }
+}

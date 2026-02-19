@@ -1,0 +1,20 @@
+@use "_variables" as v;
+@use "_mixin" as m;
+
+body {
+  width: v.$desktop;
+  background-color: green;
+  @include m.position(row, center, center);
+  margin: 0 auto;
+  @media screen and (max-width: v.$desktop-small) {
+    max-width: v.$desktop-small;
+  }
+
+  @media screen and (max-width: v.$tablet) {
+    max-width: v.$tablet;
+  }
+
+  @media screen and (max-width: v.$mobile) {
+    max-width: v.$mobile;
+  }
+}

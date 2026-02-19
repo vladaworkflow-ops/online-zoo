@@ -3,7 +3,7 @@
     "normalize.css": "^8.0.1"
   },
   "scripts": {
-    "sass:w": "sass --watch styles/main.scss:styles/main.css",
+     "sass:w": "sass --watch styles/main.scss:styles/main.css",
     "sass": "sass styles/main.scss:styles/main.css"
   },
   "devDependencies": {
