@@ -3,10 +3,10 @@
 
 header {
   @include m.size(100%, 110px);
-  @include m.font(v.$ff-m, v.$fz, 600);
+  @include m.position(row, center, center, center);
+   @include m.font(v.$ff-m, v.$fz, 600);
   line-height: 150%;
   background-color: v.$bg-orange-col;
-  @include m.position(row, center, center, center);
 }
 
 .header-container {
@@ -27,7 +27,7 @@ header {
 
 .header-content {
   @include m.position(row, center, center, center);
-  gap: 65px;
+    gap: 65px;
 
   @media screen and (max-width: v.$tablet) {
     gap: 0;
@@ -42,10 +42,8 @@ header {
 .navigation-menu ul,
 .social-media-icons ul {
   @include m.position(row, center, center, center);
-  gap: 50px;
   padding: 0;
   margin: 0;
-  list-style: none;
 
   @media screen and (max-width: v.$desktop-small) {
     gap: 30px;
@@ -54,6 +52,10 @@ header {
   @media screen and (max-width: v.$tablet) {
     display: none;
   }
+}
+
+.navigation-menu ul {
+  gap: 50px;
 }
 
 .social-media-icons ul {

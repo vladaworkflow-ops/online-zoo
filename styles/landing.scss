@@ -4,7 +4,7 @@
 body {
   width: v.$desktop;
   background-color: green;
-  @include m.position(row, center, center);
+  @include m.position(column, center, center);
   margin: 0 auto;
   @media screen and (max-width: v.$desktop-small) {
     max-width: v.$desktop-small;

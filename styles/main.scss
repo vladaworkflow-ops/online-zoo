@@ -19,3 +19,7 @@
 a:focus,a:active{outline: none;box-shadow: none;}
 a:visited{color: inherit;}
 a{ text-decoration: none; color: inherit; }
+
+ul, li {
+  list-style: none;
+}
