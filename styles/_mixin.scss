@@ -1,3 +1,5 @@
+@use "_variables" as v;
+
 @mixin font($ff,$f,$w) {
   font-family: $ff;
   font-size: $f;
@@ -14,6 +16,27 @@
 @mixin size($w,$h) {
   width: $w;
   height: $h;
+}
+
+@mixin h2(
+  $ff: v.$ff-m,
+  $f: v.$fz-h2,
+  $w: 600
+) {
+  font-family: $ff;
+  font-size: $f;
+  font-weight: $w;
+}
+
+@mixin btn-template() {
+  @include size(360px, 74px);
+  @include position(row, center, center);
+  @include font(v.$ff-m,18px ,600 );
+  gap: 10px;
+  align-items: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: v.$white-col;
 }
 
 // @include modules.

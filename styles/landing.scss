@@ -6,7 +6,7 @@ body {
   min-height: 100vh;
   background-color: green;
 
-  @include m.position(column, center, center);
+  @include m.position(column, flex-start, center, center);
   margin: 0 auto;
   @media screen and (max-width: v.$desktop-small) {
     max-width: v.$desktop-small;

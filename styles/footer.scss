@@ -54,15 +54,9 @@ footer {
     }
 
     .footer-button-donate {
-      @include m.size(360px, 74px);
-      @include m.position(row, center, center);
-      gap: 10px;
-      align-items: center;
-      border-radius: 5px;
       border: 1px solid v.$white-col;
       background-color: transparent;
-      text-transform: uppercase;
-      color: v.$white-col;
+      @include m.btn-template;
       @media screen and  (max-width: v.$mobile) {
         @include m.size(300px, 45px);
         text-transform: none;

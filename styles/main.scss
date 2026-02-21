@@ -3,6 +3,7 @@
 @use "header.scss";
 @use "footer.scss";
 @use "map.scss";
+@use "contact.scss";
 @use "_mixin.scss";
 
 *{
@@ -23,4 +24,34 @@ a{ text-decoration: none; color: inherit; }
 
 ul, li {
   list-style: none;
+}
+
+input,
+textarea,
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border: none;
+  outline: none;
+  background: none;
+
+  font: inherit;
+  color: inherit;
+
+  padding: 0;
+  margin: 0;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+input::placeholder,
+textarea {
+  color: gray;
+  opacity: 1;
 }

@@ -64,6 +64,40 @@
       </div>
     </div>
   </header>
+  <section class="contact">
+    <div class="contact-bg">
+      <picture>
+        <source 
+          srcset="../../assets/images/contact-bg-tablet.png" 
+          media="(max-width: 640px)"
+        >
+        <img 
+          src="../../assets/images/contact-page.png" 
+          alt="Contact background"
+        >
+      </picture>
+    </div>
+    <div class="main-content">
+      <div class="get-in-touch">
+        <h2 class="get-in-touch_title">Get in touch</h2>
+        <p>Whether you have a question, or would like to say hello, we're happy to hear from you. Please use the form to send us a message and we'll get back to you as soon as we can. Whether you have a question, or would like to say hello, we're happy to hear from you. Please use the form to send us a message and we'll get back to you as soon as we can.</p>
+      </div>
+      <form action="" method="post" class="form-contact">
+        <label for="name"><span>*</span>Your Name</label>
+        <input type="text" name="name" id="name" autocomplete="name" placeholder="First and last name" required>
+        <label for="email"><span>*</span>Your Email Address</label>
+        <input type="email" name="email" id="email" autocomplete="email" placeholder="Enter your email" required>
+        <label for="subject"><span>*</span>Subject</label>
+        <input type="text" name="subject" id="subject" placeholder="Enter the subject" required>
+        <label for="message"><span>*</span>Message</label>
+        <textarea name="message" id="message" maxlength=1000 required>Enter your message</textarea>
+        <button class="submit-contact-form" type="submit">
+          send message
+          <img src="../../assets/icons/vector.svg" alt="vector">
+        </button>
+      </form>
+    </div>
+  </section>
   <footer>
     <div class="footer-container">
       <div class="footer-content">
