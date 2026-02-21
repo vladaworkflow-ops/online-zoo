@@ -3,7 +3,9 @@
 
 body {
   width: v.$desktop;
+  min-height: 100vh;
   background-color: green;
+
   @include m.position(column, center, center);
   margin: 0 auto;
   @media screen and (max-width: v.$desktop-small) {

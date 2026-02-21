@@ -1,5 +1,6 @@
 body {
   width: 1920px;
+  min-height: 100vh;
   background-color: green;
   display: flex;
   flex-direction: column;
@@ -413,6 +414,143 @@ footer .footer-contacts #footer-social-media-icons {
   footer {
     height: 710px;
   }
+}
+
+.map-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.map-section .map-tittle {
+  margin: 40px 0 70px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #20113D;
+  font-family: "Montserrat", sans-serif;
+  font-size: 54px;
+  font-weight: 600;
+}
+.map-section .map-tittle .desktop-break {
+  display: block;
+}
+@media (max-width: 640px) {
+  .map-section .map-tittle .desktop-break {
+    display: none;
+  }
+}
+.map-section .map-tittle .mobile-break {
+  display: none;
+}
+@media (max-width: 640px) {
+  .map-section .map-tittle .mobile-break {
+    display: block;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .map-section .map-tittle {
+    margin: 30px 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  .map-section .map-tittle {
+    margin: 30px 0 50px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .map-section .map-tittle {
+    margin: 30px 0;
+    text-transform: none;
+  }
+}
+.map-section .map-img {
+  max-width: 1405px;
+  width: 100%;
+  margin-bottom: 150px;
+  position: relative;
+}
+.map-section .map-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media screen and (max-width: 1200px) {
+  .map-section .map-img {
+    max-width: 1200px;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .map-section .map-img {
+    margin-bottom: 50px;
+  }
+}
+
+.map-marker {
+  position: absolute;
+  cursor: pointer;
+}
+
+.map-marker img {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.marker-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.map-marker:hover .marker-default {
+  opacity: 0;
+}
+
+.map-marker:hover .marker-hover {
+  opacity: 1;
+}
+
+.marker-1 {
+  top: 50%;
+  left: 46%;
+}
+
+.marker-2 {
+  top: 68%;
+  left: 80%;
+}
+
+.marker-3 {
+  top: 40%;
+  left: 20%;
+}
+
+.marker-4 {
+  top: 50%;
+  left: 39%;
+}
+
+.marker-5 {
+  top: 63%;
+  left: 55%;
+}
+
+.marker-6 {
+  top: 40%;
+  left: 67%;
+}
+
+.marker-7 {
+  top: 55%;
+  left: 70%;
+}
+
+.marker-8 {
+  top: 43%;
+  left: 10%;
 }
 
 * {
