@@ -419,6 +419,10 @@ footer .footer-contacts #footer-social-media-icons {
   }
 }
 
+footer .footer-content .footer-button-donate:hover {
+  background-color: #00A092;
+}
+
 .map-section {
   width: 100%;
   display: flex;
@@ -752,6 +756,10 @@ footer .footer-contacts #footer-social-media-icons {
   }
 }
 
+.contact .main-content .form-contact .submit-contact-form:hover {
+  background-color: #05786E;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -787,8 +795,7 @@ ul, li {
 }
 
 input,
-textarea,
-button {
+textarea {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -811,6 +818,11 @@ input::placeholder,
 textarea {
   color: gray;
   opacity: 1;
+}
+
+button {
+  transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

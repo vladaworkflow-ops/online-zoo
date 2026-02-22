@@ -27,8 +27,7 @@ ul, li {
 }
 
 input,
-textarea,
-button {
+textarea {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -54,4 +53,9 @@ input::placeholder,
 textarea {
   color: gray;
   opacity: 1;
+}
+
+button {
+  transition: opacity 0.3s ease;
+  cursor: pointer;
 }
