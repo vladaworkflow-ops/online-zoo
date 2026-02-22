@@ -121,6 +121,129 @@ body {
   }
 }
 
+.welcome-section {
+  width: 1920px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 150px 0;
+  gap: 150px;
+}
+.welcome-section :last-child {
+  flex-direction: row-reverse;
+}
+.welcome-section .welcome-block {
+  width: 72.9166666667%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  box-sizing: content-box;
+}
+.welcome-section .welcome-block .welcome-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.welcome-section .welcome-block .welcome-title {
+  font-size: 54px;
+  font-weight: 600;
+  color: #00A092;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1200px) {
+  .welcome-section .welcome-block .welcome-title {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .welcome-section .welcome-block .welcome-title {
+    padding: 0 40px 0 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .welcome-section .welcome-block .welcome-title {
+    font-size: 26px;
+    font-weight: 500;
+    padding: 0 50px 0 10px;
+  }
+}
+.welcome-section .welcome-block .welcome-paragraph {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 400;
+}
+@media screen and (max-width: 320px) {
+  .welcome-section .welcome-block .welcome-paragraph .hide-text {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .welcome-section .welcome-block .welcome-paragraph {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .welcome-section .welcome-block .welcome-paragraph {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .welcome-section .welcome-block {
+    max-width: 660px;
+    width: 660px;
+    flex-direction: column-reverse;
+    padding: 0 100px;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .welcome-section .welcome-block {
+    max-width: 640px;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .welcome-section .welcome-block {
+    max-width: 320px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .welcome-section {
+    max-width: 1200px;
+    margin: 100px 0;
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .welcome-section {
+    max-width: 640px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .welcome-section {
+    max-width: 320px;
+    margin: 50px 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .welcome-block:first-child {
+    align-self: flex-start;
+  }
+  .welcome-block:last-child {
+    align-self: flex-end;
+  }
+}
+@media screen and (max-width: 640px) {
+  .welcome-block:first-child {
+    align-self: center;
+  }
+  .welcome-block:last-child {
+    align-self: center;
+  }
+}
 header {
   width: 100%;
   height: 110px;

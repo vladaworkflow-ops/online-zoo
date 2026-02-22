@@ -96,3 +96,124 @@ body {
     background-size: 100% 35%;
   }
 }
+
+.welcome-section {
+  width: v.$desktop;
+  @include m.position(column, center, center, center);
+  margin: 150px 0;
+  gap: 150px;
+
+  :last-child{
+    flex-direction: row-reverse;
+  }
+
+  .welcome-block{
+    width: calc(1400px / 1920px)*100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-sizing: content-box;
+
+    .welcome-img {
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    .welcome-title {
+      @include m.h2;
+      color: v.$bg-blue-col;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+
+      @media screen and (max-width: v.$desktop-small) {
+        margin-bottom: 30px;
+      }
+
+      @media screen and (max-width: v.$tablet) {
+        padding: 0 40px 0 20px;
+      }
+
+      @media screen and (max-width: v.$mobile) {
+        font-size: 26px;
+        font-weight: 500;
+        padding: 0 50px 0 10px;
+      }
+    }
+
+    .welcome-paragraph {
+      font-size: v.$fz;
+      line-height: 150%;
+      font-weight: 400;
+
+      .hide-text{
+        @media screen and (max-width: v.$mobile) {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: v.$tablet) {
+        padding: 0 20px;
+      }
+
+      @media screen and (max-width: v.$mobile) {
+        padding: 0 10px;
+      }
+    }
+
+    @media screen and (max-width: v.$desktop-small) {
+      max-width: 660px;
+      width: 660px;
+      flex-direction: column-reverse;
+      padding: 0 100px;
+      gap: 30px;
+    }
+
+     @media screen and (max-width: v.$tablet) {
+       max-width: v.$tablet;
+       padding: 0;
+     }
+
+     @media screen and (max-width: v.$mobile) {
+       max-width: v.$mobile;
+     }
+  }
+
+  @media screen and (max-width: v.$desktop-small) {
+    max-width: v.$desktop-small;
+    margin: 100px 0;
+    gap: 50px;
+  }
+
+  @media screen and (max-width: v.$tablet) {
+    max-width: v.$tablet;
+  }
+
+  @media screen and (max-width: v.$mobile) {
+    max-width: v.$mobile;
+    margin: 50px 0;
+  }
+}
+
+@media screen and (max-width: v.$desktop-small) {
+.welcome-block:first-child {
+  align-self: flex-start;
+  }
+
+.welcome-block:last-child {
+    align-self: flex-end;
+  }
+}
+
+@media screen and (max-width: v.$tablet) {
+.welcome-block:first-child {
+  align-self: center;
+  }
+
+.welcome-block:last-child {
+    align-self: center;
+  }
+}
