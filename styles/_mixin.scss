@@ -1,7 +1,6 @@
 @use "_variables" as v;
 
-@mixin font($ff,$f,$w) {
-  font-family: $ff;
+@mixin font($f,$w) {
   font-size: $f;
   font-weight: $w;
 }
@@ -19,11 +18,9 @@
 }
 
 @mixin h2(
-  $ff: v.$ff-m,
   $f: v.$fz-h2,
   $w: 600
 ) {
-  font-family: $ff;
   font-size: $f;
   font-weight: $w;
 }
@@ -31,12 +28,12 @@
 @mixin btn-template($w: 360px, $h: 74px) {
   @include size($w, $h);
   @include position(row, center, center);
-  @include font(v.$ff-m,18px ,600 );
+  @include font(18px ,600 );
   gap: 10px;
   align-items: center;
   border-radius: 5px;
   text-transform: uppercase;
-  color: v.$white-col;
+  color: #fff;
 }
 
 // @include modules.

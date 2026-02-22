@@ -1,6 +1,7 @@
 body {
   width: 1920px;
   min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
   background-color: green;
   display: flex;
   flex-direction: column;
@@ -36,7 +37,6 @@ body {
 }
 .watch-section .title-watch {
   width: 740px;
-  font-family: "Montserrat", sans-serif;
   font-size: 82px;
   font-weight: 800;
   color: #00A092;
@@ -56,7 +56,6 @@ body {
 }
 .watch-section .paragraph-watch {
   width: 340px;
-  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 150%;
@@ -79,14 +78,13 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 600;
   gap: 10px;
   align-items: center;
   border-radius: 5px;
   text-transform: uppercase;
-  color: white;
+  color: #fff;
   background-color: #F58021;
 }
 @media screen and (max-width: 320px) {
@@ -130,7 +128,6 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 600;
   line-height: 150%;
@@ -256,7 +253,7 @@ header {
 
 .burger-toggle:checked ~ .burger-line:nth-child(4) {
   transform: rotate(-45deg) translate(8px, -8px);
-  background: white;
+  background: #fff;
 }
 
 .burger-toggle:checked ~ .burger-line {
@@ -268,7 +265,7 @@ header {
 }
 
 .burger-line {
-  background-color: black;
+  background-color: #000;
   width: 100%;
   height: 2.5px;
 }
@@ -297,7 +294,7 @@ header {
     margin-top: 150px;
     list-style: none;
     text-transform: uppercase;
-    color: white;
+    color: #fff;
   }
 }
 @media screen and (max-width: 320px) {
@@ -312,18 +309,17 @@ footer {
   width: 1920px;
   height: 329px;
   background-color: #20113D;
-  color: white;
+  color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 600;
 }
 footer .footer-content {
   width: 1400px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -368,7 +364,6 @@ footer .footer-content .footer-menu li a {
 }
 @media screen and (max-width: 320px) {
   footer .footer-content .footer-menu li a {
-    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 600;
   }
@@ -384,7 +379,7 @@ footer .footer-content .footer-menu li a {
   }
 }
 footer .footer-content .footer-button-donate {
-  border: 1px solid white;
+  border: 1px solid #fff;
   background-color: transparent;
   width: 360px;
   height: 74px;
@@ -392,14 +387,13 @@ footer .footer-content .footer-button-donate {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 600;
   gap: 10px;
   align-items: center;
   border-radius: 5px;
   text-transform: uppercase;
-  color: white;
+  color: #fff;
 }
 @media screen and (max-width: 320px) {
   footer .footer-content .footer-button-donate {
@@ -462,7 +456,7 @@ footer .footer-contacts .autors {
     align-items: flex-start;
     align-items: center;
     padding-top: 30px;
-    border-top: 1px solid white;
+    border-top: 1px solid #fff;
     gap: 30px;
   }
 }
@@ -528,14 +522,13 @@ footer .footer-content .footer-button-donate:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #fff;
 }
 .map-section .map-tittle {
   margin: 40px 0 70px;
   text-transform: uppercase;
   text-align: center;
   color: #20113D;
-  font-family: "Montserrat", sans-serif;
   font-size: 54px;
   font-weight: 600;
 }
@@ -702,7 +695,6 @@ footer .footer-content .footer-button-donate:hover {
   margin-bottom: 150px;
 }
 .contact .main-content .get-in-touch_title {
-  font-family: "Montserrat", sans-serif;
   font-size: 54px;
   font-weight: 600;
   color: #00A092;
@@ -800,14 +792,13 @@ footer .footer-content .footer-button-donate:hover {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 600;
   gap: 10px;
   align-items: center;
   border-radius: 5px;
   text-transform: uppercase;
-  color: white;
+  color: #fff;
   background-color: #00A092;
 }
 @media screen and (max-width: 640px) {
