@@ -24,6 +24,105 @@ body {
   }
 }
 
+.watch-section {
+  width: 1920px;
+  max-width: 1920px;
+  height: 830px;
+  background-size: cover;
+  background-position: bottom center;
+  background-image: url("../assets/images/bg-watch.png");
+  padding-left: 260px;
+  padding-top: 130px;
+}
+.watch-section .title-watch {
+  width: 740px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 82px;
+  font-weight: 800;
+  color: #00A092;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 640px) {
+  .watch-section .title-watch {
+    width: 100%;
+    max-width: 640px;
+    font-size: 72px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .watch-section .title-watch {
+    font-size: 40px;
+  }
+}
+.watch-section .paragraph-watch {
+  width: 340px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 50px 0;
+}
+@media screen and (max-width: 1200px) {
+  .watch-section .paragraph-watch {
+    margin: 30px 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .watch-section .paragraph-watch {
+    width: 100%;
+  }
+}
+.watch-section .button-watch {
+  width: 240px;
+  height: 74px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  gap: 10px;
+  align-items: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #F58021;
+}
+@media screen and (max-width: 320px) {
+  .watch-section .button-watch {
+    width: 300px;
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .watch-section {
+    width: 1200px;
+    max-width: 1200px;
+    height: 690px;
+    background-position: bottom right;
+    background-image: url("../assets/images/bg-watch-small-d.png");
+  }
+}
+@media screen and (max-width: 640px) {
+  .watch-section {
+    width: 640px;
+    max-width: 640px;
+    height: 644px;
+    padding: 50px 20px 0;
+    background-size: 100% 60%;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 320px) {
+  .watch-section {
+    max-width: 320px;
+    padding: 20px 10px 0;
+    height: 686px;
+    background-size: 100% 35%;
+  }
+}
+
 header {
   width: 100%;
   height: 110px;
