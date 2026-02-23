@@ -228,6 +228,184 @@ body {
   }
 }
 
+.donation-block {
+  height: 220px;
+  background-color: #20113D;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.donation-block .donation-content {
+  width: 72.9166666667%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.donation-block .donation-content .donation-text h3 {
+  font-size: 42px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 640px) {
+  .donation-block .donation-content .donation-text h3 {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .donation-block .donation-content .donation-text h3 {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .donation-block .donation-content .donation-text {
+    width: 90%;
+  }
+}
+.donation-block .donation-content .donation-text p {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+@media screen and (max-width: 1200px) {
+  .donation-block .donation-content .donation-text p {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .donation-block .donation-content .donation-text p {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .donation-block .donation-content .donation-text p {
+    padding: 0;
+  }
+}
+.donation-block .donation-content .donation-button-container h4 {
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.donation-block .donation-content .donation-button-container button {
+  width: 320px;
+  height: 74px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 18px;
+  font-weight: 600;
+  gap: 10px;
+  align-items: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  justify-content: end;
+  gap: 20px;
+  background-color: inherit;
+  border: 1px solid #fff;
+}
+.donation-block .donation-content .donation-button-container button .icon-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  height: 74px;
+  background-color: #F58021;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  border-left: none;
+}
+.donation-block .donation-content .donation-button-container button .icon-wrapper img {
+  width: 25px;
+  height: 22;
+  max-width: 100%;
+  max-height: 100%;
+}
+@media screen and (max-width: 320px) {
+  .donation-block .donation-content .donation-button-container button .icon-wrapper {
+    width: 60px;
+    height: 45px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .donation-block .donation-content .donation-button-container button {
+    width: 365px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .donation-block .donation-content .donation-button-container button {
+    font-size: 16px;
+    font-weight: 600;
+    width: 300px;
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .donation-block .donation-content {
+    width: 83.3333333333%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .donation-block .donation-content {
+    width: 640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .donation-block .donation-content {
+    width: 320px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .donation-block {
+    height: 315px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .donation-block {
+    height: 460px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .donation-block {
+    height: 445px;
+  }
+}
+
+.meet-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.meet-section .meet-text {
+  margin: 135px 0 100px;
+}
+.meet-section .meet-text h2 {
+  font-size: 54px;
+  font-weight: 600;
+  color: #00A092;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.meet-section .meet-text p {
+  width: 850px;
+  font-size: 26px;
+  line-height: 1.3;
+}
+
 @media screen and (max-width: 1200px) {
   .welcome-block:first-child {
     align-self: flex-start;
