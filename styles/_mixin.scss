@@ -23,14 +23,14 @@
 ) {
   font-size: $f;
   font-weight: $w;
+  text-transform: uppercase;
 }
 
 @mixin btn-template($w: 360px, $h: 74px) {
   @include size($w, $h);
-  @include position(row, center, center);
+  @include position(row, center, center, center);
   @include font(18px ,600 );
   gap: 10px;
-  align-items: center;
   border-radius: 5px;
   text-transform: uppercase;
   color: #fff;
