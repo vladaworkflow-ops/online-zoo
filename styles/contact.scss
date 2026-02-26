@@ -37,7 +37,6 @@
 
     .get-in-touch_title{
       @include m.h2;
-      color: v.$bg-blue-col;
       text-align: left;
       margin-bottom: 50px;
       @media screen and (max-width: v.$desktop-small)  {

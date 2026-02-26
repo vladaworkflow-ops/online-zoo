@@ -145,9 +145,7 @@ body {
 
     .welcome-title {
       @include m.h2;
-      color: v.$bg-blue-col;
       margin-bottom: 50px;
-      text-transform: uppercase;
 
       @media screen and (max-width: v.$desktop-small) {
         margin-bottom: 30px;
@@ -356,8 +354,6 @@ body {
 
     h2 {
       @include m.h2;
-      color: v.$bg-blue-col;
-      text-transform: uppercase;
       margin-bottom: 50px;
       @media screen and (max-width: v.$desktop-small){
         margin-bottom: 30px;
@@ -804,7 +800,6 @@ body {
 
         .think-title {
           @include m.h2;
-          text-transform: uppercase;
           padding-right: 70px;
           margin-bottom: 50px;
 
@@ -966,12 +961,12 @@ body {
 
     .comments-circe-container {
       display: none;
-      width: 92px;
-      height: 8px;
-      margin: 30px 0 50px;
-      @include m.position(row, space-between, center, center);
+
       @media screen and (max-width: v.$mobile) {
-        display: flex;
+        width: 92px;
+        height: 8px;
+        margin: 30px 0 50px;
+        @include m.position(row, space-between, center, center);
       }
 
       .circle {
@@ -1011,16 +1006,248 @@ body {
 }
 
 .care-section {
-  padding: 136px 260px 150px;
+  padding: 136px 260px 0;
   @include m.position(column, center, center, center);
   text-align: center;
 
-  .care-text-container {
-    .care-title {
-      @include m.h2;
-      color: v.$bg-blue-col;
+  @media screen and (max-width: v.$desktop-small) {
+    padding: 150px 135px 0;
+  }
+
+  @media screen and (max-width: v.$tablet) {
+    align-items: start;
+    width: v.$tablet;
+    padding: 80px 20px 100px 20px;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: v.$mobile) {
+    width: v.$mobile;
+    padding: 50px 10px 0;
+  }
+
+
+  .care-card-container {
+    @include m.position(row, flex-start, center , flex-start);
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    @media screen and (max-width: v.$desktop-small){
+      gap: 20px;
+    }
+
+    @media screen and (max-width: v.$tablet){
+      height: 297px;
+      flex-wrap: nowrap;
+      overflow-x: hidden;
+      scroll-snap-type: x mandatory;
+     }
+
+    @media screen and (max-width: v.$mobile){
+      height: 570px;
+      gap: 10px;
+      padding-bottom: 0;
+    }
+
+
+    .care-bg-card {
+        img {
+          transform: scaleX(-1);
+        }
+        @media screen and (max-width: v.$tablet){
+          display: none;
+        }
+      }
+    .care-slide-animal-card {
+      position: relative;
+      @include m.position(column, flex-start, center , flex-start);
+      @include m.size(440px, 658px);
+      background-color: v.$bg-purple-col;
+      color: #fff;
+      border-radius: 5px;
+
+      @media screen and (max-width: v.$desktop-small){
+        @include m.size(455px, 641px);
+      }
+
+      @media screen and (max-width: v.$tablet){
+        width: v.$tablet;
+        flex-direction: row;
+        justify-content: center;
+        flex: 0 0 600px;
+        height: 297px;
+      }
+
+      @media screen and (max-width: v.$mobile){
+        max-width: 300px;
+        width: 300px;
+        flex-direction: column;
+        justify-content: center;
+        flex: 0 0 320px;
+        height: 100%;
+      }
+
+      .card-img {
+        height: 373px;
+        border-radius: 5px;
+        @media screen and (max-width: v.$tablet){
+          width: 300px;
+          height: 297px;
+        }
+
+        @media screen and (max-width: v.$mobile){
+          height: auto;
+        }
+
+        img {
+          border-radius: 5px;
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+
+      .about-card {
+        height: 285px;
+        @include m.position(column, space-between, center, center);
+        padding: 30px 25px 50px;
+        @media screen and (max-width: v.$tablet){
+          height: 100%;
+          padding: 66px 0 60px;
+        }
+        @media screen and (max-width: v.$mobile){
+          width: 300px;
+        }
+
+      }
+
+      .about-animal {
+        height: 70px;
+        @include m.font(18px, 400);
+        @media screen and (max-width: v.$tablet){
+          height: 105px;
+          padding: 0 25px;
+        }
+      }
+
+      .cam-button {
+        @include m.position(row, center, center, center);
+        color: v.$bg-orange-col;
+        @include m.font(20px, 600);
+        line-height: 1.5;
+        gap: 10px;
+        @media screen and (max-width: v.$desktop-small){
+          margin-bottom: 60px;
+        }
+        @media screen and (max-width: v.$tablet){
+          margin: 0;
+        }
+      }
     }
   }
+
+  @media screen and (max-width: v.$desktop-small){
+    .panda { order: 1;}
+    .tiger { order: 3; }
+    .lemur { order: 2; }
+    .eagles { order: 4;}
+  }
+  .care-text-container {
+    width: 550px;
+
+      @media screen and (max-width: v.$tablet) {
+        width: auto;
+        align-self: center;
+      }
+    .care-title {
+      @include m.h2;
+      @media screen and (max-width: v.$tablet){
+        font-size: 26px;
+      }
+    }
+
+    .care-paragraph{
+      font-size: 26px;
+      line-height: 1.3;
+      font-weight: 400;
+      margin: 50px 0 100px;
+      @media screen and (max-width: v.$tablet) {
+        margin-bottom: 70px;
+        margin-top: 30px;
+      }
+      @media screen and (max-width: v.$mobile) {
+        font-size: 18px;
+        margin: 30px 10px;
+      }
+
+    }
+  }
+
+  .care-comments-circe-container {
+      display: none;
+
+      @media screen and (max-width: v.$tablet) {
+        width: 92px;
+        height: 8px;
+        margin: 50px 0 50px;
+        @include m.position(row, space-between, center, center);
+        align-self: center;
+      }
+
+      .circle {
+        width: 8px;
+        height: 8px;
+        border: 1px solid v.$bg-purple-col;
+        border-radius: 100%;
+      }
+
+      .circle:hover {
+        background-color: v.$bg-purple-col;
+      }
+    }
+
+  .meet-button:hover {
+    background-color: v.$bg-purple-col;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .meet-button {
+    @include m.btn-template(360px, 74px);
+    margin: 100px 0 150px;
+    color: v.$bg-purple-col;
+    border: 1px solid v.$bg-purple-col;
+    align-self: center;
+    transition: 0.3s ease;
+
+    @media screen and (max-width: v.$tablet){
+      margin: 50px 0 100px;
+    }
+    @media screen and  (max-width: v.$mobile) {
+      @include m.size(300px, 45px);
+      text-transform: capitalize;
+      margin: 0 0 80px;
+    }
+  }
+}
+
+.care-bg-container {
+    width: 1400px;
+    height: 652px;
+    background-image: url("../assets/images/care-bg.png");
+    margin: 0 260px  150px;
+    @media screen and (max-width: v.$desktop-small){
+      width: v.$desktop-small;
+      height: 668px;
+      background-size: 150%;
+      margin: 0 0 150px;
+    }
+
+    @media screen and (max-width: v.$tablet){
+      width:  v.$tablet;
+      display: none;
+    }
 
 }
 

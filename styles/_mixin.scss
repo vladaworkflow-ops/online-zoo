@@ -19,11 +19,13 @@
 
 @mixin h2(
   $f: v.$fz-h2,
-  $w: 600
+  $w: 600,
+  $c: v.$bg-blue-col
 ) {
   font-size: $f;
   font-weight: $w;
   text-transform: uppercase;
+  color: $c;
 }
 
 @mixin btn-template($w: 360px, $h: 74px) {

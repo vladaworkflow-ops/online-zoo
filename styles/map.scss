@@ -11,8 +11,7 @@
     margin: 40px 0 70px;
     text-transform: uppercase;
     text-align: center;
-    color: v.$bg-purple-col;
-    @include m.h2;
+    @include m.h2($c: v.$bg-purple-col);
 
     .desktop-break {
       display: block;
