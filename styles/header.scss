@@ -81,9 +81,18 @@ header {
 }
 
 .logo {
+  position: relative;
   @media screen and (max-width: v.$tablet) {
     margin-left: 20px;
   }
+}
+
+.header {
+  position: absolute;
+  font-size: 42px;
+  font-weight: 600;
+  position: absolute;
+  top: -7px;
 }
 
 //burger menu
