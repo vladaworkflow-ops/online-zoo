@@ -58,8 +58,18 @@ header {
   gap: 50px;
 }
 
+.navigation-menu ul li:hover{
+  gap: 50px;
+  color: v.$bg-blue-col;
+}
+
 .social-media-icons ul {
   gap: 30px;
+}
+
+.social-media-icons ul li:hover{
+  gap: 30px;
+  scale: 1.2;
 }
 
 .navigation-menu ul li{
