@@ -53,6 +53,10 @@ footer {
       }
     }
 
+    .footer-menu li:hover {
+      color: v.$bg-orange-col;
+    }
+
     .footer-button-donate {
       border: 1px solid #fff;
       background-color: transparent;

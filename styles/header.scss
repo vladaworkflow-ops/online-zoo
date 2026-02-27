@@ -29,6 +29,10 @@ header {
   @include m.position(row, center, center, center);
     gap: 65px;
 
+  @media screen and (max-width: v.$desktop-small) {
+    gap: 80px;
+  }
+
   @media screen and (max-width: v.$tablet) {
     gap: 0;
     margin-right: 50px;
@@ -56,6 +60,10 @@ header {
 
 .navigation-menu ul {
   gap: 50px;
+
+  @media screen and (max-width: v.$desktop-small) {
+    gap: 30px;
+  }
 }
 
 .navigation-menu ul li:hover{
