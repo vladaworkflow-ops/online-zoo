@@ -27,12 +27,13 @@ body {
 .watch-section {
   width: 1920px;
   max-width: 1920px;
-  height: 830px;
+  height: 790px;
   background-size: cover;
   background-position: bottom center;
   background-image: url("../assets/images/bg-watch.png");
   padding-left: 260px;
   padding-top: 130px;
+  padding-bottom: 130px;
 }
 @media screen and (max-width: 1200px) {
   .watch-section {
@@ -62,9 +63,11 @@ body {
   }
 }
 .watch-section .title-watch {
-  width: 740px;
+  width: 850px;
   font-size: 82px;
   font-weight: 800;
+  letter-spacing: 1%;
+  line-height: 1.2;
   color: #00A092;
   text-transform: uppercase;
 }
@@ -81,11 +84,11 @@ body {
   }
 }
 .watch-section .paragraph-watch {
-  width: 340px;
+  width: 400px;
   font-size: 18px;
   font-weight: 400;
   line-height: 150%;
-  margin: 50px 0;
+  margin: 30px 0 50px;
 }
 @media screen and (max-width: 1200px) {
   .watch-section .paragraph-watch {
@@ -159,6 +162,13 @@ body {
   align-items: center;
   gap: 40px;
   box-sizing: content-box;
+}
+.welcome-section .welcome-block .welcome-content {
+  width: 560px;
+}
+.welcome-section .welcome-block .welcome-img {
+  width: 800px;
+  height: 531px;
 }
 .welcome-section .welcome-block .welcome-img img {
   width: 100%;
@@ -260,6 +270,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  margin: 50px 0;
 }
 .donation-block .donation-content .donation-text h3 {
   font-size: 42px;
@@ -283,7 +294,7 @@ body {
   }
 }
 .donation-block .donation-content .donation-text p {
-  max-width: 600px;
+  max-width: 630px;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -440,9 +451,10 @@ body {
   }
 }
 .meet-section .meet-text p {
-  width: 850px;
+  width: 920px;
   font-size: 26px;
   line-height: 1.3;
+  font-weight: 500;
 }
 @media screen and (max-width: 640px) {
   .meet-section .meet-text p {
@@ -468,13 +480,6 @@ body {
     margin: 50px 0 30px;
   }
 }
-.meet-section .arrow-container .arrows:hover {
-  background-color: #20113D;
-  background-image: url(../assets/icons/vector.svg);
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-  background-position: center;
-}
 .meet-section .arrow-container {
   display: flex;
   gap: 55px;
@@ -490,6 +495,15 @@ body {
   width: 60px;
   height: 60px;
   border: 1px solid #20113D;
+  background-color: transparent;
+  color: #20113D;
+}
+.meet-section .arrow-container .arrows:hover {
+  background-color: #20113D;
+  color: #fff;
+}
+.meet-section .arrow-container .arr-left {
+  transform: rotate(180deg);
 }
 @media screen and (max-width: 640px) {
   .meet-section .arrow-container {
@@ -541,6 +555,9 @@ body {
   color: #fff;
   border-radius: 5px;
 }
+.meet-section .meet-slide-container .slide-animal-card :hover {
+  cursor: pointer;
+}
 @media screen and (max-width: 1200px) {
   .meet-section .meet-slide-container .slide-animal-card {
     width: 455px;
@@ -553,9 +570,21 @@ body {
     height: 600px;
   }
 }
+.meet-section .meet-slide-container .slide-animal-card .crocodile {
+  background-image: url("../assets/images/cards/crocodale-card.png");
+  background-size: 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.meet-section .meet-slide-container .slide-animal-card .crocodile:hover {
+  background-size: 130%;
+}
 .meet-section .meet-slide-container .slide-animal-card .card-img {
   width: 100%;
   height: 436px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.6s ease;
 }
 @media screen and (max-width: 640px) {
   .meet-section .meet-slide-container .slide-animal-card .card-img {
@@ -566,6 +595,18 @@ body {
   width: 100%;
   height: 100%;
   display: block;
+  border-radius: 5px;
+}
+.meet-section .meet-slide-container .slide-animal-card .card-img img:hover {
+  scale: 1.2;
+}
+.meet-section .meet-slide-container .slide-animal-card .about-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 0 50px;
+  height: 311px;
 }
 .meet-section .meet-slide-container .slide-animal-card .name-card {
   position: absolute;
@@ -577,10 +618,12 @@ body {
   font-size: 26px;
   font-weight: 500;
   background-color: #20113D;
-  padding: 12px 20px;
+  padding: 13px 20px;
+  border-radius: 5px 0;
+  padding-left: 30px;
 }
 .meet-section .meet-slide-container .slide-animal-card .name-animal {
-  margin: 30px 0 20px;
+  margin: 0 0 20px;
   line-height: 1.3;
   font-size: 26px;
   font-weight: 500;
@@ -593,6 +636,8 @@ body {
 .meet-section .meet-slide-container .slide-animal-card .about-animal {
   height: 70px;
   padding: 0 45px;
+  line-height: 1.5;
+  flex-grow: 1;
   font-size: 18px;
   font-weight: 400;
 }
@@ -607,12 +652,16 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 240px;
+  height: 74px;
+  border-radius: 5px;
+  background-color: transparent;
   color: #F58021;
   font-size: 20px;
   font-weight: 600;
   line-height: 1.5;
-  margin: 55px 75px;
   gap: 10px;
+  transition: 0.3s ease;
 }
 @media screen and (max-width: 1200px) {
   .meet-section .meet-slide-container .slide-animal-card .cam-button {
@@ -623,6 +672,12 @@ body {
   .meet-section .meet-slide-container .slide-animal-card .cam-button {
     margin: 45px 0 35px;
   }
+}
+.meet-section .meet-slide-container .slide-animal-card .cam-button:hover {
+  align-self: center;
+  background-color: #F58021;
+  color: #fff;
+  cursor: pointer;
 }
 .meet-section .meet-button:hover {
   background-color: #20113D;
@@ -723,37 +778,39 @@ body {
     font-size: 26px;
   }
 }
-.pay-section .pay-container div {
+.pay-section .pay-container .line-container {
+  height: 34px;
   font-size: 26px;
+  margin-bottom: 82px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 @media screen and (max-width: 640px) {
-  .pay-section .pay-container div {
+  .pay-section .pay-container .line-container {
     justify-content: center;
     padding: 0 20px;
     gap: 10px;
   }
 }
 @media screen and (max-width: 320px) {
-  .pay-section .pay-container div {
+  .pay-section .pay-container .line-container {
     padding: 0 0 0 10px;
   }
 }
-.pay-section .pay-container div .line {
+.pay-section .pay-container .line-container .line {
   width: 91.4285714286%;
   height: 2px;
   background-color: #fff;
 }
 @media screen and (max-width: 1200px) {
-  .pay-section .pay-container div .line {
+  .pay-section .pay-container .line-container .line {
     width: 85.4166666667%;
   }
 }
 @media screen and (max-width: 640px) {
-  .pay-section .pay-container div .line {
+  .pay-section .pay-container .line-container .line {
     width: 87.96875%;
   }
 }
@@ -762,8 +819,9 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  height: 680px;
-  gap: 160px;
+  height: auto;
+  gap: 155px;
+  margin-bottom: 100px;
 }
 @media screen and (max-width: 1200px) {
   .pay-section .pay-container .pay-content {
@@ -787,8 +845,12 @@ body {
 }
 .pay-section .pay-container .pay-content .icon-pay-text {
   margin-bottom: 30px;
+  margin-top: 20px;
 }
 .pay-section .pay-container .pay-content .pay-header {
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 400;
   margin-bottom: 50px;
 }
 @media screen and (max-width: 1200px) {
@@ -798,7 +860,6 @@ body {
 }
 .pay-section .pay-container .pay-content .pay-img-container {
   width: 100%;
-  margin-top: 100px;
 }
 @media screen and (max-width: 640px) {
   .pay-section .pay-container .pay-content .pay-img-container {
@@ -823,7 +884,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   align-self: center;
-  padding-right: 120px;
+  padding-right: 110px;
 }
 @media screen and (max-width: 1200px) {
   .pay-section .pay-container .pay-content .pay-text {
@@ -860,6 +921,9 @@ body {
   text-transform: uppercase;
   color: #fff;
   background-color: #F58021;
+}
+.pay-section .pay-container .pay-content .pay-text .button-donate-now:hover {
+  background-color: #D26004;
 }
 @media screen and (max-width: 1200px) {
   .pay-section .pay-container .pay-content .pay-text .button-donate-now {
@@ -913,8 +977,9 @@ body {
 }
 .thinks-section .user-think-container {
   width: 100%;
-  padding-top: 200px;
+  padding-top: 100px;
   padding-bottom: 150px;
+  padding-left: 260px;
 }
 @media screen and (max-width: 640px) {
   .thinks-section .user-think-container {
@@ -933,8 +998,7 @@ body {
 }
 .thinks-section .user-think-container .user-think-content {
   display: flex;
-  gap: 30px;
-  padding-left: 260px;
+  gap: 20px;
 }
 @media screen and (max-width: 1200px) {
   .thinks-section .user-think-container .user-think-content {
@@ -949,7 +1013,7 @@ body {
   }
 }
 .thinks-section .user-think-container .user-think-content .user-think-text {
-  width: 560px;
+  width: 580px;
 }
 @media screen and (max-width: 1200px) {
   .thinks-section .user-think-container .user-think-content .user-think-text {
@@ -969,7 +1033,7 @@ body {
   text-transform: uppercase;
   color: #00A092;
   padding-right: 70px;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 @media screen and (max-width: 320px) {
   .thinks-section .user-think-container .user-think-content .user-think-text .think-title {
@@ -982,7 +1046,8 @@ body {
 .thinks-section .user-think-container .user-think-content .user-think-text .think-paragraph {
   font-size: 26px;
   line-height: 1.3;
-  padding-right: 20px;
+  font-weight: 400;
+  padding-right: 30px;
 }
 @media screen and (max-width: 320px) {
   .thinks-section .user-think-container .user-think-content .user-think-text .think-paragraph {
@@ -1028,6 +1093,9 @@ body {
   background-color: #fff;
   padding: 20px 50px 70px;
 }
+.thinks-section .user-think-container .user-think-content .comments-container .comments-content .comments-icon {
+  padding: 25px 10px;
+}
 @media screen and (max-width: 640px) {
   .thinks-section .user-think-container .user-think-content .comments-container .comments-content {
     width: 523px;
@@ -1050,6 +1118,9 @@ body {
   }
 }
 .thinks-section .user-think-container .user-think-content .comments-container .comments-content .comments-title {
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 500;
   padding: 20px 0;
   display: flex;
   align-items: center;
@@ -1096,40 +1167,18 @@ body {
 }
 .thinks-section .user-think-container .comments-arrows {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
-@media screen and (max-width: 1200px) {
-  .thinks-section .user-think-container .comments-arrows {
-    justify-content: flex-end;
-  }
-}
-@media screen and (max-width: 640px) {
-  .thinks-section .user-think-container .comments-arrows {
-    display: none;
-  }
-}
-.thinks-section .user-think-container .comments-arrows .comments-arrow-container .arrows:hover {
-  background-color: #20113D;
-  background-image: url(../assets/icons/vector.svg);
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-  background-position: center;
-}
-.thinks-section .user-think-container .comments-arrows .comments-arrow-container {
-  width: 180px;
+.thinks-section .user-think-container .comments-arrows .arrow-container {
   display: flex;
   gap: 60px;
-  margin-bottom: 50px;
   margin-top: 60px;
-  align-self: center;
+  margin-right: 280px;
   cursor: pointer;
 }
-@media screen and (max-width: 1200px) {
-  .thinks-section .user-think-container .comments-arrows .comments-arrow-container {
-    margin: 100px 40px 100px 0;
-  }
-}
-.thinks-section .user-think-container .comments-arrows .comments-arrow-container .arrows {
+.thinks-section .user-think-container .comments-arrows .arrow-container .arrows {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1137,9 +1186,24 @@ body {
   width: 60px;
   height: 60px;
   border: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+.thinks-section .user-think-container .comments-arrows .arrow-container .arrows:hover {
+  background-color: white;
+  color: #20113D;
+}
+.thinks-section .user-think-container .comments-arrows .arrow-container .arr-left {
+  transform: rotate(180deg);
+}
+@media screen and (max-width: 1200px) {
+  .thinks-section .user-think-container .comments-arrows .arrow-container {
+    justify-content: flex-end;
+    margin: 100px 40px 100px 0;
+  }
 }
 @media screen and (max-width: 640px) {
-  .thinks-section .user-think-container .comments-arrows .comments-arrow-container {
+  .thinks-section .user-think-container .comments-arrows .arrow-container {
     display: none;
   }
 }
@@ -1181,7 +1245,6 @@ body {
   color: #fff;
   background-color: transparent;
   border: 1px solid white;
-  margin-left: 260px;
   margin-top: 376px;
 }
 @media screen and (max-width: 1200px) {
@@ -1247,7 +1310,6 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-bottom: 50px;
   flex-wrap: wrap;
   gap: 40px;
 }
@@ -1271,8 +1333,10 @@ body {
     padding-bottom: 0;
   }
 }
-.care-section .care-card-container .care-bg-card img {
-  transform: scaleX(-1);
+@media screen and (max-width: 1200px) {
+  .care-section .care-card-container .care-bg-card img {
+    transform: scaleX(-1);
+  }
 }
 @media screen and (max-width: 640px) {
   .care-section .care-card-container .care-bg-card {
@@ -1290,6 +1354,7 @@ body {
   background-color: #20113D;
   color: #fff;
   border-radius: 5px;
+  transition: all 0.3s ease;
 }
 @media screen and (max-width: 1200px) {
   .care-section .care-card-container .care-slide-animal-card {
@@ -1319,6 +1384,7 @@ body {
 .care-section .care-card-container .care-slide-animal-card .card-img {
   height: 373px;
   border-radius: 5px;
+  overflow: hidden;
 }
 @media screen and (max-width: 640px) {
   .care-section .care-card-container .care-slide-animal-card .card-img {
@@ -1336,6 +1402,9 @@ body {
   width: 100%;
   height: 100%;
   display: block;
+}
+.care-section .care-card-container .care-slide-animal-card .card-img img:hover {
+  scale: 1.2;
 }
 .care-section .care-card-container .care-slide-animal-card .about-card {
   height: 285px;
@@ -1360,6 +1429,7 @@ body {
   height: 70px;
   font-size: 18px;
   font-weight: 400;
+  line-height: 1.5;
 }
 @media screen and (max-width: 640px) {
   .care-section .care-card-container .care-slide-animal-card .about-animal {
@@ -1376,7 +1446,14 @@ body {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.5;
+  width: 142px;
+  height: 74px;
+  border-radius: 5px;
   gap: 10px;
+}
+.care-section .care-card-container .care-slide-animal-card .cam-button:hover {
+  background-color: #F58021;
+  color: #fff;
 }
 @media screen and (max-width: 1200px) {
   .care-section .care-card-container .care-slide-animal-card .cam-button {
@@ -1403,7 +1480,7 @@ body {
   }
 }
 .care-section .care-text-container {
-  width: 550px;
+  width: 570px;
 }
 @media screen and (max-width: 640px) {
   .care-section .care-text-container {
@@ -1426,7 +1503,8 @@ body {
   font-size: 26px;
   line-height: 1.3;
   font-weight: 400;
-  margin: 50px 0 100px;
+  margin: 55px 0 100px;
+  padding: 0 20px;
 }
 @media screen and (max-width: 640px) {
   .care-section .care-text-container .care-paragraph {
