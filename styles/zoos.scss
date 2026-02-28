@@ -1,0 +1,56 @@
+@use "_variables" as v;
+@use "_mixin" as m;
+
+.button-donate-now {
+            margin-top: 50px;
+            @include m.btn-template(240px, 74px);
+            background-color: v.$bg-orange-col;
+
+            &:hover {
+              background-color: v.$bg-orange-hover;
+            }
+
+            @media screen and (max-width: v.$desktop-small) {
+              position: absolute;
+              bottom: 0;
+              left: 51%;
+              width: 266px;
+              margin-top: 118px;
+            }
+
+            @media screen and (max-width: v.$tablet){
+              width: 290px;
+              margin-top: 0;
+              transform: translateX(-50%);
+            }
+
+            @media screen and (max-width: v.$mobile){
+              width: 300px;
+              height: 45px;
+            }
+
+            img {
+              margin-bottom: 0;
+            }
+}
+
+.cams-gallery-container {
+  @include m.position(column, center, center, flex-end);
+  margin: 50px 260px 150px;
+}
+
+.about-animal-container {
+  margin: 150px 260px;
+}
+
+.title-cams-animal {
+  @include m.position(row, space-between, center, row);
+
+  .title-cams {
+    @include m.h2;
+  }
+}
+
+.subtitle-cam {
+  @include m.h2(42px, 500);
+}

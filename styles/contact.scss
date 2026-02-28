@@ -4,6 +4,14 @@
 .contact {
   @include m.position(column, center, center, center);
 
+  @media screen and (max-width: v.$desktop-small){
+    width: v.$desktop-small;
+  }
+
+  @media screen and (max-width: v.$mobile){
+    width: v.$mobile;
+  }
+
   .contact-bg {
     max-width: 1405px;
     width: 100%;
@@ -17,16 +25,29 @@
       }
     @media screen and (max-width: v.$desktop-small){
        max-width: v.$desktop-small;
+       height: 815px;
        margin-bottom: 50px;
+       overflow: hidden;
+
+       img {
+        width: 114%;
+        height: 100%;
+        display: block;
+      }
     }
 
     @media screen and (max-width: v.$tablet){
       max-width: v.$tablet;
+      height: 434px;
+      img {
+        width: 100%;
+      }
     }
 
     @media screen and (max-width: v.$mobile){
       max-width: v.$mobile;
       margin-bottom: 30px;
+      height: 217px;
     }
   }
 
@@ -35,13 +56,39 @@
     @include m.position(row, space-between, center);
     margin-bottom: 150px;
 
+    @media screen and (max-width: v.$desktop-small)  {
+      width: 835px;
+      @include m.position(column, center, center, flex-start);
+      margin-bottom: 100px;
+      margin-left: 230px;
+      margin-right: 142px;
+    }
+
+    @media screen and (max-width: v.$tablet) {
+      width: 600px;
+      padding: 0;
+      margin: 0 20px 100px;
+    }
+
+    @media screen and (max-width: v.$mobile) {
+      width: v.$mobile;
+      padding: 0 10px;
+      margin-bottom: 80px;
+    }
+
     .get-in-touch_title{
       @include m.h2;
       text-align: left;
       margin-bottom: 50px;
       @media screen and (max-width: v.$desktop-small)  {
         text-align: center;
+        letter-spacing: 1px;
         margin-bottom: 30px;
+        padding-right: 100px;
+      }
+
+      @media screen and (max-width: v.$tablet) {
+        padding-right: 0;
       }
 
       @media screen and (max-width: v.$mobile) {
@@ -54,21 +101,22 @@
       width: 545px;
       font-size: v.$fz;
       font-weight: 400;
+      line-height: 1.5;
       color: black;
 
       @media screen and (max-width: v.$desktop-small)  {
         width: 840px;
         text-align: center;
-        padding-left: 40px;
       }
 
       @media screen and (max-width: v.$tablet)  {
-        width: 100%;
+        width: 600px;
         padding-left: 0;
       }
 
       @media screen and (max-width: v.$mobile)  {
-        padding: 0 20px;
+        width: auto;
+        padding: 0;
       }
     }
 
@@ -87,11 +135,13 @@
       }
 
       input {
-        @include m.size(100%,60px);
+        @include m.size(100%, 60px);
         border: 1px solid black;
         border-radius: 5px;
         margin: 10px 0 30px;
-        padding-left: 20px;
+        padding: 17px 0 16px 20px;
+        font-size: v.$fz;
+        font-weight: 400;
 
         @media screen and (max-width: v.$mobile) {
           height: 50px;
@@ -121,6 +171,7 @@
       background-color: v.$bg-blue-col;
 
         @media screen and (max-width: v.$tablet)  {
+          align-self: center;
           @include m.size(290px, 74px);
         }
 
@@ -138,21 +189,6 @@
         width: 100%;
       }
 
-    }
-
-    @media screen and (max-width: v.$desktop-small)  {
-      @include m.position(column, center, center, center);
-      margin-bottom: 100px;
-    }
-
-    @media screen and (max-width: v.$tablet) {
-      padding: 0 20px;
-    }
-
-    @media screen and (max-width: v.$mobile) {
-      width: v.$mobile;
-      padding: 0 10px;
-      margin-bottom: 80px;
     }
   }
 }
