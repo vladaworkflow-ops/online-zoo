@@ -24,6 +24,9 @@ footer {
       @media screen and (max-width: v.$desktop-small) {
         width: 344px;
       }
+      @media screen and (max-width: v.$tablet) {
+        width: 440px;
+      }
       @media screen and (max-width: v.$mobile) {
         width: 100%;
         @include m.position(column, center, space-between);
@@ -46,6 +49,10 @@ footer {
 
       @media screen and (max-width: v.$desktop-small)  {
         gap: 20px; 
+      }
+
+      @media screen and (max-width: v.$tablet) {
+        gap: 53px;
       }
 
       @media screen and (max-width: v.$mobile) {

@@ -4,7 +4,7 @@
 header {
   @include m.size(100%, 110px);
   @include m.position(row, center, center, center);
-   @include m.font(v.$fz, 600);
+  @include m.font(v.$fz, 600);
   line-height: 150%;
   background-color: v.$bg-orange-col;
 }
@@ -90,17 +90,23 @@ header {
 
 .logo {
   position: relative;
+  width: 96px;
+  height: 50px;
   @media screen and (max-width: v.$tablet) {
     margin-left: 20px;
   }
 }
 
 .header {
+  height: 25px;
   position: absolute;
   font-size: 42px;
   font-weight: 600;
-  position: absolute;
-  top: -7px;
+  bottom: 0;
+  opacity: 0;
+  @media screen and (max-width: v.$tablet) {
+    display: none;
+  }
 }
 
 //burger menu
@@ -117,6 +123,8 @@ header {
 
 .burger-toggle {
   position: absolute;
+  @include m.size(30px, 30px);
+  @include m.position(column, space-between, center, center);
   inset: 0;
   opacity: 0;
   z-index: 2;

@@ -1,5 +1,6 @@
 @use "_variables" as v;
 @use "_mixin" as m;
+@use "think.scss";
 
 body {
   width: v.$desktop;
@@ -101,6 +102,9 @@ body {
     @include m.btn-template(240px, 74px);
     background-color: v.$bg-orange-col;
     transition: 0.3s ease;
+    @media screen and (max-width: v.$tablet) {
+      @include m.btn-template(285px, 74px);
+    }
     @media screen and (max-width: v.$mobile) {
      width: 300px;
      height: 45px;
@@ -122,6 +126,7 @@ body {
 
   @media screen and (max-width: v.$tablet) {
     max-width: v.$tablet;
+    gap: 50px;
   }
 
   @media screen and (max-width: v.$mobile) {
@@ -142,6 +147,12 @@ body {
 
     .welcome-content {
       width: 560px;
+      @media screen and (max-width: v.$tablet) {
+        width: v.$tablet;
+      }
+      @media screen and (max-width: v.$mobile) {
+        width: v.$mobile;
+      }
     }
 
     .welcome-img {
@@ -151,9 +162,18 @@ body {
       @media screen and (max-width: v.$desktop-small) {
         @include m.size(660px, 438px);
       }
+      @media screen and (max-width: v.$tablet) {
+        width: v.$tablet;
+        height: 438px;
+      }
+      @media screen and (max-width: v.$mobile) {
+        width: v.$mobile;
+        height: 218px;
+      }
+
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
         display: block;
       }
     }
@@ -167,13 +187,23 @@ body {
       }
 
       @media screen and (max-width: v.$tablet) {
-        padding: 0 40px 0 20px;
+        padding: 0 0 0 20px;
       }
 
       @media screen and (max-width: v.$mobile) {
         font-size: 26px;
         font-weight: 500;
         padding: 0 50px 0 10px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .eagle {
+      @media screen and (max-width: v.$desktop-small) {
+        height: 425px;
+      }
+      @media screen and (max-width: v.$mobile) {
+        height: 213px;
       }
     }
 
@@ -182,18 +212,12 @@ body {
       line-height: 150%;
       font-weight: 400;
 
-      .hide-text{
-        @media screen and (max-width: v.$mobile) {
-          display: none;
-        }
-      }
-
       @media screen and (max-width: v.$tablet) {
-        padding: 0 20px;
+        padding: 0 0 0 20px;
       }
 
       @media screen and (max-width: v.$mobile) {
-        padding: 0 10px;
+        padding: 0 0 0 10px;
       }
     }
 
@@ -251,6 +275,7 @@ body {
 
       @media screen and (max-width: v.$tablet) {
         margin-bottom: 30px;
+        padding-right: 0;
       }
 
       @media screen and (max-width: v.$mobile) {
@@ -273,9 +298,10 @@ body {
       }
       @media screen and (max-width: v.$tablet) {
         width: 100%;
-        padding: 0 20px;
+        padding: 0 27px;
       }
       @media screen and (max-width: v.$mobile) {
+        width: 100%;
         padding: 0;
       }
     }
@@ -345,7 +371,7 @@ body {
       gap: 30px;
     }
     @media screen and (max-width: v.$mobile) {
-    width: v.$mobile;
+      width: v.$mobile;
     }
   }
 }
@@ -530,6 +556,7 @@ body {
 
         @media screen and (max-width: v.$tablet){
           height: 333px;
+          min-height: 333px;
         }
 
         img {
@@ -611,7 +638,7 @@ body {
           margin-bottom: 35px;
         }
         @media screen and (max-width: v.$tablet){
-          margin: 45px 0 35px;
+          margin: 0;
         }
       }
 
@@ -643,6 +670,7 @@ body {
     }
 
     @media screen and (max-width: v.$tablet){
+      width: 345px;
       margin: 50px 0 100px;
     }
     @media screen and (max-width: v.$mobile){
@@ -697,6 +725,7 @@ body {
         @media screen and (max-width: v.$tablet){
           text-align: center;
           padding-bottom: 50px;
+          padding-left: 0;
         }
         @media screen and (max-width: v.$mobile){
           font-size: 26px;
@@ -712,9 +741,10 @@ body {
           margin-bottom: 62px;
         }
         @media screen and (max-width: v.$tablet){
-          justify-content: center;
+          justify-content: space-between;
           padding: 0 20px;
           gap: 10px;
+          margin-bottom: 0;
         }
         @media screen and (max-width: v.$mobile){
           padding: 0 0 0 10px;
@@ -730,7 +760,7 @@ body {
             width: 1025px;
           }
           @media screen and (max-width: v.$tablet){
-            width: calc(563px / 640px)*100%;
+            width: calc(563px / 600px)*100%;
           }
         }
       }
@@ -750,6 +780,7 @@ body {
         @media screen and (max-width: v.$tablet){
           height: auto;
           flex-direction: column;
+          margin-bottom: 0;
           gap: 50px;
         }
 
@@ -794,14 +825,18 @@ body {
             height: 358px;
           }
           @media screen and (max-width: v.$tablet){
-          margin-top: 50px;
+            margin-top: 50px;
+            width: v.$tablet;
+            height: 417px;
 
-            /* img {
+            img {
               width: 100%;
-            } */
+            }
           }
           @media screen and (max-width: v.$mobile){
+            width: v.$mobile;
             margin-top: 30px;
+            height: 208px;
             padding: 0;
           }
 
@@ -828,7 +863,7 @@ body {
 
           @media screen and (max-width: v.$tablet){
             text-align: center;
-            padding-bottom: 50px;
+            padding: 0 20px 50px;
           }
 
           @media screen and (max-width: v.$mobile){
@@ -840,6 +875,18 @@ body {
             @media screen and (max-width: v.$desktop-small) {
               text-align: center;
               padding: 0;
+            }
+            @media screen and (max-width: v.$tablet) {
+              padding: 0 5px;
+            }
+            @media screen and (max-width: v.$mobile) {
+              padding: 0 20px;
+            }
+          }
+
+          .pay-paragraph-second {
+            @media screen and (max-width: v.$mobile) {
+              padding: 0 5px;
             }
           }
 
@@ -861,6 +908,7 @@ body {
             }
 
             @media screen and (max-width: v.$tablet){
+              width: 290px;
               margin-top: 0;
               transform: translateX(-50%);
             }
@@ -876,303 +924,6 @@ body {
           }
         }
       }
-  }
-}
-
-.thinks-section {
-  width: 100%;
-  background-image: url("../assets/images/bg-thinks.png");
-  background-color: v.$bg-purple-col;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  color: #fff;
-
-  @media screen and (max-width: v.$desktop-small) {
-    background-position: 5% bottom;
-  }
-
-  @media screen and (max-width: v.$tablet) {
-    background-size: 240%;
-    background-position: 5% 130%;
-  }
-
-  @media screen and (max-width: v.$mobile) {
-    background-size: 210%;
-    background-position: 1% 105%;
-  }
-
-  .user-think-container {
-    width: 100%;
-    padding-top: 100px;
-    padding-bottom: 150px;
-    padding-left: 260px;
-
-    @media screen and (max-width: v.$desktop-small) {
-      padding-top: 200px;
-      padding-left: 0;
-    }
-
-    @media screen and (max-width: v.$tablet) {
-      padding-top: 160px;
-      padding-bottom: 752px;
-    }
-
-    @media screen and (max-width: v.$mobile) {
-      width: v.$mobile;
-      padding: 90px 10px 450px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .user-think-content {
-      display: flex;
-      gap: 20px;
-
-      @media screen and (max-width: v.$desktop-small) {
-        flex-direction: column;
-        padding: 0;
-        gap: 50px;
-        overflow: hidden;
-      }
-
-      @media screen and (max-width: v.$tablet) {
-        overflow: hidden;
-      }
-
-
-      .user-think-text {
-        width: 580px;
-        @media screen and (max-width: v.$desktop-small) {
-          width: 680px;
-          padding-left: 40px;
-        }
-
-        @media screen and (max-width: v.$mobile) {
-          text-align: center;
-          width: 100%;
-          padding-left: 0;
-        }
-
-        .think-title {
-          @include m.h2;
-          padding-right: 70px;
-          margin-bottom: 45px;
-
-          @media screen and (max-width: v.$desktop-small) {
-            margin-bottom: 30px;
-            padding-right: 150px;
-          }
-
-          @media screen and (max-width: v.$mobile) {
-            font-size: 26px;
-            padding-bottom: 30px;
-            padding-right: 0;
-            margin-bottom: 0;
-          }
-        }
-        .think-paragraph {
-          font-size: 26px;
-          line-height: 1.3;
-          font-weight: 400;
-          padding-right: 30px;
-
-          @media screen and (max-width: v.$desktop-small) {
-          padding-right: 0;
-          }
-
-          @media screen and (max-width: v.$mobile) {
-          padding-right: 0;
-        }
-        }
-      }
-
-      .comments-container {
-        @include m.position(column, center, center, center);
-        height: 956px;
-        gap: 30px;
-        flex-wrap: wrap;
-
-        @media screen and (max-width: v.$desktop-small) {
-          padding-left: 140px;
-        }
-
-        @media screen and (max-width: v.$tablet) {
-          @include m.position(column, flex-start, center, center);
-          height: 371px;
-          gap: 20px;
-          padding-left: 20px;
-        }
-
-        @media screen and (max-width: v.$mobile) {
-          height: 549px;
-          padding-left: 0;
-        }
-
-        .comments-content{
-          @include m.size(515px, 463px);
-          border-radius: 5px;
-          color: black;
-          background-color: #fff;
-          padding: 20px 50px 70px;
-
-          .comments-icon {
-            padding: 25px 10px;
-          }
-
-          @media screen and (max-width: v.$tablet) {
-            @include m.size(523px, 371px);
-            padding: 50px 30px;
-            text-align: center;
-            .comments-icon {
-              display: none;
-            }
-            .comments-icon-tabl {
-              display: block;
-            }
-          }
-
-          @media screen and (max-width: v.$mobile) {
-            @include m.size(300px, 549px);
-            padding: 20px 20px 50px;
-          }
-
-          .comments-title {
-            font-size: 26px;
-            line-height: 1.3;
-            font-weight: 500;
-            padding: 20px 0;
-            display: flex;
-            align-items: center;
-            gap: 60px;
-            @media screen and (max-width: v.$tablet) {
-              max-width: 70%;
-              font-size: 26px;
-              line-height: 1.3;
-              padding: 0 0 30px;
-            }
-
-            @media screen and (max-width: v.$mobile) {
-              max-width: 100%;
-              flex-direction: column;
-              gap: 0;
-              padding: 0 40px 20px;
-            }
-
-            .comments-icon-tabl {
-              display: none;
-              @media screen and (max-width: v.$tablet) {
-                display: block;
-              }
-            }
-
-          }
-          .comment-text {
-            font-size: 18px;
-            line-height: 1.5;
-            height: 180px;
-            @media screen and (max-width: v.$mobile) {
-              height: 273px;
-            }
-          }
-
-          .comment-user-name {
-            text-transform: uppercase;
-            font-size: 18px;
-            font-weight: 600;
-          }
-        }
-      }
-    }
-
-    .comments-arrows {
-      @include m.position(row, center, center, center);
-
-      @media screen and (max-width: v.$desktop-small) {
-        justify-content: flex-end;
-      }
-
-      .arrow-container {
-      display: flex;
-      gap: 60px;
-      margin-top: 60px;
-      margin-right: 280px;
-      cursor: pointer;
-
-      .arrows {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 60px;
-        height: 60px;
-        border: 1px solid white;
-        background-color: transparent;
-        color: white;
-      }
-
-      .arrows:hover {
-        background-color: white;
-        color: v.$bg-purple-col;
-      }
-
-      .arr-left {
-        transform: rotate(180deg);
-      }
-
-      @media screen and (max-width: v.$desktop-small) {
-        justify-content: flex-end;
-        margin: 100px 40px 100px 0;
-      }
-
-      @media screen and (max-width: v.$tablet) {
-        display: none;
-      }
-      }
-    }
-
-    .comments-circe-container {
-      display: none;
-
-      @media screen and (max-width: v.$mobile) {
-        width: 92px;
-        height: 8px;
-        margin: 30px 0 50px;
-        @include m.position(row, space-between, center, center);
-      }
-
-      .circle {
-        width: 8px;
-        height: 8px;
-        border: 1px solid #fff;
-        border-radius: 100%;
-      }
-
-      .circle:hover {
-        background-color: #fff;
-      }
-    }
-
-    .leave-feed-button {
-      @include m.btn-template(360px, 74px);
-      background-color: transparent;
-      border: 1px solid white;
-      margin-top: 376px;
-       @media screen and (max-width: v.$desktop-small) {
-        margin: 0 0 0 135px;
-      }
-      @media screen and (max-width: v.$tablet) {
-        margin: 50px 0 0 20px;
-      }
-      @media screen and (max-width: v.$mobile) {
-        @include m.btn-template(300px, 45px);
-        margin: 0;
-      }
-    }
-
-    .leave-feed-button:hover {
-      background-color: v.$bg-blue-col;
-    }
   }
 }
 
@@ -1251,15 +1002,15 @@ body {
       }
 
       @media screen and (max-width: v.$tablet){
-        width: v.$tablet;
+        width: 600px;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         flex: 0 0 600px;
         height: 297px;
       }
 
       @media screen and (max-width: v.$mobile){
-        max-width: 300px;
+        max-width: 353px;
         width: 300px;
         flex-direction: column;
         justify-content: center;
@@ -1281,7 +1032,7 @@ body {
         }
 
         @media screen and (max-width: v.$mobile){
-          height: auto;
+          height: 353px;
         }
 
         img {
@@ -1305,11 +1056,15 @@ body {
           height: 268px;
         }
         @media screen and (max-width: v.$tablet){
+          width: 300px;
           height: 100%;
           padding: 66px 0 60px;
         }
         @media screen and (max-width: v.$mobile){
           width: 300px;
+          height: 100%;
+          padding-top: 15px;
+          padding-bottom: 20px;
         }
 
       }
@@ -1321,6 +1076,9 @@ body {
         @media screen and (max-width: v.$tablet){
           height: 105px;
           padding: 0 25px;
+        }
+        @media screen and (max-width: v.$mobile){
+          padding: 0 30px;
         }
       }
 
@@ -1364,11 +1122,12 @@ body {
       @media screen and (max-width: v.$tablet) {
         width: auto;
         align-self: center;
+        margin: 0;
       }
     .care-title {
       @include m.h2;
 
-      @media screen and (max-width: v.$tablet){
+      @media screen and (max-width: v.$mobile){
         font-size: 26px;
       }
     }
@@ -1379,6 +1138,7 @@ body {
       font-weight: 500;
       margin: 55px 0 100px;
       padding: 0 20px;
+      color: v.$bg-purple-col;
 
       @media screen and (max-width: v.$desktop-small){
         margin-bottom: 50px;
@@ -1388,6 +1148,7 @@ body {
       @media screen and (max-width: v.$tablet) {
         margin-bottom: 70px;
         margin-top: 30px;
+        padding: 0;
       }
       @media screen and (max-width: v.$mobile) {
         font-size: 18px;
@@ -1407,6 +1168,9 @@ body {
         @include m.position(row, space-between, center, center);
         align-self: center;
       }
+      @media screen and (max-width: v.$mobile){
+      margin-top: 30px;
+      }
 
       .circle {
         width: 8px;
@@ -1418,7 +1182,7 @@ body {
       .circle:hover {
         background-color: v.$bg-purple-col;
       }
-    }
+  }
 
   .meet-button:hover {
     background-color: v.$bg-purple-col;
@@ -1435,7 +1199,7 @@ body {
     transition: 0.3s ease;
 
     @media screen and (max-width: v.$tablet){
-      margin: 50px 0 100px;
+      margin: 0;
     }
     @media screen and  (max-width: v.$mobile) {
       @include m.size(300px, 45px);
@@ -1459,9 +1223,23 @@ body {
 
     @media screen and (max-width: v.$tablet){
       width:  v.$tablet;
-      display: none;
+      height: 379px;
+      margin-bottom: 100px;
+      background-size: 130%;
     }
 
+    @media screen and (max-width: v.$mobile){
+      width:  v.$mobile;
+      margin-bottom: 80px;
+      height: 189px;
+    }
+
+}
+
+.hide-text {
+  @media screen and (max-width: v.$mobile) {
+    display: none;
+  }
 }
 
 @media screen and (max-width: v.$desktop-small) {
