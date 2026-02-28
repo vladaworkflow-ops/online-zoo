@@ -2535,6 +2535,83 @@ footer .footer-content .footer-button-donate:hover {
   left: 12%;
 }
 
+.button-donate-now {
+  margin-top: 50px;
+  width: 240px;
+  height: 74px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  gap: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #F58021;
+}
+.button-donate-now:hover {
+  background-color: #D26004;
+}
+@media screen and (max-width: 1200px) {
+  .button-donate-now {
+    position: absolute;
+    bottom: 0;
+    left: 51%;
+    width: 266px;
+    margin-top: 118px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .button-donate-now {
+    width: 290px;
+    margin-top: 0;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 320px) {
+  .button-donate-now {
+    width: 300px;
+    height: 45px;
+  }
+}
+.button-donate-now img {
+  margin-bottom: 0;
+}
+
+.cams-gallery-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 50px 260px 150px;
+}
+
+.about-animal-container {
+  margin: 150px 260px;
+}
+
+.title-cams-animal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: row;
+}
+.title-cams-animal .title-cams {
+  font-size: 54px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #00A092;
+}
+
+.subtitle-cam {
+  font-size: 42px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #00A092;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
