@@ -2606,8 +2606,29 @@ footer .footer-content .footer-button-donate:hover {
   fill: #20113D;
   transition: fill 0.3s ease;
 }
-.side-panel .icon:hover path {
-  /* fill: white; */
+
+.side-panel.menu-animal.highlighted .icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 128px;
+  width: 128px;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+.side-panel.menu-animal.highlighted .icon-box {
+  background-color: white;
+}
+.side-panel.menu-animal.highlighted .icon path {
+  fill: #20113D;
+}
+
+.menu-animal.active.highlighted .icon path {
+  fill: white;
+}
+.menu-animal.active.highlighted .icon-container {
+  border: none;
 }
 
 .side-panel.expandable {
