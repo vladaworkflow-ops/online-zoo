@@ -103,7 +103,9 @@
 }
 
 .about-animal-container {
-  margin: 150px 260px;
+  @include m.position(column, center, center, flex-start);
+  width: 1920px;
+  padding: 150px 260px;
 }
 
 .title-cams-animal {
@@ -120,13 +122,14 @@
 .subtitle-cams-animal {
   @include m.h2(42px, 500, black);
   align-self: center;
-  margin: 30px 0;
+  margin: 100px 0 30px;
 }
 
 .slide-cam-container {
   @include m.position(row, space-between, center, center);
   width: 1214px;
   gap: 13px;
+  margin-right: 40px;
 
   .slide-cam-elements {
     @include m.position(row, space-between, center, center);
@@ -319,15 +322,16 @@
   }
 }
 
-.about-animal {
+.about-animal-live {
   @include m.position(row, space-between, center, flex-start);
   margin: 147px 0 50px;
+  width: 1160px;
 
   .element-parametr {
     font-size: 26px;
-    line-height: 1.3;
+    line-height: 1.2;
     font-weight: 500;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 
   .parametr {
@@ -336,16 +340,47 @@
     line-height: 1.5;
     margin-left: 20px;
   }
+}
 
-  .animal-text {
+.animal-text {
+    width: 1160px;
     font-size: 18px;
     font-weight: 500;
     line-height: 1.5;
-  }
 }
 
 .more-container {
   @include m.position(row, center, center, center);
   height: 80px;
+  cursor: pointer;
+}
+
+.last-element-parametr {
+  @include m.position(row, center, center, center);
+}
+
+.live-cam-button {
+        @include m.position(row, center, center, center);
+        @include m.size(240px, 74px);
+        border-radius: 5px;
+        background-color: transparent;
+        color: v.$bg-orange-col;
+        @include m.font(20px, 600);
+        line-height: 1.5;
+        gap: 10px;
+        transition: 0.3s ease;
+        margin-left: 20px;
+        @media screen and (max-width: v.$desktop-small){
+          margin-bottom: 35px;
+        }
+        @media screen and (max-width: v.$tablet){
+          margin: 0;
+        }
+}
+
+.live-cam-button:hover {
+  align-self: center;
+  background-color: v.$bg-orange-col;
+  color: #fff;
   cursor: pointer;
 }
