@@ -1,16 +1,53 @@
 @use "_variables" as v;
 @use "_mixin" as m;
 
+.zoos-section {
+  @media screen and (max-width: v.$desktop-small) {
+    max-width: 1200px;
+  }
+}
+
+.cams-gallery-container {
+  @include m.position(column, center, center, flex-end);
+  margin: 50px 260px 150px;
+
+  @media screen and (max-width: v.$desktop-small) {
+    width: 1200px;
+    margin: 0;
+    padding: 30px 40px 100px 135px;
+
+    .cams-bg {
+      width: 1025px;
+      height: 760px;
+      overflow: hidden;
+
+      img{
+        width: 110%;
+        height: 110%;
+      }
+    }
+  }
+}
+
 .side-panel {
   position: absolute;
   width: 220px;
   transition: width 0.3s ease;
   background-color: v.$bg-purple-col;
 
+  @media screen and (max-width: v.$desktop-small) {
+    width: 115px;
+  }
+
   .handle-panel {
     @include m.position(row, space-between, center, flex-start);
     height: 80px;
     border-bottom: 1px solid white;
+
+    @media screen and (max-width: v.$desktop-small) {
+      align-content: center;
+      justify-content: center;
+    }
 
     .live-cam {
       @include m.position(row, center, center, center);
@@ -20,6 +57,10 @@
       font-weight: 600;
       background-color: v.$bg-orange-col;
       gap: 10px;
+
+      @media screen and (max-width: v.$desktop-small) {
+        display: none;;
+      }
     }
 
     .handle-side-button {
@@ -46,6 +87,10 @@
     width: 128px;
     border-radius: 100%;
     border: 2px solid white;
+
+    @media screen and (max-width: v.$desktop-small) {
+    border: none;
+    }
   }
 
   .icon-box {
@@ -54,6 +99,10 @@
     width: 120px;
     border-radius: 100%;
     background-color: v.$bg-orange-col;
+
+    @media screen and (max-width: v.$desktop-small) {
+    background-color: transparent;
+    }
   }
 
   .icon-box:hover {
@@ -63,6 +112,10 @@
   .icon path {
     fill: #20113D;
     transition: fill 0.3s ease;
+
+    @media screen and (max-width: v.$desktop-small) {
+      fill: v.$bg-orange-col;
+    }
   }
 }
 
@@ -131,48 +184,15 @@
   }
 }
 
-.button-donate-now {
-            margin-top: 50px;
-            @include m.btn-template(240px, 74px);
-            background-color: v.$bg-orange-col;
-
-            &:hover {
-              background-color: v.$bg-orange-hover;
-            }
-
-            @media screen and (max-width: v.$desktop-small) {
-              position: absolute;
-              bottom: 0;
-              left: 51%;
-              width: 266px;
-              margin-top: 118px;
-            }
-
-            @media screen and (max-width: v.$tablet){
-              width: 290px;
-              margin-top: 0;
-              transform: translateX(-50%);
-            }
-
-            @media screen and (max-width: v.$mobile){
-              width: 300px;
-              height: 45px;
-            }
-
-            img {
-              margin-bottom: 0;
-            }
-}
-
-.cams-gallery-container {
-  @include m.position(column, center, center, flex-end);
-  margin: 50px 260px 150px;
-}
-
 .about-animal-container {
   @include m.position(column, center, center, flex-start);
   width: 1920px;
   padding: 150px 260px;
+
+  @media screen and (max-width: v.$desktop-small) {
+    width: 1160px;
+    padding: 100px 40px;
+  }
 }
 
 .title-cams-animal {
@@ -180,9 +200,48 @@
   height: 74px;
   margin-bottom: 46px;
 
+  @media screen and (max-width: v.$desktop-small) {
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
   .title-cams {
     @include m.h2;
     margin-right: 198px;
+    @media screen and (max-width: v.$desktop-small) {
+      margin: 0;
+    }
+  }
+
+  .button-donate-now-cam {
+    margin-top: 50px;
+    @include m.btn-template(240px, 74px);
+    background-color: v.$bg-orange-col;
+
+    &:hover {
+      background-color: v.$bg-orange-hover;
+    }
+
+    @media screen and (max-width: v.$desktop-small) {
+      @include m.btn-template(240px, 56px);
+      margin: 0;
+      margin-left: 70px;
+    }
+
+    @media screen and (max-width: v.$tablet){
+      width: 290px;
+      margin-top: 0;
+      transform: translateX(-50%);
+    }
+
+    @media screen and (max-width: v.$mobile){
+      width: 300px;
+      height: 45px;
+    }
+
+    img {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -190,6 +249,10 @@
   @include m.h2(42px, 500, black);
   align-self: center;
   margin: 100px 0 30px;
+
+  @media screen and (max-width: v.$desktop-small) {
+    margin-top: 10px;
+  }
 }
 
 .slide-cam-container {
@@ -198,10 +261,25 @@
   gap: 13px;
   margin-right: 40px;
 
+  @media screen and (max-width: v.$desktop-small) {
+    margin-right: 20px;
+    width: 995px;
+  }
+
   .slide-cam-elements {
     @include m.position(row, space-between, center, center);
     width: 1040px;
     gap: 40px;
+
+    @media screen and (max-width: v.$desktop-small) {
+      gap: 20px;
+      width: auto;
+
+      img {
+        width: 265px;
+        height: 209px;
+      }
+    }
   }
 
   .arrows {
@@ -228,7 +306,7 @@
 .animal-container {
   @include m.position(column, center, center, center);
 
-  .donation-block {
+  .cam-donation-block {
     max-width: 1920px;
     width: 100%;
     max-height: 249px;
@@ -239,7 +317,8 @@
     padding: 50px 0;
 
     @media screen and (max-width: v.$desktop-small) {
-      height: 315px;
+      max-width: 1200px;
+      padding: 30px 40px;
     }
     @media screen and (max-width: v.$tablet) {
       height: 460px;
@@ -253,9 +332,16 @@
       @include m.position(row, center, center,center);
       margin: 0;
 
+      @media screen and (max-width: v.$desktop-small) {
+        width: 1120px;
+        justify-content: space-between;
+      }
+
       .donation-text {
         flex: 1;
         min-width: 0;
+        @media screen and (max-width: v.$desktop-small) {
+        }
         @media screen and (max-width: v.$mobile) {
           width: 90%;
         }
@@ -267,8 +353,7 @@
           margin-bottom: 20px;
 
           @media screen and (max-width: v.$desktop-small) {
-            margin-bottom: 30px;
-            padding-right: 100px;
+            padding-right: 0;
           }
 
           @media screen and (max-width: v.$tablet) {
@@ -286,7 +371,7 @@
           line-height: 1.5;
           width: 100%;
           @media screen and (max-width: v.$desktop-small) {
-            width: 100%;
+            
           }
           @media screen and (max-width: v.$tablet) {
             padding: 0 27px;
@@ -375,6 +460,10 @@
   margin-left: 180px;
   box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.25);
 
+  @media screen and (max-width: v.$desktop-small) {
+    margin-left: 0;
+  }
+
   .subtitle-cam {
     @include m.h2(42px, 500);
     margin-bottom: 20px;
@@ -393,6 +482,10 @@
   @include m.position(row, space-between, center, flex-start);
   margin: 147px 0 50px;
   width: 1160px;
+
+  @media screen and (max-width: v.$desktop-small) {
+      width: auto;
+    }
 
   .element-parametr {
     font-size: 26px;
@@ -414,6 +507,10 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 1.5;
+
+    @media screen and (max-width: v.$desktop-small) {
+      width: auto;
+    }
 }
 
 .more-container {
