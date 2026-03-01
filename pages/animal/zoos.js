@@ -1,5 +1,6 @@
 const animalContainer = document.querySelectorAll('.animal-container');
 const menuAnimalContainer = document.querySelectorAll('.menu-animal');
+const sidePanel = document.querySelector('.side-panel');
 
 function handleViewAnimal() {
 
@@ -8,7 +9,7 @@ function handleViewAnimal() {
   });
 
   if (menuAnimalContainer[0]) {
-    menuAnimalContainer[0].classList.add('active');
+    menuAnimalContainer[0].classList.add('active','highlighted');
   }
 
   menuAnimalContainer.forEach((menuEl, index) => {
@@ -21,10 +22,16 @@ function handleViewAnimal() {
         animalContainer[index].style.display = 'flex';
       }
 
-      menuAnimalContainer.forEach(el => el.classList.remove('active'));
-      menuEl.classList.add('active');
+      menuAnimalContainer.forEach(el => el.classList.remove('active','highlighted'));
+      menuEl.classList.add('active','highlighted');
     });
   });
 }
 
 handleViewAnimal();
+
+const toggleButton = document.querySelector('.handle-side-button');
+
+toggleButton.addEventListener('click', () => {
+  sidePanel.classList.toggle('expandable');
+});
