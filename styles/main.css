@@ -2535,6 +2535,77 @@ footer .footer-content .footer-button-donate:hover {
   left: 12%;
 }
 
+.side-panel {
+  position: absolute;
+  width: 220px;
+  background-color: #20113D;
+}
+.side-panel .handle-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 80px;
+  border-bottom: 1px solid white;
+}
+.side-panel .handle-panel .live-cam {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 34px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  background-color: #F58021;
+  gap: 10px;
+}
+.side-panel .handle-panel .handle-side-button {
+  align-self: center;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.side-panel .menu-animal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 171px;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.side-panel .icon-container:hover {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 128px;
+  width: 128px;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+.side-panel .icon-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+  background-color: #F58021;
+}
+.side-panel .icon-box:hover {
+  background-color: white;
+}
+.side-panel .icon path {
+  fill: #20113D;
+  transition: fill 0.3s ease;
+}
+.side-panel .icon:hover path {
+  /* fill: white; */
+}
+
 .button-donate-now {
   margin-top: 50px;
   width: 240px;
@@ -2595,21 +2666,298 @@ footer .footer-content .footer-button-donate:hover {
 .title-cams-animal {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: row;
+  justify-content: center;
+  align-items: flex-end;
+  height: 74px;
+  margin-bottom: 46px;
 }
 .title-cams-animal .title-cams {
   font-size: 54px;
   font-weight: 600;
   text-transform: uppercase;
   color: #00A092;
+  margin-right: 198px;
 }
 
-.subtitle-cam {
+.subtitle-cams-animal {
+  font-size: 42px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: black;
+  align-self: center;
+  margin: 30px 0;
+}
+
+.slide-cam-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1214px;
+  gap: 13px;
+}
+.slide-cam-container .slide-cam-elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1040px;
+  gap: 40px;
+}
+.slide-cam-container .arrows {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  color: black;
+}
+.slide-cam-container .arrows:hover {
+  background-color: #20113D;
+  color: #fff;
+}
+.slide-cam-container .arr-left {
+  transform: rotate(180deg);
+}
+
+.animal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.animal-container .donation-block {
+  max-width: 1920px;
+  width: 100%;
+  max-height: 249px;
+  height: fit-content;
+  background-color: #20113D;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 50px 0;
+}
+@media screen and (max-width: 1200px) {
+  .animal-container .donation-block {
+    height: 315px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .animal-container .donation-block {
+    height: 460px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .animal-container .donation-block {
+    height: 445px;
+  }
+}
+.animal-container .donation-block .donation-content {
+  width: 72.9166666667%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.animal-container .donation-block .donation-content .donation-text {
+  flex: 1;
+  min-width: 0;
+}
+@media screen and (max-width: 320px) {
+  .animal-container .donation-block .donation-content .donation-text {
+    width: 90%;
+  }
+}
+.animal-container .donation-block .donation-content .donation-text h3 {
+  font-size: 42px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .animal-container .donation-block .donation-content .donation-text h3 {
+    margin-bottom: 30px;
+    padding-right: 100px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .animal-container .donation-block .donation-content .donation-text h3 {
+    margin-bottom: 30px;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .animal-container .donation-block .donation-content .donation-text h3 {
+    font-size: 26px;
+  }
+}
+.animal-container .donation-block .donation-content .donation-text .donation-text-paragraph {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .animal-container .donation-block .donation-content .donation-text .donation-text-paragraph {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .animal-container .donation-block .donation-content .donation-text .donation-text-paragraph {
+    padding: 0 27px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .animal-container .donation-block .donation-content .donation-text .donation-text-paragraph {
+    padding: 0;
+  }
+}
+.animal-container .donation-block .donation-content .donation-button-container:hover .icon-wrapper {
+  background-color: #D26004;
+}
+.animal-container .donation-block .donation-content .donation-button-container h4 {
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.animal-container .donation-block .donation-content .donation-button-container button {
+  width: 320px;
+  height: 74px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  gap: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  justify-content: end;
+  gap: 20px;
+  background-color: inherit;
+  border: 1px solid #fff;
+}
+.animal-container .donation-block .donation-content .donation-button-container button .icon-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  height: 74px;
+  background-color: #F58021;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  border-left: none;
+}
+.animal-container .donation-block .donation-content .donation-button-container button .icon-wrapper img {
+  width: 25px;
+  height: 22;
+  max-width: 100%;
+  max-height: 100%;
+}
+@media screen and (max-width: 320px) {
+  .animal-container .donation-block .donation-content .donation-button-container button .icon-wrapper {
+    width: 60px;
+    height: 45px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .animal-container .donation-block .donation-content .donation-button-container button {
+    width: 365px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .animal-container .donation-block .donation-content .donation-button-container button {
+    font-size: 16px;
+    font-weight: 600;
+    width: 300px;
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .animal-container .donation-block .donation-content {
+    width: 83.3333333333%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .animal-container .donation-block .donation-content {
+    width: 640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .animal-container .donation-block .donation-content {
+    width: 320px;
+  }
+}
+
+.cam-block-info {
+  width: 1040px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 46px 60px 50px;
+  margin-left: 180px;
+  box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.25);
+}
+.cam-block-info .subtitle-cam {
   font-size: 42px;
   font-weight: 500;
   text-transform: uppercase;
   color: #00A092;
+  margin-bottom: 20px;
+}
+.cam-block-info .subtitle-cam-paragraph {
+  font-size: 26px;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.about-animal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 147px 0 50px;
+}
+.about-animal .element-parametr {
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+.about-animal .parametr {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-left: 20px;
+}
+.about-animal .animal-text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.more-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  cursor: pointer;
 }
 
 .contact {
