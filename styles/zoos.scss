@@ -4,6 +4,7 @@
 .side-panel {
   position: absolute;
   width: 220px;
+  transition: width 0.3s ease;
   background-color: v.$bg-purple-col;
   .handle-panel {
     @include m.position(row, space-between, center, flex-start);
@@ -25,6 +26,10 @@
       margin-right: 30px;
       cursor: pointer;
     }
+  }
+
+  .about-icon-animal {
+    display: none;
   }
 
   .menu-animal {
@@ -61,6 +66,43 @@
 
   .icon:hover path {
     /* fill: white; */
+  }
+}
+
+.side-panel.expandable {
+  width: 300px;
+
+  .about-icon-animal {
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #fff;
+  }
+
+  .handle-side-button {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+
+  .icon-container:hover {
+    @include m.position(row, center, center, center);
+    height: 128px;
+    width: 128px;
+    border: none;
+  }
+
+  .icon-box {
+    background-color: transparent;
+  }
+
+  .icon path {
+    fill: v.$bg-orange-col;
+    transition: fill 0.3s ease;
+  }
+
+  .icon:hover path {
+    fill: white;
   }
 }
 

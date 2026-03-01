@@ -28,3 +28,10 @@ function handleViewAnimal() {
 }
 
 handleViewAnimal();
+
+const sidePanel = document.querySelector('.side-panel');
+const toggleButton = document.querySelector('.handle-side-button');
+
+toggleButton.addEventListener('click', () => {
+  sidePanel.classList.toggle('expandable');
+});
