@@ -2660,7 +2660,12 @@ footer .footer-content .footer-button-donate:hover {
 }
 
 .about-animal-container {
-  margin: 150px 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 1920px;
+  padding: 150px 260px;
 }
 
 .title-cams-animal {
@@ -2685,7 +2690,7 @@ footer .footer-content .footer-button-donate:hover {
   text-transform: uppercase;
   color: black;
   align-self: center;
-  margin: 30px 0;
+  margin: 100px 0 30px;
 }
 
 .slide-cam-container {
@@ -2695,6 +2700,7 @@ footer .footer-content .footer-button-donate:hover {
   align-items: center;
   width: 1214px;
   gap: 13px;
+  margin-right: 40px;
 }
 .slide-cam-container .slide-cam-elements {
   display: flex;
@@ -2926,26 +2932,29 @@ footer .footer-content .footer-button-donate:hover {
   line-height: 1.3;
 }
 
-.about-animal {
+.about-animal-live {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   margin: 147px 0 50px;
+  width: 1160px;
 }
-.about-animal .element-parametr {
+.about-animal-live .element-parametr {
   font-size: 26px;
-  line-height: 1.3;
+  line-height: 1.2;
   font-weight: 500;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
-.about-animal .parametr {
+.about-animal-live .parametr {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.5;
   margin-left: 20px;
 }
-.about-animal .animal-text {
+
+.animal-text {
+  width: 1160px;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.5;
@@ -2957,6 +2966,48 @@ footer .footer-content .footer-button-donate:hover {
   justify-content: center;
   align-items: center;
   height: 80px;
+  cursor: pointer;
+}
+
+.last-element-parametr {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.live-cam-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 74px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #F58021;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  gap: 10px;
+  transition: 0.3s ease;
+  margin-left: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .live-cam-button {
+    margin-bottom: 35px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .live-cam-button {
+    margin: 0;
+  }
+}
+
+.live-cam-button:hover {
+  align-self: center;
+  background-color: #F58021;
+  color: #fff;
   cursor: pointer;
 }
 
