@@ -8,6 +8,10 @@
     width: v.$desktop-small;
   }
 
+  @media screen and (max-width: v.$tablet){
+    width: v.$tablet;
+  }
+
   @media screen and (max-width: v.$mobile){
     width: v.$mobile;
   }
