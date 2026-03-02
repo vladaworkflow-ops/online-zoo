@@ -1,0 +1,39 @@
+function createCarousel({
+  containerSelector,
+  slideSelector,
+  prevBtnSelector,
+  nextBtnSelector
+}) {
+  const container = document.querySelector(containerSelector);
+  const prevBtn = document.querySelector(prevBtnSelector);
+  const nextBtn = document.querySelector(nextBtnSelector);
+
+  function moveRight() {
+    const firstSlide = container.querySelector(slideSelector);
+    container.appendChild(firstSlide);
+  }
+
+  function moveLeft() {
+    const slides = container.querySelectorAll(slideSelector);
+    const lastSlide = slides[slides.length - 1];
+    container.prepend(lastSlide);
+  }
+
+  nextBtn.addEventListener('click', moveRight);
+  prevBtn.addEventListener('click', moveLeft);
+}
+
+createCarousel({
+  containerSelector: '.meet-slide-container',
+  slideSelector: '.slide-animal-card-link',
+  prevBtnSelector: '#move-slide-left',
+  nextBtnSelector: '#move-slide-right'
+});
+
+createCarousel({
+  containerSelector: '.comments-container',
+  slideSelector: '.comments-content',
+  prevBtnSelector: '#comment-slide-left',
+  nextBtnSelector: '#comment-slide-right'
+});
+
