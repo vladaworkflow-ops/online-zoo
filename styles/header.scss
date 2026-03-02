@@ -119,6 +119,10 @@ header {
     @include m.size(30px, 30px);
     @include m.position(column, space-between, center, center);
   }
+
+  @media screen and (max-width: v.$mobile) {
+    @include m.size(22px, 30px);
+  }
 }
 
 .burger-toggle {

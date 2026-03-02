@@ -130,8 +130,8 @@
 }
 
 .marker-3 {
-  top: 40%;
-  left: 20%;
+  top: 43%;
+  left: 19%;
 }
 
 .marker-4 {
@@ -145,8 +145,12 @@
 }
 
 .marker-6 {
-  top: 40%;
-  left: 67%;
+  top: 36%;
+  left: 66%;
+   @media screen and (max-width: v.$desktop-small){
+    top: 30%;
+    left: 69%;;
+  }
 }
 
 .marker-7 {
@@ -157,4 +161,7 @@
 .marker-8 {
   top: 47%;
   left: 12%;
+  @media screen and (max-width: v.$desktop-small){
+    top: 41%;
+  }
 }
