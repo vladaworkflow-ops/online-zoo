@@ -634,6 +634,7 @@ body {
         line-height: 1.5;
         gap: 10px;
         transition: 0.3s ease;
+        cursor: pointer;
         @media screen and (max-width: v.$desktop-small){
           margin-bottom: 35px;
         }
@@ -1090,6 +1091,7 @@ body {
         @include m.size(142px, 74px);
         border-radius: 5px;
         gap: 10px;
+        cursor: pointer;
 
         &:hover {
           background-color: v.$bg-orange-col;
