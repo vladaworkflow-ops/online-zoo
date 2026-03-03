@@ -1,3 +1,20 @@
+const openModalTogetherBtn = document.querySelectorAll('.cam-button');
+const overlay = document.querySelector('.overlay');
+const modal = document.querySelector('.modal-together-container');
+const closeModalBtn = document.querySelector('.close-modal-together');
+
+openModalTogetherBtn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    overlay.classList.add('active-modal');
+    modal.classList.add('active-modal');
+  });
+});
+
+closeModalBtn.addEventListener('click', () => {
+  overlay.classList.remove('active-modal');
+  modal.classList.remove('active-modal');
+});
+
 function createCarousel({
   containerSelector,
   slideSelector,

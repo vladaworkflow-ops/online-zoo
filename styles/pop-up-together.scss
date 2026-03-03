@@ -1,0 +1,88 @@
+@use "_variables" as v;
+@use "_mixin" as m;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.overlay.active-modal,
+.modal-together-container.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-together-container {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  @include m.position(column, flex-end, center, center);
+  @include m.size(1160px, 815px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  background-image: url("../assets/images/together-bg.png");
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  z-index: 1001;
+  padding-bottom: 50px;
+
+  .close-modal-together {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 100%;
+    height: 60px;
+    @include m.position(row, flex-end, center, center);
+    cursor: pointer;
+  }
+
+  .modal-together-content {
+    padding: 0 80px 0;
+
+    .modal-together-text {
+      padding: 0 160px 50px;
+
+      .tittle-modal-together {
+        @include m.h2;
+        margin-bottom: 30px;
+        color: v.$bg-orange-col;
+      }
+
+      .paragraph-together {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+  }
+  .donate-btn-container {
+    @include m.position(row, space-between, center, center);
+    width: 100%;
+    height: 65px;
+    gap: 40px;
+    padding: 0 80px;
+
+    .together-donate-btn {
+      width: 120px;
+      height: 65px;
+      border-radius: 5px;
+      background-color: v.$bg-blue-col;
+      color: white;
+
+      &:hover{
+        background-color: v.$bg-blue-hover;
+      }
+    }
+
+    .together-donate-btn--wide {
+      width: 200px;
+    }
+  }
+}
