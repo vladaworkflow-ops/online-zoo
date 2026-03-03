@@ -2054,7 +2054,7 @@ header {
 .burger-container {
   position: relative;
   display: none;
-  z-index: 1100;
+  z-index: 999;
 }
 @media screen and (max-width: 640px) {
   .burger-container {
@@ -3817,12 +3817,27 @@ footer .footer-content .footer-button-donate:hover {
   z-index: 1001;
   padding-bottom: 50px;
 }
+@media screen and (max-width: 1200px) {
+  .modal-together-container {
+    width: 1121px;
+    height: 700px;
+    background-size: 100% 312px;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .modal-together-container {
+    width: 600px;
+    height: 643px;
+    background-size: 100% 167px;
+    padding-bottom: 40px;
+  }
+}
 .modal-together-container .close-modal-together {
   position: absolute;
-  top: 0;
+  top: 30px;
   right: 30px;
   width: 100%;
-  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -3830,10 +3845,20 @@ footer .footer-content .footer-button-donate:hover {
   cursor: pointer;
 }
 .modal-together-container .modal-together-content {
-  padding: 0 80px 0;
+  padding: 0 80px;
+}
+@media screen and (max-width: 1200px) {
+  .modal-together-container .modal-together-content {
+    padding: 0;
+  }
 }
 .modal-together-container .modal-together-content .modal-together-text {
   padding: 0 160px 50px;
+}
+@media screen and (max-width: 1200px) {
+  .modal-together-container .modal-together-content .modal-together-text {
+    padding: 0;
+  }
 }
 .modal-together-container .modal-together-content .modal-together-text .tittle-modal-together {
   font-size: 54px;
@@ -3843,9 +3868,31 @@ footer .footer-content .footer-button-donate:hover {
   margin-bottom: 30px;
   color: #F58021;
 }
+@media screen and (max-width: 1200px) {
+  .modal-together-container .modal-together-content .modal-together-text .tittle-modal-together {
+    padding: 0 202px 0 270px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .modal-together-container .modal-together-content .modal-together-text .tittle-modal-together {
+    font-size: 42px;
+    padding: 0 57px 0 57px;
+  }
+}
 .modal-together-container .modal-together-content .modal-together-text .paragraph-together {
   font-size: 18px;
   line-height: 1.5;
+}
+@media screen and (max-width: 1200px) {
+  .modal-together-container .modal-together-content .modal-together-text .paragraph-together {
+    text-align: center;
+    padding: 0 255px 30px 290px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .modal-together-container .modal-together-content .modal-together-text .paragraph-together {
+    padding: 0 57px 20px 57px;
+  }
 }
 .modal-together-container .donate-btn-container {
   display: flex;
@@ -3857,6 +3904,20 @@ footer .footer-content .footer-button-donate:hover {
   gap: 40px;
   padding: 0 80px;
 }
+@media screen and (max-width: 1200px) {
+  .modal-together-container .donate-btn-container {
+    padding: 0 40px 0 80px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .modal-together-container .donate-btn-container {
+    justify-content: center;
+    padding: 0 60px 0 60px;
+    gap: 20px;
+    flex-wrap: wrap;
+    height: auto;
+  }
+}
 .modal-together-container .donate-btn-container .together-donate-btn {
   width: 120px;
   height: 65px;
@@ -3867,8 +3928,18 @@ footer .footer-content .footer-button-donate:hover {
 .modal-together-container .donate-btn-container .together-donate-btn:hover {
   background-color: #05786E;
 }
+@media screen and (max-width: 640px) {
+  .modal-together-container .donate-btn-container .together-donate-btn {
+    width: 135px;
+  }
+}
 .modal-together-container .donate-btn-container .together-donate-btn--wide {
   width: 200px;
+}
+@media screen and (max-width: 640px) {
+  .modal-together-container .donate-btn-container .together-donate-btn--wide {
+    width: 135px;
+  }
 }
 
 * {
