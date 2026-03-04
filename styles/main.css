@@ -3798,6 +3798,25 @@ footer .footer-content .footer-button-donate:hover {
   border-radius: 5px;
   z-index: 1001;
 }
+@media screen and (max-width: 640px) {
+  .modal-donation-container {
+    width: 600px;
+    height: auto;
+    max-height: 90%;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modal-donation-container {
+    width: 300px;
+    height: 100auto;
+    border-radius: 0;
+    max-height: 90%;
+  }
+}
 .modal-donation-container .header-modal-donation {
   height: 135px;
   width: 100%;
@@ -3807,9 +3826,27 @@ footer .footer-content .footer-button-donate:hover {
   justify-content: center;
   align-items: center;
   font-size: 42px;
+  border-radius: 5px;
   color: white;
   background-color: #F58021;
   text-transform: uppercase;
+}
+@media screen and (max-width: 640px) {
+  .modal-donation-container .header-modal-donation {
+    min-width: 0;
+    max-width: 600px;
+    height: 99px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modal-donation-container .header-modal-donation {
+    width: 300px;
+    height: 117px;
+    max-width: 300px;
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+  }
 }
 .modal-donation-container .header-text {
   height: 87px;
@@ -3825,10 +3862,38 @@ footer .footer-content .footer-button-donate:hover {
   padding-left: 123px;
   padding-bottom: 10px;
 }
+@media screen and (max-width: 640px) {
+  .modal-donation-container .header-text {
+    margin-left: 0;
+    padding-left: 77px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modal-donation-container .header-text {
+    justify-content: center;
+    padding-left: 0;
+    height: 47px;
+    padding-bottom: 0;
+  }
+}
 .modal-donation-container .donation-amount-container {
   width: 680px;
   height: auto;
   margin: 40px 120px 0;
+}
+@media screen and (max-width: 640px) {
+  .modal-donation-container .donation-amount-container {
+    width: 600px;
+    margin: 0;
+    padding: 40px 77px 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modal-donation-container .donation-amount-container {
+    width: 300px;
+    padding: 30px 10px 0;
+    text-align: center;
+  }
 }
 .modal-donation-container .donation-amount-container .amount-text {
   font-size: 18px;
@@ -3848,6 +3913,18 @@ footer .footer-content .footer-button-donate:hover {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 640px) {
+  .modal-donation-container .donation-amount-container .donate-btn-container {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 40px 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modal-donation-container .donation-amount-container .donate-btn-container {
+    gap: 20px;
+  }
+}
 .modal-donation-container .donation-amount-container .donate-btn-container .together-donate-btn {
   width: 80px;
   height: 100%;
@@ -3855,6 +3932,18 @@ footer .footer-content .footer-button-donate:hover {
   color: white;
   border-radius: 5px;
   cursor: pointer;
+}
+@media screen and (max-width: 640px) {
+  .modal-donation-container .donation-amount-container .donate-btn-container .together-donate-btn {
+    width: 135px;
+    height: 65px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modal-donation-container .donation-amount-container .donate-btn-container .together-donate-btn {
+    width: 130px;
+    height: 50px;
+  }
 }
 .modal-donation-container .donation-amount-container .donate-btn-container .together-donate-btn:hover {
   background-color: #05786E;
@@ -3864,26 +3953,76 @@ footer .footer-content .footer-button-donate:hover {
   gap: 40px;
   margin: 40px 0;
 }
+@media screen and (max-width: 640px) {
+  .modal-donation-container .donation-amount-container .other-amount-input-container {
+    gap: 20px;
+    margin-bottom: 49px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .modal-donation-container .donation-amount-container .other-amount-input-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
 .modal-donation-container .donation-amount-container .other-amount-input-container .other-sum-input {
   border: 1px solid black;
   border-radius: 5px;
   width: 200px;
+}
+@media screen and (max-width: 640px) {
+  .modal-donation-container .donation-amount-container .other-amount-input-container .other-sum-input {
+    gap: 212px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modal-donation-container .donation-amount-container .other-amount-input-container .other-sum-input {
+    width: 130px;
+  }
 }
 .modal-donation-container .donation-amount-container .select-container {
   display: flex;
   gap: 40px;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 640px) {
+  .modal-donation-container .donation-amount-container .select-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modal-donation-container .donation-amount-container .select-container {
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
 .modal-donation-container .donation-amount-container .select-container .select-pets {
   border: 1px solid black;
   border-radius: 5px;
   width: 440px;
+}
+@media screen and (max-width: 640px) {
+  .modal-donation-container .donation-amount-container .select-container .select-pets {
+    width: 100%;
+    height: 65px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modal-donation-container .donation-amount-container .select-container .select-pets {
+    height: 50px;
+  }
 }
 .modal-donation-container .donation-amount-container .container-checkbox {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+}
+@media screen and (max-width: 320px) {
+  .modal-donation-container .donation-amount-container .container-checkbox {
+    flex-direction: column-reverse;
+  }
 }
 .modal-donation-container .donation-amount-container .container-checkbox .monthly-recurring {
   width: 30px;
@@ -3896,6 +4035,12 @@ footer .footer-content .footer-button-donate:hover {
   line-height: 1.5;
   font-weight: 400;
 }
+@media screen and (max-width: 320px) {
+  .modal-donation-container .donation-amount-container .container-checkbox .monthly-recurring-label {
+    font-size: 16px;
+    padding: 0 20px 10px;
+  }
+}
 .modal-donation-container .donation-amount-container .popup-btn-container {
   height: 74px;
   display: flex;
@@ -3903,6 +4048,19 @@ footer .footer-content .footer-button-donate:hover {
   justify-content: space-between;
   align-items: center;
   margin: 50px 0;
+}
+@media screen and (max-width: 640px) {
+  .modal-donation-container .donation-amount-container .popup-btn-container {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modal-donation-container .donation-amount-container .popup-btn-container {
+    height: auto;
+    flex-direction: column-reverse;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
 }
 .modal-donation-container .donation-amount-container .popup-btn-container .popup-circe-container {
   display: flex;
@@ -3936,6 +4094,17 @@ footer .footer-content .footer-button-donate:hover {
   cursor: pointer;
   margin-right: 105px;
 }
+@media screen and (max-width: 640px) {
+  .modal-donation-container .donation-amount-container .popup-btn-container .popup-btn-next {
+    margin-right: 0;
+    width: 212px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modal-donation-container .donation-amount-container .popup-btn-container .popup-btn-next {
+    height: 50px;
+  }
+}
 .modal-donation-container .donation-amount-container .popup-btn-container .popup-btn-next:hover {
   background-color: #05786E;
 }
@@ -3957,6 +4126,17 @@ footer .footer-content .footer-button-donate:hover {
   color: white;
   cursor: pointer;
 }
+@media screen and (max-width: 640px) {
+  .other-amount-btn, .special-pet-btn {
+    width: 212px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .other-amount-btn, .special-pet-btn {
+    width: 209px;
+    height: 50px;
+  }
+}
 .other-amount-btn:hover, .special-pet-btn:hover {
   background-color: #05786E;
 }
@@ -3969,6 +4149,13 @@ footer .footer-content .footer-button-donate:hover {
   visibility: hidden;
   transition: 0.3s;
   z-index: 1000;
+}
+@media screen and (max-width: 640px) {
+  .overlay .overlay {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+  }
 }
 
 .overlay.active-modal,
