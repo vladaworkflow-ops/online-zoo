@@ -2,7 +2,7 @@ const togetherBtn = document.querySelectorAll('.cam-button');
 const overlay = document.querySelector('.overlay');
 const modal = document.querySelector('.modal-together-container');
 const closeModalBtn = document.querySelector('.close-modal-together');
-const donationBtn = document.querySelectorAll('#donation-btn');
+const donationBtn = document.querySelectorAll('.donation-btn');
 const modalDonation = document.querySelector('.modal-donation-container');
 
 donationBtn.forEach(btn => {
