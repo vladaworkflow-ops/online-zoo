@@ -9,6 +9,14 @@
   visibility: hidden;
   transition: 0.3s;
   z-index: 1000;
+
+  @media screen and (max-width: v.$tablet) {
+  .overlay {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+  }
+}
 }
 
 .overlay.active-modal,
