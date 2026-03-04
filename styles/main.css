@@ -4077,7 +4077,7 @@ footer .footer-content .footer-button-donate:hover {
   border: 1px solid #00A092;
   cursor: pointer;
 }
-.modal-donation-container .donation-amount-container .popup-btn-container .popup-circe-container .circle:hover {
+.modal-donation-container .donation-amount-container .popup-btn-container .popup-circe-container .circle:first-child {
   background-color: #00A092;
 }
 .modal-donation-container .donation-amount-container .popup-btn-container .popup-btn-next {

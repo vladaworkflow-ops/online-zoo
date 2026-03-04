@@ -261,7 +261,7 @@
           border: 1px solid v.$bg-blue-col;
           cursor: pointer;
 
-          &:hover {
+          &:first-child {
             background-color: v.$bg-blue-col;
           }
         }
