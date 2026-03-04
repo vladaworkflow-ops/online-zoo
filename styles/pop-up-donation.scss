@@ -1,0 +1,173 @@
+@use "_variables" as v;
+@use "_mixin" as m;
+
+.modal-donation-container {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  @include m.position(column, flex-start, center, center);
+  @include m.size(920px, 819px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 5px;
+  z-index: 1001;
+
+  @media screen and (max-width: v.$desktop-small) {
+  }
+
+  @media screen and (max-width: v.$tablet) {
+  }
+
+  .header-modal-donation {
+    height: 135px;
+    width: 100%;
+    min-width: 920px;
+    @include m.position(row, center, center, center);
+    font-size: 42px;
+    color: white;
+    background-color: v.$bg-orange-col;
+    text-transform: uppercase;
+  }
+
+  .header-text {
+    height: 87px;
+    width: 100%;
+    @include m.position(row, flex-start, center, flex-end);
+    border-bottom: 1px solid #A4A8AE;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 600;
+    padding-left: 123px;
+    padding-bottom: 10px;
+  }
+
+  .donation-amount-container {
+    width: 680px;
+    height: auto;
+    margin: 40px 120px 0;
+
+    .amount-text {
+      font-size: 18px;
+      line-height: 1.5;
+      font-weight: 400;
+      margin-bottom: 10px;
+
+      span {
+        color: v.$bg-blue-col;
+      }
+    }
+
+    .donate-btn-container {
+      width: 100%;
+      height: 65px;
+      gap: 40px;
+      @include m.position(row, space-between, center, center);
+
+      .together-donate-btn {
+        width: 80px;
+        height: 100%;
+        background-color: #80CFC8;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover{
+          background-color: v.$bg-blue-hover;
+        }
+      }
+    }
+
+    .other-amount-input-container {
+      display: flex;
+      gap: 40px;
+      margin: 40px 0;
+
+      .other-sum-input {
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 200px;
+      }
+    }
+
+    .select-container {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 40px;
+
+      .select-pets {
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 440px;
+      }
+    }
+
+    .container-checkbox {
+      @include m.position(row, flex-start, center, center);
+
+      .monthly-recurring {
+      width: 30px;
+      height: 30px;
+      border: 1px solid black;
+      margin-right: 20px;
+      }
+
+      .monthly-recurring-label {
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 400;
+      }
+    }
+
+    .popup-btn-container {
+      height: 74px;
+      @include m.position(row, space-between, center, center);
+      margin: 50px 0;
+
+      .popup-circe-container {
+        @include m.position(row, space-between, center, center);
+        width: 50px;
+        height: 10px;
+
+        .circle {
+          height: 100%;
+          width: 10px;
+          border-radius: 100%;
+          border: 1px solid v.$bg-blue-col;
+          cursor: pointer;
+
+          &:hover {
+            background-color: v.$bg-blue-col;
+          }
+        }
+      }
+
+      .popup-btn-next {
+        @include m.position(row, center, center, center);
+        @include m.size(200px, 74px);
+        text-transform: uppercase;
+        background-color: #80CFC8;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        margin-right: 105px;
+
+        &:hover {
+          background-color: v.$bg-blue-hover;
+        }
+      }
+    }
+  }
+}
+
+.other-amount-btn, .special-pet-btn {
+  @include m.btn-template(200px, 65px);
+  background-color: #80CFC8;
+  color: white;
+  cursor: pointer;
+
+  &:hover{
+    background-color: v.$bg-blue-hover;
+  }
+}
