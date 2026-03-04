@@ -1,14 +1,32 @@
-const openModalTogetherBtn = document.querySelectorAll('.cam-button');
+const togetherBtn = document.querySelectorAll('.cam-button');
 const overlay = document.querySelector('.overlay');
 const modal = document.querySelector('.modal-together-container');
 const closeModalBtn = document.querySelector('.close-modal-together');
+const donationBtn = document.querySelectorAll('#donation-btn');
+const modalDonation = document.querySelector('.modal-donation-container');
 
-openModalTogetherBtn.forEach((btn) => {
+donationBtn.forEach(btn => {
+  btn.addEventListener('click', () => {
+    overlay.classList.add('active-modal');
+    modalDonation.classList.add('active-modal');
+  })
+})
+
+togetherBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
     overlay.classList.add('active-modal');
     modal.classList.add('active-modal');
   });
 });
+
+overlay.addEventListener('click', () => {
+  overlay.classList.remove('active-modal');
+
+  if (modal) {
+    modal.classList.remove('active-modal');
+  }
+  modalDonation.classList.remove('active-modal');
+})
 
 closeModalBtn.addEventListener('click', () => {
   overlay.classList.remove('active-modal');

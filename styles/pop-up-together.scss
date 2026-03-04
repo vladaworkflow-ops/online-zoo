@@ -12,7 +12,8 @@
 }
 
 .overlay.active-modal,
-.modal-together-container.active-modal {
+.modal-together-container.active-modal,
+.modal-donation-container.active-modal{
   opacity: 1;
   visibility: visible;
 }
@@ -115,7 +116,6 @@
         flex-wrap: wrap;
         height: auto;
      }
-    
 
     .together-donate-btn {
       width: 120px;
@@ -135,6 +135,7 @@
 
     .together-donate-btn--wide {
       width: 200px;
+      text-transform: uppercase;
       @media screen and (max-width: v.$tablet) {
         width: 135px;
       }
