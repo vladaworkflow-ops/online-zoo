@@ -1,0 +1,64 @@
+@use "variables.scss";
+@use "landing.scss";
+@use "header.scss";
+@use "footer.scss";
+@use "map.scss";
+@use "zoos.scss";
+@use "contact.scss";
+@use "_mixin.scss";
+@use "pop-up-donation.scss";
+@use "pop-up-together.scss";
+
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,*:before,*:after{
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;box-shadow: none;}
+a:visited{color: inherit;}
+a{ text-decoration: none; color: inherit; }
+
+ul, li {
+  list-style: none;
+}
+
+input,
+textarea {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border: none;
+  outline: none;
+  background: none;
+
+  font: inherit;
+  color: inherit;
+
+  padding: 0;
+  margin: 0;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+input::placeholder,
+textarea {
+  color: gray;
+  opacity: 1;
+}
+
+button {
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}

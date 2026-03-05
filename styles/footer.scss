@@ -1,0 +1,167 @@
+@use "_variables" as v;
+@use "_mixin" as m;
+
+footer {
+  max-width: 1920px;
+  width: 1920px;
+  height: 329px;
+  background-color: v.$bg-purple-col;
+  color: #fff;
+  @include m.position(row, center, center);
+  @include m.font(v.$fz, 600);
+
+  .footer-content {
+    width: 1400px;
+    border-bottom: 1px solid #fff;
+    @include m.position(row, space-between, center);
+    align-items: center;
+    padding-bottom: 70px;
+    margin-top: 70px;
+
+    .footer-logos{
+      width: 414px;
+      @include m.position(row, space-between, center);
+      @media screen and (max-width: v.$desktop-small) {
+        width: 344px;
+      }
+      @media screen and (max-width: v.$tablet) {
+        width: 440px;
+      }
+      @media screen and (max-width: v.$mobile) {
+        width: 100%;
+        @include m.position(column, center, space-between);
+        align-items: center;
+        gap: 30px;
+      }
+    }
+
+    .footer-menu {
+      @include m.position(row, space-between, center);
+      gap: 46px;
+
+      li a {
+        font-size: 18px;
+        text-transform: uppercase;
+        @media screen and (max-width: v.$mobile) {
+          @include m.font(16px, 600);
+        }
+      }
+
+      @media screen and (max-width: v.$desktop-small)  {
+        gap: 20px; 
+      }
+
+      @media screen and (max-width: v.$tablet) {
+        gap: 53px;
+      }
+
+      @media screen and (max-width: v.$mobile) {
+        gap: 15px;
+      }
+    }
+
+    .footer-menu li:hover {
+      color: v.$bg-orange-col;
+    }
+
+    .footer-button-donate {
+      border: 1px solid #fff;
+      background-color: transparent;
+      @include m.btn-template;
+      @media screen and  (max-width: v.$mobile) {
+        @include m.size(300px, 45px);
+        text-transform: none;
+      }
+    }
+
+    @media screen and (max-width: v.$desktop-small) {
+      max-width: v.$desktop-small;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media screen and (max-width: v.$tablet) {
+      max-width: v.$tablet;
+      padding: 50px 0;
+      margin: 0;
+      gap: 50px;
+      @include m.position(column, center, center);
+      align-items: center;
+    }
+
+    @media screen and  (max-width: v.$mobile) {
+      max-width: v.$mobile;
+      border-bottom: none;
+      padding: 50px 0 30px;
+      gap: 30px;
+    }
+  }
+
+  .footer-contacts {
+    @include m.position(row, space-between, center);
+    align-items: center;
+    margin-top: 37px;
+    font-weight: 400;
+
+    .autors {
+      @include m.position(row, center, center);
+      gap: 50px;
+      text-align: center;
+      @media screen and (max-width: v.$mobile) {
+        width: 100%;
+        @include m.position(column, center, center);
+        align-items: center;
+        padding-top: 30px;
+        border-top: 1px solid #fff;
+        gap: 30px;
+      }
+    }
+
+    #footer-social-media-icons {
+      gap: 40px;
+
+      ul{
+        @media screen and (max-width: v.$tablet) {
+          display: flex;
+          gap: 50px;
+          }
+      }
+
+      @media screen and (max-width: v.$tablet) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (max-width: v.$desktop-small)  {
+      padding: 0 40px;
+    }
+
+    @media screen and (max-width: v.$tablet) {
+      @include m.position(column-reverse, center, center);
+      align-items: center;
+      padding: 50px 0 0;
+      margin: 0;
+    }
+
+    @media screen and (max-width: v.$mobile) {
+      max-width: v.$mobile;
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: v.$desktop-small) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: v.$tablet) {
+    height: 545px;
+  }
+
+  @media screen and (max-width: v.$mobile) {
+    height: 710px;
+  }
+}
+
+footer .footer-content .footer-button-donate:hover {
+  background-color: v.$bg-blue-col;
+}
