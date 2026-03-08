@@ -1,0 +1,77 @@
+@use "_variables" as v;
+@use "_mixin" as m;
+
+.popup-user {
+  position: fixed;
+  opacity: 0;
+  visibility: none;
+  @include m.position(column, flex-start, center, center);
+  @include m.size(920px, auto);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 5px;
+  z-index: 1001;
+  padding: 30px 0 50px;
+  gap: 50px;
+
+  @media screen and (max-width: v.$tablet) {
+    @include m.size(600px, auto);
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: auto;
+  }
+
+  @media screen and (max-width: v.$mobile) {
+    @include m.size(300px, 100auto);
+    border-radius: 0;
+    max-height: 90%;
+  }
+
+  .sign_in-btn, 
+  .registration-btn {
+    @include m.btn-template;
+    background-color: v.$bg-orange-col;
+
+    &:hover {
+      cursor: pointer;
+      background-color: v.$bg-orange-hover;
+    }
+  }
+}
+
+.close-popup-user {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    align-self: flex-end;
+    margin-right: 30px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .line-close-popup {
+      position: absolute;
+      width: 4px;
+      height: 50px;
+      top: 50%;
+      left: 50%;
+      background-color: black;
+      transform-origin: center;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.673);
+      }
+    }
+
+    .line-close1 {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .line-close2 {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }

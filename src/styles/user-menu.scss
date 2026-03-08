@@ -1,0 +1,49 @@
+@use "_variables" as v;
+@use "_mixin" as m;
+
+.user-menu {
+  position: fixed;
+  opacity: 0;
+  visibility: none;
+  @include m.position(column, flex-start, center, flex-start);
+  @include m.size(920px, auto);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  color: black;
+  border-radius: 5px;
+  z-index: 1001;
+  padding: 30px 20px 50px;
+  gap: 50px;
+
+  @media screen and (max-width: v.$tablet) {
+    @include m.size(600px, auto);
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: auto;
+  }
+
+  @media screen and (max-width: v.$mobile) {
+    @include m.size(300px, 100auto);
+    border-radius: 0;
+    max-height: 90%;
+  }
+
+  .sign_out-btn {
+    @include m.btn-template;
+    background-color: v.$bg-orange-col;
+    align-self: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: v.$bg-orange-hover;
+    }
+  }
+}
+
+.tittle-user-menu {
+  @include m.h2(36px);
+  align-self: center;
+}
