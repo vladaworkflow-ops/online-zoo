@@ -7,8 +7,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .ts",
-    "sass:w": "sass --watch styles/main.scss:styles/main.css",
-    "sass": "sass styles/main.scss:styles/main.css"
+    "sass:w": "sass --watch src/styles/main.scss:src/styles/main.css",
+    "sass": "sass src/styles/main.scss:src/styles/main.css"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.56.1",
