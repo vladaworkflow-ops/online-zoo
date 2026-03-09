@@ -1611,7 +1611,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     flex: 0 0 600px;
-    height: 297px;
+    height: auto;
   }
 }
 @media screen and (max-width: 320px) {
@@ -4155,7 +4155,7 @@ footer .footer-content .footer-button-donate:hover {
   z-index: 1000;
 }
 @media screen and (max-width: 640px) {
-  .overlay .overlay {
+  .overlay {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     padding: 0;
@@ -4315,10 +4315,15 @@ footer .footer-content .footer-button-donate:hover {
   }
 }
 
+.popup-user.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
 .popup-user {
   position: fixed;
   opacity: 0;
-  visibility: none;
+  visibility: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -4352,27 +4357,6 @@ footer .footer-content .footer-button-donate:hover {
     max-height: 90%;
   }
 }
-.popup-user .sign_in-btn,
-.popup-user .registration-btn {
-  width: 360px;
-  height: 74px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  font-weight: 600;
-  gap: 10px;
-  border-radius: 5px;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: #F58021;
-}
-.popup-user .sign_in-btn:hover,
-.popup-user .registration-btn:hover {
-  cursor: pointer;
-  background-color: #D26004;
-}
 
 .close-popup-user {
   position: relative;
@@ -4380,6 +4364,7 @@ footer .footer-content .footer-button-donate:hover {
   height: 50px;
   align-self: flex-end;
   margin-right: 30px;
+  z-index: 1002;
 }
 .close-popup-user:hover {
   cursor: pointer;
@@ -4406,7 +4391,7 @@ footer .footer-content .footer-button-donate:hover {
 .user-menu {
   position: fixed;
   opacity: 0;
-  visibility: none;
+  visibility: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -4441,7 +4426,20 @@ footer .footer-content .footer-button-donate:hover {
     max-height: 90%;
   }
 }
-.user-menu .sign_out-btn {
+
+.tittle-user-menu {
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #00A092;
+  align-self: center;
+}
+
+.sign_out-btn,
+.submit-login-form,
+.submit-registration-form,
+.sign_in-btn,
+.registration-btn {
   width: 360px;
   height: 74px;
   display: flex;
@@ -4457,17 +4455,99 @@ footer .footer-content .footer-button-donate:hover {
   background-color: #F58021;
   align-self: center;
 }
-.user-menu .sign_out-btn:hover {
+.sign_out-btn:hover,
+.submit-login-form:hover,
+.submit-registration-form:hover,
+.sign_in-btn:hover,
+.registration-btn:hover {
   cursor: pointer;
   background-color: #D26004;
 }
 
-.tittle-user-menu {
-  font-size: 36px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #00A092;
-  align-self: center;
+.login-popup.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.login-popup {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 920px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 5px;
+  z-index: 1001;
+  padding: 30px 0 50px;
+  gap: 50px;
+}
+@media screen and (max-width: 640px) {
+  .login-popup {
+    width: 600px;
+    height: auto;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .login-popup {
+    width: 300px;
+    height: 100auto;
+    border-radius: 0;
+    max-height: 90%;
+  }
+}
+
+.registration-popup.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.registration-popup {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 920px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 5px;
+  z-index: 1001;
+  padding: 30px 0 50px;
+  gap: 50px;
+}
+@media screen and (max-width: 640px) {
+  .registration-popup {
+    width: 600px;
+    height: auto;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .registration-popup {
+    width: 300px;
+    height: 100auto;
+    border-radius: 0;
+    max-height: 90%;
+  }
 }
 
 * {
