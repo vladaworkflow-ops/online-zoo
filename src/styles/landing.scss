@@ -1007,7 +1007,7 @@ body {
         flex-direction: row;
         justify-content: space-between;
         flex: 0 0 600px;
-        height: 297px;
+        height: auto;
       }
 
       @media screen and (max-width: v.$mobile){
