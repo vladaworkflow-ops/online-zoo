@@ -1,6 +1,22 @@
 @use "_variables" as v;
 @use "_mixin" as m;
 
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.form-error-global {
+  align-self: center;
+  color: red;
+  margin-top: 40px;
+}
+
+input.input-error {
+  border: 2px solid red;
+}
+
 .registration-popup.active-modal {
   opacity: 1;
   visibility: visible;
@@ -12,6 +28,8 @@
   visibility: hidden;
   @include m.position(column, flex-start, center, center);
   @include m.size(920px, auto);
+  max-height: 100vh;
+  overflow-y: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -25,13 +43,21 @@
     @include m.size(600px, auto);
     top: 10px;
     left: 50%;
+    padding: 30px 20px 50px;
     transform: translateX(-50%);
     overflow-y: auto;
   }
 
   @media screen and (max-width: v.$mobile) {
-    @include m.size(300px, 100auto);
+    @include m.size(300px, auto);
     border-radius: 0;
     max-height: 90%;
   }
+}
+
+.submit-registration-form:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
 }

@@ -1,6 +1,11 @@
 @use "_variables" as v;
 @use "_mixin" as m;
 
+.user-menu.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
 .user-menu {
   position: fixed;
   opacity: 0;
@@ -30,6 +35,11 @@
     border-radius: 0;
     max-height: 90%;
   }
+
+  h3 {
+    border-bottom: 1px solid black;
+    padding: 10px;
+  }
 }
 
 .tittle-user-menu {
@@ -37,9 +47,18 @@
   align-self: center;
 }
 
+.submit-registration-form {
+  @include m.btn-template;
+  background-color: v.$bg-orange-col;
+  align-self: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .sign_out-btn,
 .submit-login-form,
-.submit-registration-form,
 .sign_in-btn,
 .registration-btn{
   @include m.btn-template;
@@ -50,4 +69,18 @@
     cursor: pointer;
     background-color: v.$bg-orange-hover;
   }
+}
+
+.user-icon {
+  width: 65px;
+  height: 50px;
+  background-image: url("../../assets/icons/user-in.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.user-menu-name, 
+.user-menu-email {
+  font-size: 18px;
+  font-weight: 400;
 }

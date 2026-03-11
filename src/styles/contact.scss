@@ -123,78 +123,77 @@
         padding: 0;
       }
     }
+  }
+}
 
-    .form-contact{
+.form-contact{
+  @include m.position(column, baseline, center);
+  width: 680px;
 
-      @include m.position(column, baseline, center);
-      width: 680px;
-
-      label {
-        font-size: v.$fz;
-        font-weight: 400;
-        span {
-          color: v.$bg-blue-col;
-          margin-right: 5px;
-        }
-      }
-
-      input {
-        @include m.size(100%, 60px);
-        border: 1px solid black;
-        border-radius: 5px;
-        margin: 10px 0 30px;
-        padding: 17px 0 16px 20px;
-        font-size: v.$fz;
-        font-weight: 400;
-
-        @media screen and (max-width: v.$mobile) {
-          height: 50px;
-        }
-      }
-
-      textarea {
-        @include m.size(100%,200px);
-        border: 1px solid black;
-        border-radius: 5px;
-        margin-bottom: 70px;
-        padding-left: 20px;
-        padding-top: 20px;
-        margin-top: 10px;
-
-        @media screen and (max-width: v.$desktop-small)  {
-          margin-bottom: 50px;
-        }
-
-        @media screen and (max-width: v.$mobile)  {
-          margin-bottom: 30px;
-        }
-      }
-
-      .submit-contact-form {
-      @include m.btn-template;
-      background-color: v.$bg-blue-col;
-
-        @media screen and (max-width: v.$tablet)  {
-          align-self: center;
-          @include m.size(290px, 74px);
-        }
-
-        @media screen and (max-width: v.$mobile)  {
-          @include m.size(300px, 50px);
-        }
-      }
-
-      @media screen and (max-width: v.$desktop-small)  {
-        margin-top: 50px;
-        width: 740px;
-      }
-
-      @media screen and (max-width: v.$tablet)  {
-        width: 100%;
-      }
-
+  label {
+    font-size: v.$fz;
+    font-weight: 400;
+    span {
+      color: v.$bg-blue-col;
+      margin-right: 5px;
     }
   }
+
+  input {
+    @include m.size(100%, 60px);
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0 30px;
+    padding: 17px 0 16px 20px;
+    font-size: v.$fz;
+    font-weight: 400;
+
+    @media screen and (max-width: v.$mobile) {
+      height: 50px;
+    }
+  }
+
+  textarea {
+    @include m.size(100%,200px);
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 70px;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-top: 10px;
+
+    @media screen and (max-width: v.$desktop-small)  {
+      margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: v.$mobile)  {
+      margin-bottom: 30px;
+    }
+  }
+
+  .submit-contact-form {
+  @include m.btn-template;
+  background-color: v.$bg-blue-col;
+
+    @media screen and (max-width: v.$tablet)  {
+      align-self: center;
+      @include m.size(290px, 74px);
+    }
+
+    @media screen and (max-width: v.$mobile)  {
+      @include m.size(300px, 50px);
+    }
+  }
+
+  @media screen and (max-width: v.$desktop-small)  {
+    margin-top: 50px;
+    width: 740px;
+  }
+
+  @media screen and (max-width: v.$tablet)  {
+    width: 100%;
+  }
+
 }
 
 .contact .main-content .form-contact .submit-contact-form:hover{
