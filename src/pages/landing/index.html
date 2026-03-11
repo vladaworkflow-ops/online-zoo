@@ -48,7 +48,7 @@
             </li>
           </ul>
         </nav>
-        <div class="user-icon"><img src="../../assets/icons/user-in.png" alt="user-icon" width="65" height="50"></div>
+        <div class="user-icon"></div>
         <div class="burger-container">
           <input type="checkbox" class="burger-toggle">
           <div class="burger-line"></div>
@@ -624,44 +624,62 @@
     <button class="registration-btn">Registration</button>
   </div>
   <div class="user-menu">
-    <div class="close-popup-user">
+    <div class="close-popup-user-menu">
       <div class="line-close-popup line-close1"></div>
       <div class="line-close-popup line-close2"></div>
     </div>
     <h2 class="tittle-user-menu">Hi <span class="user-name">!</span>Welcome to user menu</h2>
-    <h3>User name: <span>name</span></h3>
-    <h3>User email: <span>email</span></h3>
+    <h3>User name: <span class="user-menu-name">name</span></h3>
+    <h3>User email: <span class="user-menu-email">email</span></h3>
     <button class="sign_out-btn">Sign out</button>
   </div>
   <div class="login-popup">
     <h3>Login in to your account</h3>
-    <form method="post" class="form-login">
+    <form method="post" class="form-contact form-login" id="form-login">
         <label for="login"><span>*</span>Your Login</label>
-        <input type="text" name="login" id="login" autocomplete="login" placeholder="Enter your login" required>
+        <input type="text" name="login" id="log-in" autocomplete="login" placeholder="Enter your login" required>
+        <div class="error-message" id="log-in-error"></div>
+
         <label for="password"><span>*</span>Your password</label>
-        <input type="password" name="password" id="password" placeholder="Enter your password" required>
-        <button class="submit-login-form" type="submit">
+        <input type="password" name="password" id="password-login" placeholder="Enter your password" required>
+        <div class="error-message" id="password-error-login"></div>
+
+        <button class="submit-login-form" id="submit-login-form" type="submit">
           log in
           <img src="../../assets/icons/vector.svg" alt="vector">
         </button>
-      </form>
+        <div class="form-login-error-global"></div>
+    </form>
   </div>
   <div class="registration-popup">
     <h3>Please, feel registration form</h3>
-    <form method="post" class="form-registration">
-        <label for="name"><span>*</span>Your Name</label>
-        <input type="text" name="name" id="name" autocomplete="name" placeholder="First and last name" required>
-        <label for="login"><span>*</span>Your Login</label>
-        <input type="text" name="login" id="login" autocomplete="login" placeholder="Enter your login" required>
-        <label for="password"><span>*</span>Your password</label>
-        <input type="password" name="password" id="password" placeholder="Enter your password" required>
-        <label for="confirm-password"><span>*</span>Confirm password</label>
-        <input type="confirm-password" name="confirm-password" id="confirm-password" placeholder="Enter your password" required>
-        <button class="submit-registration-form" type="submit">
-          registration
-          <img src="../../assets/icons/vector.svg" alt="vector">
-        </button>
-      </form>
+    <form method="post" class="form-contact form-registration" id="registration-form">
+      <label for="login"><span>*</span>Your Login</label>
+      <input type="text" name="login" id="login" autocomplete="login" placeholder="Enter your login" required>
+      <div class="error-message" id="login-error"></div>
+
+      <label for="name"><span>*</span>Your Name</label>
+      <input type="text" name="name" id="name" autocomplete="name" placeholder="First and last name" required>
+      <div class="error-message" id="name-error"></div>
+
+      <label for="email"><span>*</span>Your Email Address</label>
+      <input type="email" name="email" id="email" autocomplete="email" placeholder="Enter your email" required>
+      <div class="error-message" id="email-error"></div>
+
+      <label for="password"><span>*</span>Your password</label>
+      <input type="password" name="password" id="password" placeholder="Enter your password" required>
+      <div class="error-message" id="password-error"></div>
+
+      <label for="confirm-password"><span>*</span>Confirm password</label>
+      <input type="password" name="confirm-password" id="confirm-password" placeholder="Enter your password" required>
+      <div class="error-message" id="confirm-password-error"></div>
+
+      <button class="submit-registration-form" type="submit">
+        registration
+        <img src="../../assets/icons/vector.svg" alt="vector">
+      </button>
+      <div class="form-error-global" id="form-error-global"></div>
+    </form>
   </div>
   <script type="module" src="./landing.js"></script>
   <script type="module" src="../../scripts/main.ts"></script>
