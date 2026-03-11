@@ -3,6 +3,7 @@ import * as path from 'path';
 
 export default defineConfig({
   root: 'src',
+  envDir: '../',
   server: {
     fs: { strict: false },
     open: '/pages/landing/index.html',
