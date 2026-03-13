@@ -985,7 +985,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   width: 1920px;
-  height: 1540px;
+  height: fit-content;
   flex-wrap: wrap;
   gap: 40px;
   margin-left: 260px;
@@ -994,7 +994,6 @@ body {
   .meet-section .meet-slide-container {
     flex-direction: row;
     width: 1900px;
-    height: 1452px;
     margin-left: 40px;
     gap: 20px;
   }
@@ -1170,6 +1169,9 @@ body {
   background-color: #F58021;
   color: #fff;
   cursor: pointer;
+}
+.meet-section .meet-slide-container .refresh-page-txt {
+  align-self: center;
 }
 .meet-section .meet-button:hover {
   background-color: #20113D;
@@ -1913,6 +1915,22 @@ body {
   }
   .welcome-block:last-child {
     align-self: center;
+  }
+}
+.slider-loader {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 header {
@@ -4694,6 +4712,10 @@ textarea {
 button {
   transition: opacity 0.3s ease;
   cursor: pointer;
+}
+
+main {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */
