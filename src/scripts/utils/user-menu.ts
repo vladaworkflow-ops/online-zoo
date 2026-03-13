@@ -34,14 +34,18 @@ btnSignOut?.addEventListener('click', () => {
 
 
 export function updateUserMenu(auth: UserAuth | null) {
-  if (!userNameEl || !userEmailEl) return;
+  const userIconName = document.querySelector('.user-icon-name') as HTMLElement | null;
+
+  if (!userNameEl || !userEmailEl || !userIconName) return;
 
   if (auth?.isLogged && auth.user) {
     userNameEl.textContent = auth.user.name;
     userEmailEl.textContent = auth.user.email;
+    userIconName.textContent = auth.user.name;
   } else {
     userNameEl.textContent = '';
     userEmailEl.textContent = '';
+    userIconName.textContent = '';
   }
 }
 
