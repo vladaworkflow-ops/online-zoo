@@ -1,4 +1,6 @@
 import { Cards } from '../../types/pet-cards';
+import pandaImg from "../../assets/images/cards/panda-card.png";
+import loaderImg from "../../assets/icons/loading.png";
 
 export function createAnimalCard(card: Cards): HTMLAnchorElement {
   const link = document.createElement("a");
@@ -17,7 +19,7 @@ export function createAnimalCard(card: Cards): HTMLAnchorElement {
   imgWrapper.className = "card-img";
 
   const img = document.createElement("img");
-  img.src = "../../assets/images/cards/panda-card.png";
+  img.src = pandaImg;
   img.alt = card.name;
 
   const aboutCard = document.createElement("div");
@@ -50,7 +52,7 @@ export function createLoader(container: HTMLDivElement):void {
   container.innerHTML = "";
   const loader = document.createElement("img");
   loader.className = "slider-loader";
-  loader.src = "../../assets/icons/loading.png";
+  loader.src = loaderImg;
   loader.alt = "Loading...";
   container.appendChild(loader);
 }

@@ -1,6 +1,8 @@
 import { authState } from '../api/auth';
 import {openPopup, closeModal} from '../popup/popup-user';
 import { UserAuth } from '../../types/user';
+import userLogged from "../../assets/icons/user-logged.png";
+import userIn from "../../assets/icons/user-in.png";
 
 const userMenu = document.querySelector('.user-menu') as HTMLDivElement;
 const userNameEl = userMenu?.querySelector('.user-menu-name') as HTMLSpanElement;
@@ -54,6 +56,6 @@ export function updateUserIcon(auth: UserAuth | null) {
   if (!userIcon) return;
 
   userIcon.style.backgroundImage = auth?.isLogged
-    ? 'url("../../assets/icons/user-logged.png")'
-    : 'url("../../assets/icons/user-in.png")';
+    ? `url(${userLogged})`
+    : `url(${userIn})`;
 }

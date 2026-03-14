@@ -2,6 +2,8 @@ import { petCardsApi } from '../api/petCardApi';
 import { Cards } from '../../types/pet-cards';
 import { createAnimalCard, createLoader } from './createCard'
 import { renderFeedbackCards } from './renderThinkCards';
+import userLogged from "../../assets/icons/user-logged.png";
+import userIn from "../../assets/icons/user-in.png";
 const slideContainer = document.querySelector('.meet-slide-container') as HTMLDivElement;
 const commentsContainer = document.querySelector('.comments-container') as HTMLDivElement;
 
@@ -29,6 +31,10 @@ async function renderCards() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const userIcon = document.querySelector('.user-icon') as HTMLElement | null;
+  if (!userIcon) return;
+
+  userIcon.style.backgroundImage = `url(${userIn})`;
   createLoader(slideContainer);
   renderCards();
   createLoader(commentsContainer);
