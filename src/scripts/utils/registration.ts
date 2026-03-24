@@ -20,6 +20,8 @@ const emailError = document.getElementById('email-error') as HTMLDivElement;
 const passwordError = document.getElementById('password-error') as HTMLDivElement;
 const confirmPasswordError = document.getElementById('confirm-password-error') as HTMLDivElement;
 const formErrorGlobal = document.getElementById('form-error-global') as HTMLDivElement;
+const overlay = document.querySelector('.overlay') as  HTMLElement;
+
 
 export function showError(input: HTMLInputElement, errorElement: HTMLDivElement, message: string) {
   input.classList.add("input-error");
@@ -116,6 +118,7 @@ form.addEventListener('submit', async (e) => {
       updateUserMenu(authState);
       form.reset();
       registerContainer.classList.remove('active-modal');
+      overlay.classList.remove('active-modal');
     } else {
       formErrorGlobal.textContent = message;
     }
