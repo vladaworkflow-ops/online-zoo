@@ -14,15 +14,19 @@
 <body>
   <header>
     <div class="header-container">
-      <div class="logo"><h1 class="header">ZO</h1><img src="../../assets/icons/Logo.png" alt="logo"></div>
+      <div class="logo">
+        <h1 class="header">ZO</h1><img src="../../assets/icons/Logo.png" alt="logo">
+      </div>
       <div class="header-content">
         <nav class="navigation-menu">
           <ul>
             <li><a href="../landing/index.html">About</a></li>
-            <li class="highlighted"><a href="./map.html">Map</a></li>
+            <li class="highlighted"><a href="../map/map.html">Map</a></li>
             <li><a href="../animal/zoos.html">Zoos</a></li>
             <li><a href="../contact/contact.html">Contact us</a></li>
-            <li><a href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project?node-id=0%3A1" target="_blank">Design</a></li>
+            <li>
+              <a href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project?node-id=0%3A1" target="_blank">Design</a>
+            </li>
           </ul>
         </nav>
         <nav class="social-media-icons">
@@ -44,6 +48,9 @@
             </li>
           </ul>
         </nav>
+        <div class="user-icon">
+        </div>
+        <div class="user-icon-name"></div>
         <div class="burger-container">
           <input type="checkbox" class="burger-toggle">
           <div class="burger-line"></div>
@@ -53,11 +60,12 @@
         <div class="side-menu">
           <nav>
             <ul class="side-navigation-menu">
-              <li><a href="../landing/index.html">About</a></li>
-              <li class="highlighted"><a href="./map.html">Map</a></li>
+              <li class="highlighted"><a href="">About</a></li>
+              <li><a href="../map/map.html">Map</a></li>
               <li><a href="../animal/zoos.html">Zoos</a></li>
               <li><a href="../contact/contact.html">Contact us</a></li>
-              <li><a href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project?node-id=0%3A1" target="_blank">Design</a></li>
+              <li><a href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project?node-id=0%3A1"
+                  target="_blank">Design</a></li>
             </ul>
           </nav>
         </div>
@@ -126,7 +134,7 @@
             <li><a href="../contact/contact.html">Contact us</a></li>
           </ul>
         </nav>
-        <button class="footer-button-donate">Donate for volunteers
+        <button class="donation-btn footer-button-donate">Donate for volunteers
           <img src="../../assets/icons/vector.svg" alt="vector">
         </button>
       </div>
@@ -136,7 +144,7 @@
           <p>© Yem Digital </p>
           <p>© RSSchool</p>
         </div>
-        <nav class="social-media-icons" id="footer-social-media-icons">
+        <nav class="social-media-icons footer-social-media-icons">
           <ul>
             <li>
               <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">
@@ -158,5 +166,196 @@
       </div>
     </div>
   </footer>
+  <div class="overlay"></div>
+  <div class="modal-donation-container">
+    <div class="modal-donation-content donation-first-step">
+      <h2 class="header-modal-donation">make your donation</h2>
+      <p class="header-text">Donation Information:</p>
+      <form class="donation-form">
+        <p class="amount-text"><span>*</span> Choose your donation amount:</p>
+        <div class="donate-btn-container">
+          <button type="button" class="together-donate-btn">$10</button>
+          <button type="button" class="together-donate-btn">$20</button>
+          <button type="button" class="together-donate-btn">$30</button>
+          <button type="button" class="together-donate-btn">$50</button>
+          <button type="button" class="together-donate-btn">$80</button>
+          <button type="button" class="together-donate-btn">$100</button>
+        </div>
+        <div class="other-amount-input-container">
+          <button type="button" class="other-amount-btn">Other amount</button>
+          <input type="text" name="other-sum-input" id="other-sum-input" class="other-sum-input">
+        </div>
+        <div class="select-container">
+          <button type="button" class="special-pet-btn">for special pet</button>
+          <select name="pets" id="pet-select" class="select-pets">
+            <option value="">Choose your favourite</option>
+            <option value="dog">Lukas the Panda</option>
+            <option value="cat">Andy the Lemur</option>
+            <option value="hamster">Glen the Gorilla</option>
+            <option value="parrot">Mike the Alligator</option>
+            <option value="spider">Sam & Lora the eagles family</option>
+            <option value="goldfish">Shake the Lion</option>
+            <option value="goldfish">Senja the Tiger</option>
+          </select>
+        </div>
+        <div class="container-checkbox">
+          <input type="checkbox" name="monthly-recurring" class="monthly-recurring" id="monthly-recurring">
+          <label for="monthly-recurring" class="monthly-recurring-label">Make this a monthly recurring gift</label>
+        </div>
+        <div class="popup-btn-container">
+          <div class="popup-circe-container">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+          <button type="submit" class="popup-btn-next">next
+            <img src="../../assets/icons/vector.svg" alt="vector">
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="modal-donation-content donation-second-step">
+      <h2 class="header-modal-donation">make your donation</h2>
+      <p class="header-text">Billing Information:</p>
+      <form method="post" class="donation-form form-contact" id="donation-form">
+        <label for="name"><span>*</span>Your Name</label>
+        <input type="text" name="name" id="name" autocomplete="name" placeholder="First and last name" required>
+        <div class="error-message" id="name-error"></div>
+        <label for="email"><span>*</span>Your Email Address</label>
+        <input type="email" name="email" id="email" autocomplete="email" placeholder="Enter your email" required>
+        <div class="error-message" id="email-error"></div>
+        <p class="second-form-text">You will receive emails from the Online Zoo, including updates and news on the latest discoveries and translations. You can unsubscribe at any time.</p>
+        <div class="popup-btn-container">
+          <div class="popup-circe-container">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+          <button class="back-btn">Back</button>
+          <button type="submit" class="popup-btn-next">next
+            <img src="../../assets/icons/vector.svg" alt="vector">
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="modal-donation-content donation-third-step">
+      <h2 class="header-modal-donation">make your donation</h2>
+      <p class="header-text">Payment Information:</p>
+      <form class="donation-form">
+        <div class="credential-container">
+          <div class="card-number">
+            <label class="amount-text"><span>*</span> Credit Card Number</label>
+            <input type="text" name="other-sum-input" id="other-sum-input">
+          </div>
+          <div>
+            <label class="amount-text"><span>*</span> CVV Number</label>
+            <input type="text" name="other-sum-input" id="other-sum-input">
+          </div>
+        </div>
+        <p>*<span>*</span> Expiration Date</p>
+        <div class="select-container">
+          <select name="pets" id="pet-select" class="select-date">
+            <option value="">Month</option>
+            <option value="dog">Lukas the Panda</option>
+            <option value="cat">Andy the Lemur</option>
+            <option value="hamster">Glen the Gorilla</option>
+            <option value="parrot">Mike the Alligator</option>
+            <option value="spider">Sam & Lora the eagles family</option>
+            <option value="goldfish">Shake the Lion</option>
+            <option value="goldfish">Senja the Tiger</option>
+          </select>
+          <select name="pets" id="pet-select" class="select-date">
+            <option value="">Year</option>
+            <option value="dog">Lukas the Panda</option>
+            <option value="cat">Andy the Lemur</option>
+            <option value="hamster">Glen the Gorilla</option>
+            <option value="parrot">Mike the Alligator</option>
+            <option value="spider">Sam & Lora the eagles family</option>
+            <option value="goldfish">Shake the Lion</option>
+            <option value="goldfish">Senja the Tiger</option>
+          </select>
+        </div>
+        <div class="popup-btn-container">
+          <div class="popup-circe-container">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+          <button class="back-btn">Back</button>
+          <button type="submit" class="complete-btn">Complete donation
+            <img src="../../assets/icons/vector.svg" alt="vector">
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+   <div class="popup-user">
+    <div class="close-popup-user">
+      <div class="line-close-popup line-close1"></div>
+      <div class="line-close-popup line-close2"></div>
+    </div>
+    <h3>Please Sign in or registration</h3>
+    <button class="sign_in-btn">Sign in</button>
+    <button class="registration-btn">Registration</button>
+  </div>
+  <div class="user-menu">
+    <div class="close-popup-user-menu">
+      <div class="line-close-popup line-close1"></div>
+      <div class="line-close-popup line-close2"></div>
+    </div>
+    <h2 class="tittle-user-menu">Hi <span class="user-name">!</span>Welcome to user menu</h2>
+    <h3>User name: <span class="user-menu-name">name</span></h3>
+    <h3>User email: <span class="user-menu-email">email</span></h3>
+    <button class="sign_out-btn">Sign out</button>
+  </div>
+  <div class="login-popup">
+    <h3>Login in to your account</h3>
+    <form method="post" class="form-contact form-login" id="form-login">
+        <label for="login"><span>*</span>Your Login</label>
+        <input type="text" name="login" id="log-in" autocomplete="login" placeholder="Enter your login" required>
+        <div class="error-message" id="log-in-error"></div>
+
+        <label for="password"><span>*</span>Your password</label>
+        <input type="password" name="password" id="password-login" placeholder="Enter your password" required>
+        <div class="error-message" id="password-error-login"></div>
+
+        <button class="submit-login-form" id="submit-login-form" type="submit">
+          log in
+          <img src="../../assets/icons/vector.svg" alt="vector">
+        </button>
+        <div class="form-login-error-global"></div>
+    </form>
+  </div>
+  <div class="registration-popup">
+    <h3>Please, feel registration form</h3>
+    <form method="post" class="form-contact form-registration" id="registration-form">
+      <label for="login"><span>*</span>Your Login</label>
+      <input type="text" name="login" id="login" autocomplete="login" placeholder="Enter your login" required>
+      <div class="error-message" id="login-error"></div>
+
+      <label for="name"><span>*</span>Your Name</label>
+      <input type="text" name="name" id="name" autocomplete="name" placeholder="First and last name" required>
+      <div class="error-message" id="name-error"></div>
+
+      <label for="email"><span>*</span>Your Email Address</label>
+      <input type="email" name="email" id="email" autocomplete="email" placeholder="Enter your email" required>
+      <div class="error-message" id="email-error"></div>
+
+      <label for="password"><span>*</span>Your password</label>
+      <input type="password" name="password" id="password" placeholder="Enter your password" required>
+      <div class="error-message" id="password-error"></div>
+
+      <label for="confirm-password"><span>*</span>Confirm password</label>
+      <input type="password" name="confirm-password" id="confirm-password" placeholder="Enter your password" required>
+      <div class="error-message" id="confirm-password-error"></div>
+
+      <button class="submit-registration-form" type="submit">
+        registration
+        <img src="../../assets/icons/vector.svg" alt="vector">
+      </button>
+      <div class="form-error-global" id="form-error-global"></div>
+    </form>
+  </div>
+  <script type="module" src="../../scripts/main.ts"></script>
 </body>
 </html>
