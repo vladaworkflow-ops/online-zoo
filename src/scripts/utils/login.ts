@@ -16,6 +16,7 @@ loginButton.disabled = true;
 const loginError = document.getElementById('log-in-error') as HTMLDivElement;
 const passwordError = document.getElementById('password-error-login') as HTMLDivElement;
 const formErrorGlobal = document.querySelector('.form-login-error-global') as HTMLDivElement;
+const overlay = document.querySelector('.overlay') as  HTMLElement;
 
 function checkFormLoginValidity() {
 
@@ -66,7 +67,7 @@ form.addEventListener('submit', async (e) => {
 
       form.reset();
       loginContainer.classList.remove('active-modal');
-
+      overlay.classList.remove('active-modal');
     } else {
       formErrorGlobal.textContent = message;
     }
