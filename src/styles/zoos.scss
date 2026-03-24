@@ -214,6 +214,13 @@
   }
 }
 
+.menu-animal.active.highlighted:hover{
+
+  .icon path {
+    fill: v.$bg-purple-col;
+  }
+}
+
 .side-panel.expandable {
   width: 300px;
 
