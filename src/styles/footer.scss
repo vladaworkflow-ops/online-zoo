@@ -117,7 +117,7 @@ footer {
       }
     }
 
-    #footer-social-media-icons {
+    .footer-social-media-icons {
       gap: 40px;
 
       ul{
@@ -162,6 +162,6 @@ footer {
   }
 }
 
-footer .footer-content .footer-button-donate:hover {
+footer.footer-content.footer-button-donate:hover {
   background-color: v.$bg-blue-col;
 }

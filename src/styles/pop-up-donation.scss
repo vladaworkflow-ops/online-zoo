@@ -29,6 +29,10 @@
     max-height: 90%;
   }
 
+  .donation-first-step {
+    display: none;
+  }
+
   .header-modal-donation {
     height: 135px;
     width: 100%;
@@ -78,7 +82,7 @@
     }
   }
 
-  .donation-amount-container {
+  .donation-form {
     width: 680px;
     height: auto;
     margin: 40px 120px 0;
@@ -160,51 +164,6 @@
         margin-top: 20px;
         margin-bottom: 30px;
       }
-
-      .other-sum-input {
-        border: 1px solid black;
-        border-radius: 5px;
-        width: 200px;
-
-        @media screen and (max-width: v.$tablet) {
-          gap: 212px;
-        }
-
-        @media screen and (max-width: v.$mobile) {
-          width: 130px;
-        }
-      }
-    }
-
-    .select-container {
-      display: flex;
-      gap: 40px;
-      margin-bottom: 40px;
-
-      @media screen and (max-width: v.$tablet) {
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      @media screen and (max-width: v.$mobile) {
-        align-items: center;
-        margin-bottom: 30px;
-      }
-
-      .select-pets {
-        border: 1px solid black;
-        border-radius: 5px;
-        width: 440px;
-
-        @media screen and (max-width: v.$tablet) {
-          width: 100%;
-          height: 65px;
-        }
-
-         @media screen and (max-width: v.$mobile) {
-          height: 50px;
-        }
-      }
     }
 
     .container-checkbox {
@@ -232,66 +191,172 @@
         }
       }
     }
+  }
 
-    .popup-btn-container {
-      height: 74px;
-      @include m.position(row, space-between, center, center);
-      margin: 50px 0;
+  .select-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: v.$tablet) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @media screen and (max-width: v.$mobile) {
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .select-pets {
+      border: 1px solid black;
+      border-radius: 5px;
+      width: 440px;
 
       @media screen and (max-width: v.$tablet) {
-        margin-bottom: 40px;
+        width: 100%;
+        height: 65px;
       }
-
-      @media screen and (max-width: v.$mobile) {
-        height: auto;
-        flex-direction: column-reverse;
-        gap: 30px;
-        margin-bottom: 50px;
-      }
-
-      .popup-circe-container {
-        @include m.position(row, space-between, center, center);
-        width: 50px;
-        height: 10px;
-
-        .circle {
-          height: 100%;
-          width: 10px;
-          border-radius: 100%;
-          border: 1px solid v.$bg-blue-col;
-          cursor: pointer;
-
-          &:first-child {
-            background-color: v.$bg-blue-col;
-          }
-        }
-      }
-
-      .popup-btn-next {
-        @include m.position(row, center, center, center);
-        @include m.size(200px, 74px);
-        text-transform: uppercase;
-        background-color: #80CFC8;
-        border-radius: 5px;
-        color: white;
-        cursor: pointer;
-        margin-right: 105px;
-
-        @media screen and (max-width: v.$tablet) {
-          margin-right: 0;
-          width: 212px;
-        }
 
         @media screen and (max-width: v.$mobile) {
-          height: 50px;
-        }
-
-        &:hover {
-          background-color: v.$bg-blue-hover;
-        }
+        height: 50px;
       }
     }
   }
+
+  input {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 65px;
+  }
+
+  .other-sum-input {
+    width: 200px;
+
+    @media screen and (max-width: v.$tablet) {
+      gap: 212px;
+    }
+
+    @media screen and (max-width: v.$mobile) {
+      width: 130px;
+    }
+  }
+}
+
+.donation-second-step {
+  display: none;
+  .second-form-text{
+    color: rgba(0, 0, 0, 0.547);
+  }
+
+  .circle {
+    &:nth-child(2) {
+      background-color: v.$bg-blue-col;
+    }
+  }
+}
+
+.donation-third-step {
+  .credential-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  .circle {
+    background-color: v.$bg-blue-col;
+  }
+
+  .popup-btn-container {
+    width: 100%;
+  }
+
+  .complete-btn {
+    @include m.btn-template(359px, 74px);
+    background-color: v.$bg-orange-col;
+  }
+
+  .select-date {
+    width: 201px;
+    height: 65px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .card-number {
+    input {
+      width: 445px;
+    }
+  }
+}
+
+.popup-btn-container {
+  width: 575px;
+  height: 74px;
+  @include m.position(row, space-between, center, center);
+  margin: 50px 0;
+
+  @media screen and (max-width: v.$tablet) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: v.$mobile) {
+    height: auto;
+    flex-direction: column-reverse;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .popup-circe-container {
+    @include m.position(row, space-between, center, center);
+    width: 50px;
+    height: 10px;
+
+    .circle {
+      height: 100%;
+      width: 10px;
+      border-radius: 100%;
+      border: 1px solid v.$bg-blue-col;
+      cursor: pointer;
+
+      &:first-child {
+        background-color: v.$bg-blue-col;
+      }
+    }
+  }
+
+  .popup-btn-next {
+    @include m.position(row, center, center, center);
+    @include m.size(200px, 74px);
+    text-transform: uppercase;
+    background-color: #80CFC8;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+
+    @media screen and (max-width: v.$tablet) {
+      margin-right: 0;
+      width: 212px;
+    }
+
+    @media screen and (max-width: v.$mobile) {
+      height: 50px;
+    }
+
+    &:hover {
+      background-color: v.$bg-blue-hover;
+    }
+  }
+}
+
+.back-btn {
+  color: v.$bg-blue-col;
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .other-amount-btn, .special-pet-btn {

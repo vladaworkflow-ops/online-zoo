@@ -96,6 +96,7 @@ body {
 
   .button-watch:hover {
     background-color: v.$bg-orange-hover;
+    cursor: pointer;
   }
 
   .button-watch {
@@ -361,6 +362,10 @@ body {
       }
     }
 
+    #donation-btn-input {
+      margin-left: 20px;
+    }
+
     @media screen and (max-width: v.$desktop-small) {
       width: calc(1000px / 1200px)*100%;
     }
@@ -490,17 +495,17 @@ body {
   }
 
   .meet-slide-container{
-    @include m.position(row, flex-start, center, center);
-    width: 1920px;
-    height: fit-content;
+    @include m.position(row, center, center, center);
+    width: 100%;
+    height: auto;
+    max-height: 1540px;
     flex-wrap: wrap;
     gap: 40px;
-    margin-left: 260px;
+    overflow: hidden;
 
     @media screen and (max-width: v.$desktop-small){
       flex-direction: row;
       width: 1900px;
-      margin-left: 40px;
       gap: 20px;
     }
 
