@@ -1,5 +1,5 @@
 import { Cards } from '../../types/pet-cards';
-import pandaImg from "../../assets/images/cards/panda-card.png";
+import { cardData } from "../../data/data";
 import loaderImg from "../../assets/icons/loading.png";
 
 export function createAnimalCard(card: Cards): HTMLAnchorElement {
@@ -19,7 +19,9 @@ export function createAnimalCard(card: Cards): HTMLAnchorElement {
   imgWrapper.className = "card-img";
 
   const img = document.createElement("img");
-  img.src = pandaImg;
+  const localCard = cardData.find(item => item.id === card.id);
+
+  img.src = localCard?.petImg || loaderImg;
   img.alt = card.name;
 
   const aboutCard = document.createElement("div");
