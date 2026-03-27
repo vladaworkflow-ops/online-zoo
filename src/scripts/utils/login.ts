@@ -5,6 +5,7 @@ import { authState }from '../api/auth';
 import { validateLogin, validatePassword } from "../utils/validation";
 import { BackendMessages } from "../utils/backendMessages";
 import { updateUserMenu, updateUserIcon } from "./user-menu";
+import { userDonations, renderDonations } from '../components/renderDonation';
 
 const loginContainer = document.querySelector('.login-popup') as HTMLDivElement;
 const form = document.getElementById('form-login') as HTMLFormElement;
@@ -60,10 +61,13 @@ form.addEventListener('submit', async (e) => {
         email: user.email
       };
 
+      localStorage.setItem('auth', JSON.stringify(authState));
+
       formErrorGlobal.textContent = message;
 
       updateUserMenu(authState);
       updateUserIcon(authState);
+      renderDonations(userDonations);
 
       form.reset();
       loginContainer.classList.remove('active-modal');
