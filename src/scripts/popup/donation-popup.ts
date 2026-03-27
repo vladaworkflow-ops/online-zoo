@@ -1,10 +1,13 @@
+import { userMenu } from '../utils/user-menu';
+
 const togetherOpenBtn = document.querySelectorAll('.cam-button') as  NodeListOf<HTMLDivElement>;
 const togetherBtn = document.querySelectorAll('.together-donate-btn') as NodeListOf<HTMLButtonElement>;
-const overlay = document.querySelector('.overlay') as  HTMLElement;
+export const modalDonateBtn = document.querySelectorAll('.modal-donate-btn') as NodeListOf<HTMLButtonElement>;
+export const overlay = document.querySelector('.overlay') as  HTMLElement;
 const modal = document.querySelector('.modal-together-container') as  HTMLElement;
 const closeModalBtn = document.querySelector('.close-modal-together') as  HTMLElement;
 const donationBtn = document.querySelectorAll('.donation-btn') as NodeListOf<HTMLButtonElement>;
-const modalDonation = document.querySelector('.modal-donation-container') as  HTMLElement;
+export const modalDonation = document.querySelector('.modal-donation-container') as  HTMLElement;
 const donationBtnIcon = document.querySelector('#donation-btn-icon') as HTMLElement;
 const donationBtnInput = document.querySelector('#donation-btn-input') as HTMLInputElement;
 
@@ -20,7 +23,7 @@ donationBtnInput.addEventListener("focus", () => {
   donationBtnInput.value = "";
 })
 
-function handlerDonationModal(){
+function openDonationModal(){
   overlay.classList.add('active-modal');
   modalDonation.classList.add('active-modal');
 }
@@ -29,16 +32,17 @@ donationBtn.forEach((btn: HTMLElement) => {
   if(!overlay && !modalDonation) return
 
   btn.addEventListener('click', () => {
-    handlerDonationModal()
+    openDonationModal()
   })
 })
 
-togetherBtn.forEach((btn: HTMLElement) => {
+togetherBtn.forEach((btn: HTMLElement, indx: number) => {
   if(!overlay && !modalDonation) return
 
   btn.addEventListener('click', () => {
-    handlerDonationModal();
+    openDonationModal();
     modal.classList.remove('active-modal');
+    modalDonateBtn[indx + 1].classList.add('active');
   })
 })
 
@@ -46,8 +50,7 @@ togetherBtn.forEach((btn: HTMLElement) => {
 if (donationBtnIcon && overlay && modalDonation) {
   donationBtnIcon.addEventListener('click', (event) => {
     event.stopPropagation();
-
-    handlerDonationModal()
+    openDonationModal()
   });
 }
 
@@ -65,6 +68,10 @@ overlay.addEventListener('click', () => {
     modal.classList.remove('active-modal');
   }
   modalDonation.classList.remove('active-modal');
+
+  if (userMenu) {
+    userMenu.classList.remove('active-modal');
+  }
 })
 
 closeModalBtn.addEventListener('click', () => {
