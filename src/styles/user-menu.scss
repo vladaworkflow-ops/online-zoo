@@ -21,6 +21,8 @@
   z-index: 1001;
   padding: 30px 20px 50px;
   gap: 50px;
+  max-height: 90vh;
+  overflow-y: auto;
 
   @media screen and (max-width: v.$tablet) {
     @include m.size(600px, auto);
@@ -37,8 +39,9 @@
   }
 
   h3 {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid v.$bg-blue-col;;
     padding: 10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -70,6 +73,9 @@
     background-color: v.$bg-orange-hover;
   }
 }
+.sign_out-btn {
+  flex-shrink: 0;
+}
 
 .user-icon {
   width: 65px;
@@ -83,4 +89,37 @@
 .user-menu-email {
   font-size: 18px;
   font-weight: 400;
+}
+
+.repeat-donation {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: v.$bg-blue-col;;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.repeat-donation:hover {
+  background: v.$bg-blue-hover;
+}
+
+.account-section {
+  padding: 20px;
+  border: 1px solid v.$bg-blue-col;
+  width: 100%;
+
+  p {
+    font-weight: 600;
+    padding-bottom: 5px;
+  }
+
+  input {
+    -moz-appearance: auto;
+    -webkit-appearance: checkbox;
+    appearance: auto
+  }
 }
