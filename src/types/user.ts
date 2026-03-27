@@ -14,3 +14,11 @@ export type UserAuth = {
     email: string
   } | null
 }
+
+export interface Donation {
+  animal: string;
+  amount: string;
+  recurring: boolean;
+  date?: string;
+  card?: string | null;
+}

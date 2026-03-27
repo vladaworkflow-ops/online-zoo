@@ -2,7 +2,7 @@ export interface Cards {
   "id": number,
   "name": string,
   "commonName": string,
-  "description": string
+  "description": string,
 }
 
 export interface PetsDetail {
@@ -17,4 +17,10 @@ export interface PetsDetail {
     "latitude": string,
     "longitude": string,
     "description": string
+}
+
+export interface Cameras {
+  "id": number
+  "petId": number,
+  "text": string
 }
