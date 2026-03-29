@@ -50,6 +50,12 @@ textarea {
   margin: 0;
 }
 
+input[type="checkbox"] {
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
+}
+
 input:focus::placeholder,
 textarea:focus::placeholder {
   opacity: 0;

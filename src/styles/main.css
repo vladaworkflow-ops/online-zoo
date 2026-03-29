@@ -2198,6 +2198,8 @@ header {
   z-index: 1001;
   padding: 30px 20px 50px;
   gap: 50px;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 @media screen and (max-width: 640px) {
   .user-menu {
@@ -2218,8 +2220,9 @@ header {
   }
 }
 .user-menu h3 {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #00A092;
   padding: 10px;
+  margin-bottom: 20px;
 }
 
 .tittle-user-menu {
@@ -2277,6 +2280,10 @@ header {
   background-color: #D26004;
 }
 
+.sign_out-btn {
+  flex-shrink: 0;
+}
+
 .user-icon {
   width: 65px;
   height: 50px;
@@ -2289,6 +2296,53 @@ header {
 .user-menu-email {
   font-size: 18px;
   font-weight: 400;
+}
+
+.repeat-donation {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #00A092;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.repeat-donation:hover {
+  background: #05786E;
+}
+
+.account-section {
+  padding: 20px;
+  border: 1px solid #00A092;
+  width: 100%;
+}
+.account-section p {
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.account-section input {
+  -moz-appearance: auto;
+  -webkit-appearance: checkbox;
+  appearance: auto;
+}
+
+.user-menu-card {
+  margin-top: 10px;
+}
+
+.clear-cards-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #00A092;
+  border-radius: 5px;
+  color: #fff;
+  margin-left: 15px;
+}
+.clear-cards-btn:hover {
+  background-color: #05786E;
 }
 
 footer {
@@ -3965,40 +4019,6 @@ footer.footer-content.footer-button-donate:hover {
     max-height: 90%;
   }
 }
-.modal-donation-container .donation-first-step {
-  display: none;
-}
-.modal-donation-container .header-modal-donation {
-  height: 135px;
-  width: 100%;
-  min-width: 920px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-size: 42px;
-  border-radius: 5px;
-  color: white;
-  background-color: #F58021;
-  text-transform: uppercase;
-}
-@media screen and (max-width: 640px) {
-  .modal-donation-container .header-modal-donation {
-    min-width: 0;
-    max-width: 600px;
-    height: 99px;
-  }
-}
-@media screen and (max-width: 320px) {
-  .modal-donation-container .header-modal-donation {
-    width: 300px;
-    height: 117px;
-    max-width: 300px;
-    font-size: 26px;
-    font-weight: 500;
-    text-align: center;
-  }
-}
 .modal-donation-container .header-text {
   height: 87px;
   width: 100%;
@@ -4076,7 +4096,7 @@ footer.footer-content.footer-button-donate:hover {
     gap: 20px;
   }
 }
-.modal-donation-container .donation-form .donate-btn-container .together-donate-btn {
+.modal-donation-container .donation-form .donate-btn-container .modal-donate-btn {
   width: 80px;
   height: 100%;
   background-color: #80CFC8;
@@ -4085,18 +4105,21 @@ footer.footer-content.footer-button-donate:hover {
   cursor: pointer;
 }
 @media screen and (max-width: 640px) {
-  .modal-donation-container .donation-form .donate-btn-container .together-donate-btn {
+  .modal-donation-container .donation-form .donate-btn-container .modal-donate-btn {
     width: 135px;
     height: 65px;
   }
 }
 @media screen and (max-width: 320px) {
-  .modal-donation-container .donation-form .donate-btn-container .together-donate-btn {
+  .modal-donation-container .donation-form .donate-btn-container .modal-donate-btn {
     width: 130px;
     height: 50px;
   }
 }
-.modal-donation-container .donation-form .donate-btn-container .together-donate-btn:hover {
+.modal-donation-container .donation-form .donate-btn-container .modal-donate-btn:hover {
+  background-color: #05786E;
+}
+.modal-donation-container .donation-form .modal-donate-btn.active {
   background-color: #05786E;
 }
 .modal-donation-container .donation-form .other-amount-input-container {
@@ -4132,6 +4155,12 @@ footer.footer-content.footer-button-donate:hover {
   height: 30px;
   border: 1px solid black;
   margin-right: 20px;
+  cursor: pointer;
+  display: inline-block;
+  color: black;
+  -moz-appearance: auto;
+  -webkit-appearance: checkbox;
+  appearance: auto;
 }
 .modal-donation-container .donation-form .container-checkbox .monthly-recurring-label {
   font-size: 18px;
@@ -4165,6 +4194,7 @@ footer.footer-content.footer-button-donate:hover {
   border: 1px solid black;
   border-radius: 5px;
   width: 440px;
+  padding-left: 20px;
 }
 @media screen and (max-width: 640px) {
   .modal-donation-container .select-container .select-pets {
@@ -4183,6 +4213,7 @@ footer.footer-content.footer-button-donate:hover {
   height: 65px;
 }
 .modal-donation-container .other-sum-input {
+  padding-left: 20px;
   width: 200px;
 }
 @media screen and (max-width: 640px) {
@@ -4196,6 +4227,38 @@ footer.footer-content.footer-button-donate:hover {
   }
 }
 
+.header-modal-donation {
+  height: 135px;
+  width: 100%;
+  min-width: 920px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 42px;
+  border-radius: 5px;
+  color: white;
+  background-color: #F58021;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 640px) {
+  .header-modal-donation {
+    min-width: 0;
+    max-width: 600px;
+    height: 99px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .header-modal-donation {
+    width: 300px;
+    height: 117px;
+    max-width: 300px;
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
 .donation-second-step {
   display: none;
 }
@@ -4206,10 +4269,12 @@ footer.footer-content.footer-button-donate:hover {
   background-color: #00A092;
 }
 
+.donation-third-step {
+  display: none;
+}
 .donation-third-step .credential-container {
   display: flex;
   gap: 40px;
-  margin-bottom: 50px;
 }
 .donation-third-step .circle {
   background-color: #00A092;
@@ -4243,6 +4308,12 @@ footer.footer-content.footer-button-donate:hover {
 }
 .donation-third-step .card-number input {
   width: 445px;
+}
+.donation-third-step .save-card-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
 .popup-btn-container {
@@ -4350,6 +4421,38 @@ footer.footer-content.footer-button-donate:hover {
 }
 .other-amount-btn:hover, .special-pet-btn:hover {
   background-color: #05786E;
+}
+
+.other-amount-btn.active, .special-pet-btn.active {
+  background-color: #05786E;
+}
+
+#credit-card,
+#cvv {
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+#cvv {
+  width: 200px;
+}
+
+.select-credential {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 200px;
+  height: 65px;
+  padding-left: 20px;
+}
+
+.select-credential-container {
+  display: flex;
+  gap: 40px;
+}
+
+.errors-donation-form {
+  color: red;
+  font-size: 18px;
 }
 
 .overlay {
@@ -4766,6 +4869,12 @@ textarea {
   color: inherit;
   padding: 0;
   margin: 0;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
 }
 
 input:focus::placeholder,

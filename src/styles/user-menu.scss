@@ -123,3 +123,20 @@
     appearance: auto
   }
 }
+
+.user-menu-card {
+  margin-top: 10px;
+}
+
+.clear-cards-btn {
+  width: 30px;
+  height: 30px;
+  background-color: v.$bg-blue-col;
+  border-radius: 5px;
+  color: #fff;
+  margin-left: 15px;
+
+  &:hover{
+    background-color: v.$bg-blue-hover;
+  }
+}
