@@ -12,7 +12,7 @@ export type UserAuth = {
   user: {
     name: string,
     email: string
-  } | null
+  }
 }
 
 export interface Donation {

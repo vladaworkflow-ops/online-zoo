@@ -1,4 +1,3 @@
-const passwordRegex = /^(?=.*[!@#$%^&*()_+\-=[\]{}|;:'",.<>/?]).{6,}$/;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const onlyEnRegex = /^[A-Za-z]/;
 const loginRegex = /^[A-Za-z][A-Za-z]{2,}$/;

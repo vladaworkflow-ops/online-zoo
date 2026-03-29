@@ -1,7 +1,6 @@
 import {modalDonateBtn} from './donation-popup';
 import { authState }from '../api/auth';
 
-
 export const donationFirstStep = document.querySelector('.donation-first-step') as  HTMLDivElement;
 const donationSecondStep = document.querySelector('.donation-second-step') as  HTMLDivElement;
 export const donationThirdStep = document.querySelector('.donation-third-step') as  HTMLDivElement;

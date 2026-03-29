@@ -2,7 +2,6 @@ import { petCardsApi } from '../api/petCardApi';
 import { Cards } from '../../types/pet-cards';
 import { createAnimalCard, createLoader } from './createCard'
 import { renderFeedbackCards } from './renderThinkCards';
-import userLogged from "../../assets/icons/user-logged.png";
 import userIn from "../../assets/icons/user-in.png";
 const slideContainer = document.querySelector('.meet-slide-container') as HTMLDivElement;
 const commentsContainer = document.querySelector('.comments-container') as HTMLDivElement;
