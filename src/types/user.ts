@@ -21,4 +21,9 @@ export interface Donation {
   recurring: boolean;
   date?: string;
   card?: string | null;
+  saveCard: boolean;
+}
+
+export interface DonationsByUser {
+  [email: string]: Donation[];
 }

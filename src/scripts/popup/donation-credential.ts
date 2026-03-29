@@ -1,6 +1,9 @@
 import { donationForm, donationThirdStep, donationFirstStep } from './donation-popup-validation';
 import { modalDonation, overlay } from './donation-popup';
 import { saveDonation } from '../utils/saveDonation';
+import { authState } from '../api/auth';
+import { getDonations, renderDonations } from '../components/renderDonation';
+import { updateUserMenu } from '../utils/user-menu';
 const form = document.getElementById('donation-form') as HTMLFormElement;
 const cardNumber = document.getElementById('credit-card') as HTMLInputElement;
 const cvv = document.getElementById('cvv') as HTMLInputElement;
@@ -91,7 +94,14 @@ form.addEventListener('submit', (e) => {
     return;
   }
 
-  saveDonation();
+  const email = authState.isLogged
+    ? authState.user.email
+    : 'guest';
+
+  saveDonation(email);
+  let userDonations = getDonations(email);
+  renderDonations(userDonations);
+  updateUserMenu(authState);
 
   errorText.textContent = 'Form successfully submitted!';
 

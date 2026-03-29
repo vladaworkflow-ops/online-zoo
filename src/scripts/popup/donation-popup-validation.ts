@@ -15,6 +15,7 @@ const backBtn = document.querySelectorAll('.back-btn') as NodeListOf<HTMLButtonE
 const btnNextSecond = document.querySelector('.second-btn-next') as HTMLButtonElement;
 const donationName = document.querySelector('#donation-name') as HTMLInputElement;
 const donationEmail = document.querySelector('#donation-email') as HTMLInputElement;
+const saveCard = document.querySelector('#save-card') as HTMLInputElement;
 
 btnNext.disabled = true;
 btnNextSecond.disabled = true;
@@ -26,6 +27,7 @@ interface DonationForm {
   donationName: string,
   donationEmail: string,
   card: string | null,
+  saveCard: boolean,
   cvv: string | null,
   month: string | null,
   year: string | null
@@ -39,6 +41,7 @@ export const donationForm: DonationForm = {
   donationEmail: '',
   card: '',
   cvv: '',
+  saveCard: false,
   month: '',
   year: ''
 }
@@ -113,6 +116,10 @@ petSelect.addEventListener('change', () => {
 
 checkboxMonthly.addEventListener('change', () => {
   donationForm.setMonthly = checkboxMonthly.checked;
+})
+
+saveCard.addEventListener('change', () => {
+  donationForm.saveCard = saveCard.checked;
 })
 
 function updateBtnNextState() {

@@ -538,6 +538,10 @@
             <input type="text" name="cvv" id="cvv" placeholder="***" inputmode="numeric">
           </div>
         </div>
+        <div class="save-card-container">
+          <input type="checkbox" name="save-card" class="save-card" id="save-card">
+          <span class="save-card-label">save card</span>
+        </div>
         <p><span>*</span> Expiration Date</p>
         <div class="select-credential-container">
           <select name="month" id="month-select" class="select-credential" required>
@@ -602,12 +606,11 @@
     <section class="account-section">
       <h3>Profile</h3>
       <p>Name: <span class="user-menu-name"></span></p>
-      <p>Login: <span class="user-menu-login"></span></p>
       <p>Email: <span class="user-menu-email"></span></p>
     </section>
     <section class="account-section">
       <h3>Payment Methods</h3>
-      <p>card: <span class="user-menu-card"></span></p>
+      <ul class="user-card-container">card: <li class="user-menu-card"></li></ul>
     </section>
     <section class="account-section">
       <h3>My Donations</h3>

@@ -1,4 +1,4 @@
-import { Donation } from '../../types/user';
+import { Donation, DonationsByUser } from '../../types/user';
 
 export function renderDonations(donations: Donation[]) {
   const container = document.querySelector('.donation-item') as HTMLElement;
@@ -19,7 +19,7 @@ export function renderDonations(donations: Donation[]) {
     item.innerHTML = `
       <p>Time: <span>${donation.date}</span></p>
       <p>Animal: <span>${donation.animal}</span></p>
-      <p>Amount: <span>$${donation.amount}</span></p>
+      <p>Amount: <span>${donation.amount}</span></p>
       <p>Type: <span>${donation.recurring ? 'Monthly' : 'One-time'}</span></p>
       <button class="repeat-donation">Repeat donation</button>
     `;
@@ -28,9 +28,14 @@ export function renderDonations(donations: Donation[]) {
   });
 }
 
-function getDonations(): Donation[] {
-  return JSON.parse(localStorage.getItem('donations') || '[]');
-}
 
-export const userDonations = getDonations();
-renderDonations(userDonations);
+export function getDonations(userEmail?: string): Donation[] {
+  const raw = localStorage.getItem('donations');
+  if (!raw) return [];
+
+  const data: DonationsByUser = JSON.parse(raw);
+
+  const key = userEmail || 'guest';
+
+  return data[key] ?? [];
+}

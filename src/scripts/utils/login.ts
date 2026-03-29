@@ -5,7 +5,7 @@ import { authState }from '../api/auth';
 import { validateLogin, validatePassword } from "../utils/validation";
 import { BackendMessages } from "../utils/backendMessages";
 import { updateUserMenu, updateUserIcon } from "./user-menu";
-import { userDonations, renderDonations } from '../components/renderDonation';
+import { getDonations, renderDonations } from '../components/renderDonation';
 
 const loginContainer = document.querySelector('.login-popup') as HTMLDivElement;
 const form = document.getElementById('form-login') as HTMLFormElement;
@@ -67,6 +67,7 @@ form.addEventListener('submit', async (e) => {
 
       updateUserMenu(authState);
       updateUserIcon(authState);
+      let userDonations = getDonations(authState.user.email);
       renderDonations(userDonations);
 
       form.reset();
