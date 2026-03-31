@@ -1,8 +1,8 @@
-import {validateLogin, validateUserName, validatePassword, validateConfirmPassword, validateEmail} from "../utils/validation";
-import {authState, registerUser} from "../api/auth";
-import { User, UserAuth } from "../../types/user";
-import {BackendMessages} from "../utils/backendMessages";
-import { updateUserIcon, updateUserMenu} from "../utils/user-menu";
+import { validateLogin, validateUserName, validatePassword, validateConfirmPassword, validateEmail } from "../utils/validation";
+import { authState, registerUser } from "../api/auth";
+import { User } from "../../types/user";
+import { BackendMessages } from "../utils/backendMessages";
+import { updateUserIcon, updateUserMenu } from "../utils/user-menu";
 
 const registerContainer = document.querySelector('.registration-popup') as HTMLDivElement;
 const form = document.getElementById('registration-form') as HTMLFormElement;

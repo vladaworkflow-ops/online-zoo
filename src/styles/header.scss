@@ -188,6 +188,11 @@ header {
     }
 }
 
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
 .user-icon:hover {
   cursor: pointer;
 }
