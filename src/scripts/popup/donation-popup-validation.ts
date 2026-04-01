@@ -4,11 +4,11 @@ import { authState }from '../api/auth';
 export const donationFirstStep = document.querySelector('.donation-first-step') as  HTMLDivElement;
 const donationSecondStep = document.querySelector('.donation-second-step') as  HTMLDivElement;
 export const donationThirdStep = document.querySelector('.donation-third-step') as  HTMLDivElement;
-const inputSum =  document.querySelector('.other-sum-input') as HTMLInputElement;
-const otherAmount = document.querySelector('.other-amount-btn') as HTMLButtonElement;
+export const inputSum =  document.querySelector('.other-sum-input') as HTMLInputElement;
+export const otherAmount = document.querySelector('.other-amount-btn') as HTMLButtonElement;
 const inputBtnSum = document.querySelector('#donation-btn-input') as HTMLInputElement;
-const petSelect = document.getElementById('pet-select') as HTMLSelectElement;
-const petSelectBtn = document.querySelector('.special-pet-btn') as HTMLButtonElement;
+export const petSelect = document.getElementById('pet-select') as HTMLSelectElement;
+export const petSelectBtn = document.querySelector('.special-pet-btn') as HTMLButtonElement;
 const checkboxMonthly = document.querySelector('#monthly-recurring') as HTMLInputElement;
 const btnNext = document.querySelector('.popup-btn-next') as HTMLButtonElement;
 const backBtn = document.querySelectorAll('.back-btn') as NodeListOf<HTMLButtonElement>;
@@ -122,7 +122,7 @@ saveCard.addEventListener('change', () => {
   donationForm.saveCard = saveCard.checked;
 })
 
-function updateBtnNextState() {
+export function updateBtnNextState() {
   btnNext.disabled = !(donationForm.chooseBtnSum !== '' && donationForm.specialPet !== '');
 }
 updateBtnNextState();
@@ -171,11 +171,12 @@ function fillData() {
 
 if(!authState.isLogged){
   donationName.addEventListener('input', ()=>{
-  let value = donationName.value;
-  if(value !== ''){
-    donationForm.donationName = value;
-    updateBtnNextSecondState()
-  }
+    let value = donationName.value;
+
+    if(value !== ''){
+      donationForm.donationName = value;
+      updateBtnNextSecondState()
+    }
   })
 
   donationEmail.addEventListener('input', ()=>{

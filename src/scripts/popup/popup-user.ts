@@ -2,7 +2,7 @@ import { authState } from '../api/auth';
 
 const userIcon = document.querySelector('.user-icon') as HTMLElement | null;
 const popupUser = document.querySelector('.popup-user') as HTMLElement | null;
-const userMenu = document.querySelector('.user-menu') as HTMLElement | null;
+export const userMenu = document.querySelector('.user-menu') as HTMLElement | null;
 const overlay = document.querySelector('.overlay') as HTMLElement | null;
 const closePopupBtn = document.querySelector('.close-popup-user') as HTMLElement | null;
 const loginPopup = document.querySelector('.login-popup') as HTMLElement | null;

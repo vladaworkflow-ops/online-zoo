@@ -23,7 +23,7 @@ donationBtnInput.addEventListener("focus", () => {
   donationBtnInput.value = "";
 })
 
-function openDonationModal(){
+export function openDonationModal(){
   overlay.classList.add('active-modal');
   modalDonation.classList.add('active-modal');
 }

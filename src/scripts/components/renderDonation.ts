@@ -1,4 +1,7 @@
 import { Donation, DonationsByUser } from '../../types/user';
+import { modalDonateBtn, openDonationModal } from '../popup/donation-popup';
+import { donationForm, inputSum, otherAmount, petSelect, petSelectBtn, updateBtnNextState } from '../popup/donation-popup-validation';
+import { userMenu } from '../popup/popup-user';
 
 export function renderDonations(donations: Donation[]) {
   const container = document.querySelector('.donation-item') as HTMLElement;
@@ -24,8 +27,44 @@ export function renderDonations(donations: Donation[]) {
       <button class="repeat-donation">Repeat donation</button>
     `;
 
+    const btn = item.querySelector('.repeat-donation') as HTMLButtonElement;
+
+    btn.addEventListener('click', () => {
+      repeatDonation(donation.animal, donation.amount);
+    });
+
     container.appendChild(item);
   });
+}
+
+export function repeatDonation(animal: string, amount: string) {
+  userMenu?.classList.remove('active-modal');
+  openDonationModal();
+
+  const matchedButton = Array.from(modalDonateBtn).find(btn => {
+    const btnValue = btn.textContent;
+    return btnValue === amount;
+  });
+
+  modalDonateBtn.forEach(btn => btn.classList.remove('active'));
+  otherAmount.classList.remove('active');
+
+  if (matchedButton) {
+    matchedButton.classList.add('active');
+    inputSum.value = '';
+  } else {
+    otherAmount.classList.add('active');
+    inputSum.value = amount;
+  }
+
+  donationForm.chooseBtnSum = amount;
+
+  petSelect.value = animal;
+  if (animal) {
+    petSelectBtn.classList.add('active');
+    donationForm.specialPet = animal;
+  }
+  updateBtnNextState();
 }
 
 
