@@ -1,22 +1,24 @@
-import tseslint from "@typescript-eslint/eslint-plugin";
-import parser from "@typescript-eslint/parser";
+import tseslint from '@typescript-eslint/eslint-plugin';
+import parser from '@typescript-eslint/parser';
+import prettier from 'eslint-config-prettier';
 
 export default [
   {
-    files: ["src/**/*.ts"],
+    files: ['src/**/*.ts', 'src/**/*.js'],
     languageOptions: {
       parser,
       parserOptions: {
-        project: "./tsconfig.json"
-      }
+        project: './tsconfig.json',
+      },
     },
     plugins: {
-      "@typescript-eslint": tseslint
+      '@typescript-eslint': tseslint,
     },
     rules: {
       ...tseslint.configs.recommended.rules,
 
-      "@typescript-eslint/no-explicit-any": "error"
-    }
-  }
+      '@typescript-eslint/no-explicit-any': 'error',
+    },
+  },
+  prettier,
 ];
