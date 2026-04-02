@@ -1,8 +1,8 @@
 export interface Feedback {
-  "id": number,
-  "city": string,
-  "month": string,
-  "year": string,
-  "text": string,
-  "name": string
+  id: number;
+  city: string;
+  month: string;
+  year: string;
+  text: string;
+  name: string;
 }

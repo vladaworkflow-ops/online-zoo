@@ -1,18 +1,18 @@
-@use "_variables" as v;
-@use "_mixin" as m;
+@use '_variables' as v;
+@use '_mixin' as m;
 
 .contact {
   @include m.position(column, center, center, center);
 
-  @media screen and (max-width: v.$desktop-small){
+  @media screen and (max-width: v.$desktop-small) {
     width: v.$desktop-small;
   }
 
-  @media screen and (max-width: v.$tablet){
+  @media screen and (max-width: v.$tablet) {
     width: v.$tablet;
   }
 
-  @media screen and (max-width: v.$mobile){
+  @media screen and (max-width: v.$mobile) {
     width: v.$mobile;
   }
 
@@ -22,25 +22,25 @@
     margin-bottom: 150px;
     position: relative;
 
-      img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-    @media screen and (max-width: v.$desktop-small){
-       max-width: v.$desktop-small;
-       height: 815px;
-       margin-bottom: 50px;
-       overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    @media screen and (max-width: v.$desktop-small) {
+      max-width: v.$desktop-small;
+      height: 815px;
+      margin-bottom: 50px;
+      overflow: hidden;
 
-       img {
+      img {
         width: 114%;
         height: 100%;
         display: block;
       }
     }
 
-    @media screen and (max-width: v.$tablet){
+    @media screen and (max-width: v.$tablet) {
       max-width: v.$tablet;
       height: 434px;
       img {
@@ -48,7 +48,7 @@
       }
     }
 
-    @media screen and (max-width: v.$mobile){
+    @media screen and (max-width: v.$mobile) {
       max-width: v.$mobile;
       margin-bottom: 30px;
       height: 217px;
@@ -60,7 +60,7 @@
     @include m.position(row, space-between, center);
     margin-bottom: 150px;
 
-    @media screen and (max-width: v.$desktop-small)  {
+    @media screen and (max-width: v.$desktop-small) {
       width: 835px;
       @include m.position(column, center, center, flex-start);
       margin-bottom: 100px;
@@ -80,11 +80,11 @@
       margin-bottom: 80px;
     }
 
-    .get-in-touch_title{
+    .get-in-touch_title {
       @include m.h2;
       text-align: left;
       margin-bottom: 50px;
-      @media screen and (max-width: v.$desktop-small)  {
+      @media screen and (max-width: v.$desktop-small) {
         text-align: center;
         letter-spacing: 1px;
         margin-bottom: 30px;
@@ -108,17 +108,17 @@
       line-height: 1.5;
       color: black;
 
-      @media screen and (max-width: v.$desktop-small)  {
+      @media screen and (max-width: v.$desktop-small) {
         width: 840px;
         text-align: center;
       }
 
-      @media screen and (max-width: v.$tablet)  {
+      @media screen and (max-width: v.$tablet) {
         width: 600px;
         padding-left: 0;
       }
 
-      @media screen and (max-width: v.$mobile)  {
+      @media screen and (max-width: v.$mobile) {
         width: auto;
         padding: 0;
       }
@@ -126,7 +126,7 @@
   }
 }
 
-.form-contact{
+.form-contact {
   @include m.position(column, baseline, center);
   width: 680px;
 
@@ -154,7 +154,7 @@
   }
 
   textarea {
-    @include m.size(100%,200px);
+    @include m.size(100%, 200px);
     border: 1px solid black;
     border-radius: 5px;
     margin-bottom: 70px;
@@ -162,40 +162,39 @@
     padding-top: 20px;
     margin-top: 10px;
 
-    @media screen and (max-width: v.$desktop-small)  {
+    @media screen and (max-width: v.$desktop-small) {
       margin-bottom: 50px;
     }
 
-    @media screen and (max-width: v.$mobile)  {
+    @media screen and (max-width: v.$mobile) {
       margin-bottom: 30px;
     }
   }
 
   .submit-contact-form {
-  @include m.btn-template;
-  background-color: v.$bg-blue-col;
+    @include m.btn-template;
+    background-color: v.$bg-blue-col;
 
-    @media screen and (max-width: v.$tablet)  {
+    @media screen and (max-width: v.$tablet) {
       align-self: center;
       @include m.size(290px, 74px);
     }
 
-    @media screen and (max-width: v.$mobile)  {
+    @media screen and (max-width: v.$mobile) {
       @include m.size(300px, 50px);
     }
   }
 
-  @media screen and (max-width: v.$desktop-small)  {
+  @media screen and (max-width: v.$desktop-small) {
     margin-top: 50px;
     width: 740px;
   }
 
-  @media screen and (max-width: v.$tablet)  {
+  @media screen and (max-width: v.$tablet) {
     width: 100%;
   }
-
 }
 
-.contact .main-content .form-contact .submit-contact-form:hover{
+.contact .main-content .form-contact .submit-contact-form:hover {
   background-color: v.$bg-blue-hover;
 }

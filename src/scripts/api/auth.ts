@@ -1,9 +1,9 @@
-import { User, LoginUser, UserAuth } from "../../types/user";
+import { User, LoginUser, UserAuth } from '../../types/user';
 
 export const API_URL = import.meta.env.VITE_API_URL;
 
 if (!API_URL) {
-  throw new Error("API_URL is not defined");
+  throw new Error('API_URL is not defined');
 }
 
 export async function registerUser(data: User) {
@@ -30,6 +30,6 @@ export const authState: UserAuth = {
   isLogged: false,
   user: {
     name: '',
-    email: ''
-  }
+    email: '',
+  },
 };

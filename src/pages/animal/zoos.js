@@ -3,18 +3,17 @@ const menuAnimalContainer = document.querySelectorAll('.menu-animal');
 const sidePanel = document.querySelector('.side-panel');
 
 function handleViewAnimal() {
-
   animalContainer.forEach((container, idx) => {
     container.style.display = idx === 0 ? 'flex' : 'none';
   });
 
   if (menuAnimalContainer[0]) {
-    menuAnimalContainer[0].classList.add('active','highlighted');
+    menuAnimalContainer[0].classList.add('active', 'highlighted');
   }
 
   menuAnimalContainer.forEach((menuEl, index) => {
     menuEl.addEventListener('click', () => {
-      animalContainer.forEach(container => {
+      animalContainer.forEach((container) => {
         container.style.display = 'none';
       });
 
@@ -22,8 +21,10 @@ function handleViewAnimal() {
         animalContainer[index].style.display = 'flex';
       }
 
-      menuAnimalContainer.forEach(el => el.classList.remove('active','highlighted'));
-      menuEl.classList.add('active','highlighted');
+      menuAnimalContainer.forEach((el) =>
+        el.classList.remove('active', 'highlighted'),
+      );
+      menuEl.classList.add('active', 'highlighted');
     });
   });
 }

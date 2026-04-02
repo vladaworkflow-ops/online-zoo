@@ -1,4 +1,8 @@
-import { donationForm, donationThirdStep, donationFirstStep } from './donation-popup-validation';
+import {
+  donationForm,
+  donationThirdStep,
+  donationFirstStep,
+} from './donation-popup-validation';
 import { modalDonation, overlay } from './donation-popup';
 import { saveDonation } from '../utils/saveDonation';
 import { authState } from '../api/auth';
@@ -9,7 +13,9 @@ const cardNumber = document.getElementById('credit-card') as HTMLInputElement;
 const cvv = document.getElementById('cvv') as HTMLInputElement;
 const month = document.getElementById('month-select') as HTMLSelectElement;
 const year = document.getElementById('year-select') as HTMLSelectElement;
-const errorText = document.querySelector('.errors-donation-form') as HTMLElement;
+const errorText = document.querySelector(
+  '.errors-donation-form',
+) as HTMLElement;
 
 cardNumber.addEventListener('input', () => {
   let value = cardNumber.value.replace(/\D/g, '');
@@ -35,7 +41,7 @@ month.addEventListener('change', () => {
   if (monthSelected !== '') {
     donationForm.month = monthSelected;
   }
-})
+});
 
 year.addEventListener('change', () => {
   let yearSelected: string = year.value;
@@ -43,8 +49,7 @@ year.addEventListener('change', () => {
   if (yearSelected !== '') {
     donationForm.year = yearSelected;
   }
-})
-
+});
 
 function validateForm() {
   const errors: string[] = [];
@@ -82,7 +87,6 @@ function validateForm() {
   return errors;
 }
 
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -94,9 +98,7 @@ form.addEventListener('submit', (e) => {
     return;
   }
 
-  const email = authState.isLogged
-    ? authState.user.email
-    : 'guest';
+  const email = authState.isLogged ? authState.user.email : 'guest';
 
   saveDonation(email);
   let userDonations = getDonations(email);
@@ -116,12 +118,12 @@ form.addEventListener('submit', (e) => {
   donationForm.year = '';
 
   const inputs = form.querySelectorAll('input');
-  inputs.forEach(input => {
+  inputs.forEach((input) => {
     input.value = '';
   });
 
   const selects = form.querySelectorAll('select');
-  selects.forEach(select => {
+  selects.forEach((select) => {
     select.value = '';
   });
 

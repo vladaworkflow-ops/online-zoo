@@ -1,4 +1,4 @@
-import {updateUserMenu, updateUserIcon} from "./user-menu";
+import { updateUserMenu, updateUserIcon } from './user-menu';
 import { authState } from '../api/auth';
 
 export function restoreAuth() {
@@ -14,8 +14,9 @@ export function restoreAuth() {
 
     updateUserMenu(authState);
     updateUserIcon(authState);
-  } catch (e) {
+  } catch (error) {
     console.error('Failed to parse auth from localStorage');
+    console.log(error);
   }
 }
 

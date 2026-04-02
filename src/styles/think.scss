@@ -1,9 +1,9 @@
-@use "_variables" as v;
-@use "_mixin" as m;
+@use '_variables' as v;
+@use '_mixin' as m;
 
 .thinks-section {
   width: 100%;
-  background-image: url("../assets/images/bg-thinks.png");
+  background-image: url('../assets/images/bg-thinks.png');
   background-color: v.$bg-purple-col;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -67,7 +67,6 @@
         width: v.$mobile;
         gap: 45px;
       }
-
 
       .user-think-text {
         width: 580px;
@@ -148,7 +147,7 @@
           padding-left: 0;
         }
 
-        .comments-content{
+        .comments-content {
           @include m.size(515px, 463px);
           border-radius: 5px;
           color: black;
@@ -206,7 +205,6 @@
                 display: block;
               }
             }
-
           }
           .comment-text {
             font-size: 18px;
@@ -243,41 +241,41 @@
       }
 
       .arrow-container {
-      display: flex;
-      gap: 60px;
-      margin-top: 60px;
-      margin-right: 280px;
-      cursor: pointer;
-
-      .arrows {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 60px;
-        height: 60px;
-        border: 1px solid white;
-        background-color: transparent;
-        color: white;
-      }
+        gap: 60px;
+        margin-top: 60px;
+        margin-right: 280px;
+        cursor: pointer;
 
-      .arrows:hover {
-        background-color: white;
-        color: v.$bg-purple-col;
-      }
+        .arrows {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 60px;
+          height: 60px;
+          border: 1px solid white;
+          background-color: transparent;
+          color: white;
+        }
 
-      .arr-left {
-        transform: rotate(180deg);
-      }
+        .arrows:hover {
+          background-color: white;
+          color: v.$bg-purple-col;
+        }
 
-      @media screen and (max-width: v.$desktop-small) {
-        justify-content: flex-end;
-        margin: 100px 40px 100px 0;
-      }
+        .arr-left {
+          transform: rotate(180deg);
+        }
 
-      @media screen and (max-width: v.$tablet) {
-        display: none;
-      }
+        @media screen and (max-width: v.$desktop-small) {
+          justify-content: flex-end;
+          margin: 100px 40px 100px 0;
+        }
+
+        @media screen and (max-width: v.$tablet) {
+          display: none;
+        }
       }
     }
 
@@ -308,7 +306,7 @@
       background-color: transparent;
       border: 1px solid white;
       margin-top: 376px;
-       @media screen and (max-width: v.$desktop-small) {
+      @media screen and (max-width: v.$desktop-small) {
         margin: 0 0 0 135px;
       }
       @media screen and (max-width: v.$tablet) {

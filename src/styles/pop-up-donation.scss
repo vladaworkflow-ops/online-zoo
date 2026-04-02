@@ -1,5 +1,5 @@
-@use "_variables" as v;
-@use "_mixin" as m;
+@use '_variables' as v;
+@use '_mixin' as m;
 
 .modal-donation-container {
   position: fixed;
@@ -33,7 +33,7 @@
     height: 87px;
     width: 100%;
     @include m.position(row, flex-start, center, flex-end);
-    border-bottom: 1px solid #A4A8AE;
+    border-bottom: 1px solid #a4a8ae;
     font-size: 18px;
     line-height: 1.5;
     font-weight: 600;
@@ -99,7 +99,7 @@
       .modal-donate-btn {
         width: 80px;
         height: 100%;
-        background-color: #80CFC8;
+        background-color: #80cfc8;
         color: white;
         border-radius: 5px;
         cursor: pointer;
@@ -114,13 +114,13 @@
           height: 50px;
         }
 
-        &:hover{
+        &:hover {
           background-color: v.$bg-blue-hover;
         }
       }
     }
 
-    .modal-donate-btn.active{
+    .modal-donate-btn.active {
       background-color: v.$bg-blue-hover;
     }
 
@@ -199,7 +199,7 @@
         height: 65px;
       }
 
-        @media screen and (max-width: v.$mobile) {
+      @media screen and (max-width: v.$mobile) {
         height: 50px;
       }
     }
@@ -226,34 +226,34 @@
 }
 
 .header-modal-donation {
-    height: 135px;
-    width: 100%;
-    min-width: 920px;
-    @include m.position(row, center, center, center);
-    font-size: 42px;
-    border-radius: 5px;
-    color: white;
-    background-color: v.$bg-orange-col;
-    text-transform: uppercase;
+  height: 135px;
+  width: 100%;
+  min-width: 920px;
+  @include m.position(row, center, center, center);
+  font-size: 42px;
+  border-radius: 5px;
+  color: white;
+  background-color: v.$bg-orange-col;
+  text-transform: uppercase;
 
-    @media screen and (max-width: v.$tablet) {
-      min-width: 0;
-      max-width: 600px;
-      height: 99px;
-    }
+  @media screen and (max-width: v.$tablet) {
+    min-width: 0;
+    max-width: 600px;
+    height: 99px;
+  }
 
-    @media screen and (max-width: v.$mobile) {
-      @include m.size(300px, 117px);
-      max-width: 300px;
-      font-size: 26px;
-      font-weight: 500;
-      text-align: center;
-    }
+  @media screen and (max-width: v.$mobile) {
+    @include m.size(300px, 117px);
+    max-width: 300px;
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+  }
 }
 
 .donation-second-step {
   display: none;
-  .second-form-text{
+  .second-form-text {
     color: rgba(0, 0, 0, 0.547);
   }
 
@@ -301,7 +301,7 @@
     }
   }
 
-  .save-card-container{
+  .save-card-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -348,7 +348,7 @@
     @include m.position(row, center, center, center);
     @include m.size(200px, 74px);
     text-transform: uppercase;
-    background-color: #80CFC8;
+    background-color: #80cfc8;
     border-radius: 5px;
     color: white;
     cursor: pointer;
@@ -375,9 +375,10 @@
   font-weight: 500;
 }
 
-.other-amount-btn, .special-pet-btn {
+.other-amount-btn,
+.special-pet-btn {
   @include m.btn-template(200px, 65px);
-  background-color: #80CFC8;
+  background-color: #80cfc8;
   color: white;
   cursor: pointer;
 
@@ -390,22 +391,23 @@
     height: 50px;
   }
 
-  &:hover{
+  &:hover {
     background-color: v.$bg-blue-hover;
   }
 }
 
-.other-amount-btn.active, .special-pet-btn.active {
+.other-amount-btn.active,
+.special-pet-btn.active {
   background-color: v.$bg-blue-hover;
 }
 
 #credit-card,
-#cvv{
+#cvv {
   padding-left: 20px;
   font-size: 20px;
 }
 
-#cvv{
+#cvv {
   width: 200px;
 }
 
@@ -417,7 +419,7 @@
   padding-left: 20px;
 }
 
-.select-credential-container{
+.select-credential-container {
   display: flex;
   gap: 40px;
 }

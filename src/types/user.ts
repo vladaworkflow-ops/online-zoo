@@ -3,17 +3,17 @@ export interface User {
   password: string;
   name: string;
   email: string;
-};
+}
 
 export type LoginUser = Pick<User, 'login' | 'password'>;
 
 export type UserAuth = {
-  isLogged: boolean,
+  isLogged: boolean;
   user: {
-    name: string,
-    email: string
-  }
-}
+    name: string;
+    email: string;
+  };
+};
 
 export interface Donation {
   animal: string;

@@ -1,5 +1,5 @@
-@use "_variables" as v;
-@use "_mixin" as m;
+@use '_variables' as v;
+@use '_mixin' as m;
 
 .overlay {
   position: fixed;
@@ -19,7 +19,7 @@
 
 .overlay.active-modal,
 .modal-together-container.active-modal,
-.modal-donation-container.active-modal{
+.modal-donation-container.active-modal {
   opacity: 1;
   visibility: visible;
 }
@@ -34,7 +34,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  background-image: url("../assets/images/together-bg.png");
+  background-image: url('../assets/images/together-bg.png');
   background-repeat: no-repeat;
   border-radius: 5px;
   z-index: 1001;
@@ -101,7 +101,6 @@
           padding: 0 57px 20px 57px;
         }
       }
-
     }
   }
   .donate-btn-container {
@@ -111,17 +110,17 @@
     gap: 40px;
     padding: 0 80px;
 
-     @media screen and (max-width: v.$desktop-small) {
-        padding: 0 40px 0 80px;
-     }
+    @media screen and (max-width: v.$desktop-small) {
+      padding: 0 40px 0 80px;
+    }
 
-     @media screen and (max-width: v.$tablet) {
+    @media screen and (max-width: v.$tablet) {
       justify-content: center;
-        padding: 0 60px 0 60px;
-        gap: 20px;
-        flex-wrap: wrap;
-        height: auto;
-     }
+      padding: 0 60px 0 60px;
+      gap: 20px;
+      flex-wrap: wrap;
+      height: auto;
+    }
 
     .together-donate-btn {
       width: 120px;
@@ -130,7 +129,7 @@
       background-color: v.$bg-blue-col;
       color: white;
 
-      &:hover{
+      &:hover {
         background-color: v.$bg-blue-hover;
       }
 

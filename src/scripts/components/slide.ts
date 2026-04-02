@@ -9,14 +9,14 @@ function createCarousel({
   containerSelector,
   slideSelector,
   prevBtnSelector,
-  nextBtnSelector
+  nextBtnSelector,
 }: CarouselOptions) {
   const container = document.querySelector(containerSelector) as HTMLDivElement;
-  const prevBtn = document.querySelector(prevBtnSelector) as  HTMLElement;
-  const nextBtn = document.querySelector(nextBtnSelector) as  HTMLElement;
+  const prevBtn = document.querySelector(prevBtnSelector) as HTMLElement;
+  const nextBtn = document.querySelector(nextBtnSelector) as HTMLElement;
 
   function moveRight() {
-    const firstSlide = container.querySelector(slideSelector) as  HTMLElement;
+    const firstSlide = container.querySelector(slideSelector) as HTMLElement;
     container.appendChild(firstSlide);
   }
 
@@ -34,12 +34,12 @@ createCarousel({
   containerSelector: '.meet-slide-container',
   slideSelector: '.slide-animal-card-link',
   prevBtnSelector: '#move-slide-left',
-  nextBtnSelector: '#move-slide-right'
+  nextBtnSelector: '#move-slide-right',
 });
 
 createCarousel({
   containerSelector: '.comments-container',
   slideSelector: '.comments-content',
   prevBtnSelector: '#comment-slide-left',
-  nextBtnSelector: '#comment-slide-right'
+  nextBtnSelector: '#comment-slide-right',
 });

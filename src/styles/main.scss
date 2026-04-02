@@ -1,35 +1,50 @@
-@use "variables.scss";
-@use "landing.scss";
-@use "header.scss";
-@use "user-menu.scss";
-@use "footer.scss";
-@use "map.scss";
-@use "zoos.scss";
-@use "contact.scss";
-@use "_mixin.scss";
-@use "pop-up-donation.scss";
-@use "pop-up-together.scss";
-@use "popup-user.scss";
-@use "login-popup.scss";
-@use "registration-popup.scss";
+@use 'variables.scss';
+@use 'landing.scss';
+@use 'header.scss';
+@use 'user-menu.scss';
+@use 'footer.scss';
+@use 'map.scss';
+@use 'zoos.scss';
+@use 'contact.scss';
+@use '_mixin.scss';
+@use 'pop-up-donation.scss';
+@use 'pop-up-together.scss';
+@use 'popup-user.scss';
+@use 'login-popup.scss';
+@use 'registration-popup.scss';
 
-*{
+* {
   padding: 0;
   margin: 0;
   border: 0;
 }
 
-*,*:before,*:after{
-   -moz-box-sizing: border-box;
-   -webkit-box-sizing: border-box;
-   box-sizing: border-box;
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;box-shadow: none;}
-a:visited{color: inherit;}
-a{ text-decoration: none; color: inherit; }
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+  box-shadow: none;
+}
+a:visited {
+  color: inherit;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-ul, li {
+ul,
+li {
   list-style: none;
 }
 
@@ -50,7 +65,7 @@ textarea {
   margin: 0;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   -webkit-appearance: auto;
   -moz-appearance: auto;
   appearance: auto;

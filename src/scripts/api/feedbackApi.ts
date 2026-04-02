@@ -1,8 +1,8 @@
-import { Feedback } from "../../types/testimonials";
-import { API_URL } from "./auth";
+import { Feedback } from '../../types/testimonials';
+import { API_URL } from './auth';
 
 if (!API_URL) {
-  throw new Error("API_URL is not defined");
+  throw new Error('API_URL is not defined');
 }
 
 export async function feedbackApi(): Promise<Feedback[]> {
@@ -11,12 +11,12 @@ export async function feedbackApi(): Promise<Feedback[]> {
   });
 
   if (response.status === 200) {
-  const dataCards: { data: Feedback[] } = await response.json();
-  return dataCards.data;
+    const dataCards: { data: Feedback[] } = await response.json();
+    return dataCards.data;
   }
 
   if (response.status === 500) {
-    throw new Error("Internal server error");
+    throw new Error('Internal server error');
   }
 
   throw new Error(`Unexpected error: ${response.status}`);

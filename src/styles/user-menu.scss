@@ -1,5 +1,5 @@
-@use "_variables" as v;
-@use "_mixin" as m;
+@use '_variables' as v;
+@use '_mixin' as m;
 
 .user-menu.active-modal {
   opacity: 1;
@@ -39,7 +39,7 @@
   }
 
   h3 {
-    border-bottom: 1px solid v.$bg-blue-col;;
+    border-bottom: 1px solid v.$bg-blue-col;
     padding: 10px;
     margin-bottom: 20px;
   }
@@ -63,7 +63,7 @@
 .sign_out-btn,
 .submit-login-form,
 .sign_in-btn,
-.registration-btn{
+.registration-btn {
   @include m.btn-template;
   background-color: v.$bg-orange-col;
   align-self: center;
@@ -80,12 +80,12 @@
 .user-icon {
   width: 65px;
   height: 50px;
-  background-image: url("../../assets/icons/user-in.png");
+  background-image: url('../../assets/icons/user-in.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.user-menu-name, 
+.user-menu-name,
 .user-menu-email {
   font-size: 18px;
   font-weight: 400;
@@ -97,7 +97,7 @@
   padding: 8px 12px;
   border: none;
   border-radius: 6px;
-  background: v.$bg-blue-col;;
+  background: v.$bg-blue-col;
   color: white;
   cursor: pointer;
   font-size: 14px;
@@ -120,7 +120,7 @@
   input {
     -moz-appearance: auto;
     -webkit-appearance: checkbox;
-    appearance: auto
+    appearance: auto;
   }
 }
 
@@ -136,7 +136,7 @@
   color: #fff;
   margin-left: 15px;
 
-  &:hover{
+  &:hover {
     background-color: v.$bg-blue-hover;
   }
 }

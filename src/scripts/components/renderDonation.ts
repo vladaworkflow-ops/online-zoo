@@ -1,6 +1,13 @@
 import { Donation, DonationsByUser } from '../../types/user';
 import { modalDonateBtn, openDonationModal } from '../popup/donation-popup';
-import { donationForm, inputSum, otherAmount, petSelect, petSelectBtn, updateBtnNextState } from '../popup/donation-popup-validation';
+import {
+  donationForm,
+  inputSum,
+  otherAmount,
+  petSelect,
+  petSelectBtn,
+  updateBtnNextState,
+} from '../popup/donation-popup-validation';
 import { userMenu } from '../popup/popup-user';
 
 export function renderDonations(donations: Donation[]) {
@@ -15,7 +22,7 @@ export function renderDonations(donations: Donation[]) {
     return;
   }
 
-  donations.forEach(donation => {
+  donations.forEach((donation) => {
     const item = document.createElement('div');
     item.classList.add('donation-card');
 
@@ -41,12 +48,12 @@ export function repeatDonation(animal: string, amount: string) {
   userMenu?.classList.remove('active-modal');
   openDonationModal();
 
-  const matchedButton = Array.from(modalDonateBtn).find(btn => {
+  const matchedButton = Array.from(modalDonateBtn).find((btn) => {
     const btnValue = btn.textContent;
     return btnValue === amount;
   });
 
-  modalDonateBtn.forEach(btn => btn.classList.remove('active'));
+  modalDonateBtn.forEach((btn) => btn.classList.remove('active'));
   otherAmount.classList.remove('active');
 
   if (matchedButton) {
@@ -66,7 +73,6 @@ export function repeatDonation(animal: string, amount: string) {
   }
   updateBtnNextState();
 }
-
 
 export function getDonations(userEmail?: string): Donation[] {
   const raw = localStorage.getItem('donations');

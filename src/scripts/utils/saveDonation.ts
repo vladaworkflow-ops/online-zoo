@@ -1,8 +1,8 @@
-import { Donation, DonationsByUser } from "../../types/user";
-import { donationForm } from "../popup/donation-popup-validation";
+import { Donation, DonationsByUser } from '../../types/user';
+import { donationForm } from '../popup/donation-popup-validation';
 
 export function saveDonation(userEmail?: string) {
-  const hiddenCard: string = '**** **** **** ' + donationForm?.card?.slice(-4)
+  const hiddenCard: string = '**** **** **** ' + donationForm?.card?.slice(-4);
 
   const newDonation: Donation = {
     animal: donationForm.specialPet,
@@ -10,7 +10,7 @@ export function saveDonation(userEmail?: string) {
     recurring: donationForm.setMonthly,
     date: new Date().toISOString().split('T')[0],
     card: hiddenCard,
-    saveCard: donationForm.saveCard
+    saveCard: donationForm.saveCard,
   };
 
   const raw = localStorage.getItem('donations');
