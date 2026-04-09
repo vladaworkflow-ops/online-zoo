@@ -352,8 +352,9 @@
                 <li class="element-parametr last-element-parametr">
                   Range:
                   <span class="parametr">Eastern Asia</span>
-                  <span class="live-cam-button"
-                    >VIEW MAP
+                </li>
+                <button class="live-cam-button">
+                    VIEW MAP
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="25"
@@ -369,8 +370,7 @@
                         fill="currentColor"
                       />
                     </svg>
-                  </span>
-                </li>
+                </button>
               </ul>
             </div>
             <div class="animal-photo">
@@ -1017,54 +1017,61 @@
       </div>
     </footer>
     <div class="overlay" id="overlay"></div>
-    <div class="modal-donation-container">
-      <div class="modal-donation-content">
+    <form method="post" class="modal-donation-container" id="donation-form">
+      <div class="donation-first-step">
         <h2 class="header-modal-donation">make your donation</h2>
         <p class="header-text">Donation Information:</p>
-        <form class="donation-amount-container">
+        <div class="donation-form">
           <p class="amount-text"><span>*</span> Choose your donation amount:</p>
           <div class="donate-btn-container">
-            <button type="button" class="together-donate-btn">$10</button>
-            <button type="button" class="together-donate-btn">$20</button>
-            <button type="button" class="together-donate-btn">$30</button>
-            <button type="button" class="together-donate-btn">$50</button>
-            <button type="button" class="together-donate-btn">$80</button>
-            <button type="button" class="together-donate-btn">$100</button>
+            <button type="button" class="modal-donate-btn">$10</button>
+            <button type="button" class="modal-donate-btn">$20</button>
+            <button type="button" class="modal-donate-btn">$30</button>
+            <button type="button" class="modal-donate-btn">$50</button>
+            <button type="button" class="modal-donate-btn">$80</button>
+            <button type="button" class="modal-donate-btn">$100</button>
           </div>
           <div class="other-amount-input-container">
             <button type="button" class="other-amount-btn">Other amount</button>
-            <input
-              type="text"
-              name="other-sum-input"
-              id="other-sum-input"
-              class="other-sum-input"
-            />
+            <input type="text" name="other-sum-input" id="other-sum-input" class="other-sum-input" inputmode="numeric" pattern="[0-9]*">
           </div>
           <div class="select-container">
-            <button type="button" class="special-pet-btn">
-              for special pet
-            </button>
+            <button type="button" class="special-pet-btn">for special pet</button>
             <select name="pets" id="pet-select" class="select-pets">
-              <option value="Choose">Choose your favourite</option>
-              <option value="dog">Lukas the Panda</option>
-              <option value="cat">Andy the Lemur</option>
-              <option value="hamster">Glen the Gorilla</option>
-              <option value="parrot">Mike the Alligator</option>
-              <option value="spider">Sam & Lora the eagles family</option>
-              <option value="goldfish">Shake the Lion</option>
-              <option value="goldfish">Senja the Tiger</option>
+              <option value="">Choose your favourite</option>
+              <option value="giant-panda">Giant Panda</option>
+              <option value="madagascarian-lemur">Madagascarian Lemur</option>
+              <option value="gorilla-in-congo">Gorilla in Congo</option>
+              <option value="chinese-alligator">Chinese Alligator</option>
+              <option value="west-end-bald-eagles">West End Bald Eagles</option>
+              <option value="australian-koala">Australian Koala</option>
+              <option value="african-lion">African Lion</option>
+              <option value="sumatran-tiger">Sumatran Tiger</option>
+              <option value="red-panda">Red Panda</option>
+              <option value="mountain-gorilla">Mountain Gorilla</option>
+              <option value="african-elephant">African Elephant</option>
+              <option value="sea-otter">Sea Otter</option>
+              <option value="bengal-tiger">Bengal Tiger</option>
+              <option value="gray-wolf">Gray Wolf</option>
+              <option value="fennec-fox">Fennec Fox</option>
+              <option value="grizzly-bear">Grizzly Bear</option>
+              <option value="bottlenose-dolphin">Bottlenose Dolphin</option>
+              <option value="snow-leopard">Snow Leopard</option>
+              <option value="polar-bear">Polar Bear</option>
+              <option value="jaguar">Jaguar</option>
+              <option value="ring-tailed-lemur">Ring-Tailed Lemur</option>
+              <option value="white-rhinoceros">White Rhinoceros</option>
+              <option value="arctic-fox">Arctic Fox</option>
+              <option value="saltwater-crocodile">Saltwater Crocodile</option>
+              <option value="scarlet-macaw">Scarlet Macaw</option>
+              <option value="komodo-dragon">Komodo Dragon</option>
+              <option value="sloth">Sloth</option>
+              <option value="cheetah">Cheetah</option>
             </select>
           </div>
           <div class="container-checkbox">
-            <input
-              type="checkbox"
-              name="monthly-recurring"
-              class="monthly-recurring"
-              id="monthly-recurring"
-            />
-            <label for="monthly-recurring" class="monthly-recurring-label"
-              >Make this a monthly recurring gift</label
-            >
+            <input type="checkbox" name="monthly-recurring" class="monthly-recurring" id="monthly-recurring">
+            <span class="monthly-recurring-label">Make this a monthly recurring gift</span>
           </div>
           <div class="popup-btn-container">
             <div class="popup-circe-container">
@@ -1072,15 +1079,186 @@
               <div class="circle"></div>
               <div class="circle"></div>
             </div>
-            <button type="submit" class="popup-btn-next">
-              next
-              <img src="../../assets/icons/vector.svg" alt="vector" />
+            <button class="popup-btn-next">next
+              <img src="../../assets/icons/vector.svg" alt="vector">
             </button>
           </div>
-        </form>
+        </div>
       </div>
+      <div class="donation-second-step">
+        <h2 class="header-modal-donation">make your donation</h2>
+        <p class="header-text">Billing Information:</p>
+        <div class="donation-form form-contact" id="donation-form">
+          <label for="name"><span>*</span>Your Name</label>
+          <input type="text" name="name" id="donation-name" autocomplete="name" placeholder="First and last name" required>
+          <div class="error-message" id="name-error"></div>
+          <label for="email"><span>*</span>Your Email Address</label>
+          <input type="email" name="email" id="donation-email" autocomplete="email" placeholder="Enter your email" required>
+          <div class="error-message" id="email-error"></div>
+          <p class="second-form-text">You will receive emails from the Online Zoo, including updates and news on the latest discoveries and translations. You can unsubscribe at any time.</p>
+          <div class="popup-btn-container">
+            <div class="popup-circe-container">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+            <button class="back-btn">Back</button>
+            <button class="popup-btn-next second-btn-next">next
+              <img src="../../assets/icons/vector.svg" alt="vector">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="donation-third-step">
+        <h2 class="header-modal-donation">make your donation</h2>
+        <p class="header-text">Payment Information:</p>
+        <div class="donation-form">
+          <div class="credential-container">
+            <div class="card-number">
+              <label for="credit-card"><span>*</span> Credit Card Number</label>
+              <input type="text" name="credit-card" id="credit-card" placeholder="**** **** **** ****" inputmode="numeric">
+            </div>
+            <div>
+              <label for="cvv"><span>*</span> CVV Number</label>
+              <input type="text" name="cvv" id="cvv" placeholder="***" inputmode="numeric">
+            </div>
+          </div>
+          <div class="save-card-container">
+            <input type="checkbox" name="save-card" class="save-card" id="save-card">
+            <span class="save-card-label">save card</span>
+          </div>
+          <p><span>*</span> Expiration Date</p>
+          <div class="select-credential-container">
+            <select name="month" id="month-select" class="select-credential" required>
+              <option value="">Month</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <select name="year" id="year-select" class="select-credential" required>
+              <option value="">Year</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+              <option value="2031">2031</option>
+              <option value="2032">2032</option>
+              <option value="2033">2033</option>
+              <option value="2034">2034</option>
+              <option value="2035">2035</option>
+            </select>
+          </div>
+          <div class="popup-btn-container">
+            <div class="popup-circe-container">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+            <button class="back-btn">Back</button>
+            <button type="submit" class="complete-btn">Complete donation
+              <img src="../../assets/icons/vector.svg" alt="vector">
+            </button>
+          </div>
+          <p class="errors-donation-form"></p>
+        </div>
+      </div>
+    </form>
+    <div class="popup-user">
+    <div class="close-popup-user">
+      <div class="line-close-popup line-close1"></div>
+      <div class="line-close-popup line-close2"></div>
     </div>
-    <script type="module" src="../../scripts/main.ts"></script>
+    <h3>Please Sign in or registration</h3>
+    <button class="sign_in-btn">Sign in</button>
+    <button class="registration-btn">Registration</button>
+    </div>
+    <div class="user-menu">
+    <div class="close-popup-user-menu">
+      <div class="line-close-popup line-close1"></div>
+      <div class="line-close-popup line-close2"></div>
+    </div>
+    <h2 class="tittle-user-menu">Hi <span class="user-name">!</span>Welcome to Account</h2>
+    <section class="account-section">
+      <h3>Profile</h3>
+      <p>Name: <span class="user-menu-name"></span></p>
+      <p>Email: <span class="user-menu-email"></span></p>
+    </section>
+    <section class="account-section">
+      <h3>Payment Methods</h3>
+      <ul class="user-card-container">card: <li class="user-menu-card"></li></ul>
+    </section>
+    <section class="account-section">
+      <h3>My Donations</h3>
+      <div class="donation-item">
+      </div>
+    </section>
+    <button class="sign_out-btn">Sign out</button>
+    </div>
+    <div class="login-popup">
+      <h3>Login in to your account</h3>
+      <form method="post" class="form-contact form-login" id="form-login">
+          <label for="login"><span>*</span>Your Login</label>
+          <input type="text" name="login" id="log-in" autocomplete="login" placeholder="Enter your login" required>
+          <div class="error-message" id="log-in-error"></div>
+
+          <label for="password"><span>*</span>Your password</label>
+          <input type="password" name="password" id="password-login" placeholder="Enter your password" required>
+          <div class="error-message" id="password-error-login"></div>
+
+          <button class="submit-login-form" id="submit-login-form" type="submit">
+            log in
+            <img src="../../assets/icons/vector.svg" alt="vector">
+          </button>
+          <div class="form-login-error-global"></div>
+      </form>
+    </div>
+    <div class="registration-popup">
+      <h3>Please, feel registration form</h3>
+      <form method="post" class="form-contact form-registration" id="registration-form">
+        <label for="login"><span>*</span>Your Login</label>
+        <input type="text" name="login" id="login" autocomplete="login" placeholder="Enter your login" required>
+        <div class="error-message" id="login-error"></div>
+
+        <label for="name"><span>*</span>Your Name</label>
+        <input type="text" name="name" id="name" autocomplete="name" placeholder="First and last name" required>
+        <div class="error-message" id="name-error"></div>
+
+        <label for="email"><span>*</span>Your Email Address</label>
+        <input type="email" name="email" id="email" autocomplete="email" placeholder="Enter your email" required>
+        <div class="error-message" id="email-error"></div>
+
+        <label for="password"><span>*</span>Your password</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+        <div class="error-message" id="password-error"></div>
+
+        <label for="confirm-password"><span>*</span>Confirm password</label>
+        <input type="password" name="confirm-password" id="confirm-password" placeholder="Enter your password" required>
+        <div class="error-message" id="confirm-password-error"></div>
+
+        <button class="submit-registration-form" type="submit">
+          registration
+          <img src="../../assets/icons/vector.svg" alt="vector">
+        </button>
+        <div class="form-error-global" id="form-error-global"></div>
+      </form>
+    </div>
+    <div id="modal-map">
+      <button id="closeMap">X</button>
+      <div id="map"></div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDw66LMJVyviKeuM-EToILfVcC_PQzDEI"></script>
+    <script type="module" src="./map.js"></script>
+    <script type="module" src="/scripts/main.ts"></script>
     <script type="module" src="./zoos.js" defer></script>
   </body>
 </html>

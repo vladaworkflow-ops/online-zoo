@@ -29,15 +29,15 @@ const donationBtnInput = document.querySelector(
   '#donation-btn-input',
 ) as HTMLInputElement;
 
-const initialValue = donationBtnInput.value;
+const initialValue = donationBtnInput?.value;
 
-donationBtnInput.addEventListener('blur', () => {
+donationBtnInput?.addEventListener('blur', () => {
   if (donationBtnInput.value.trim() === '') {
     donationBtnInput.value = initialValue;
   }
 });
 
-donationBtnInput.addEventListener('focus', () => {
+donationBtnInput?.addEventListener('focus', () => {
   donationBtnInput.value = '';
 });
 
@@ -91,7 +91,8 @@ overlay.addEventListener('click', () => {
   }
 });
 
-closeModalBtn.addEventListener('click', () => {
+closeModalBtn?.addEventListener('click', () => {
   overlay.classList.remove('active-modal');
   modal.classList.remove('active-modal');
 });
+

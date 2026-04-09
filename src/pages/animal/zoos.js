@@ -33,6 +33,8 @@ handleViewAnimal();
 
 const toggleButton = document.querySelector('.handle-side-button');
 
-toggleButton.addEventListener('click', () => {
-  sidePanel.classList.toggle('expandable');
+toggleButton?.addEventListener('click', () => {
+  sidePanel?.classList.toggle('expandable');
 });
+
+console.log('zoos loaded');
