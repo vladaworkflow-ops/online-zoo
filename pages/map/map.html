@@ -1,361 +1,562 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>map page</title>
-  <link rel="icon" href="/online-zoo/assets/favicon-BrG6oz87.ico" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
-  <script type="module" crossorigin src="/online-zoo/assets/main-Bm0W8sYz.js"></script>
-  <link rel="stylesheet" crossorigin href="/online-zoo/assets/main-BjLNd3iJ.css">
-</head>
-<body>
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <h1 class="header">ZO</h1><img src="data:image/png;base64,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" alt="logo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map page</title>
+    <link rel="icon" href="/assets/favicon-BrG6oz87.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/latest/normalize.css"
+    />
+    <script type="module" crossorigin src="/assets/main-DCW0IR-l.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-CGjVcJTv.css">
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <h1 class="header">ZO</h1>
+          <img src="data:image/png;base64,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" alt="logo" />
+        </div>
+        <div class="header-content">
+          <nav class="navigation-menu">
+            <ul>
+              <li><a href="../landing/index.html">About</a></li>
+              <li class="highlighted"><a href="../map/map.html">Map</a></li>
+              <li><a href="../animal/zoos.html">Zoos</a></li>
+              <li><a href="../contact/contact.html">Contact us</a></li>
+              <li>
+                <a
+                  href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project?node-id=0%3A1"
+                  target="_blank"
+                  >Design</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <nav class="social-media-icons">
+            <ul>
+              <li>
+                <a
+                  href="https://youtube.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJYSURBVHgBzZnxVYMwEMYPn/8bJxA3YIPWCewG6AS4AW5QN0BHcILWCWgngE4AG5x3HjxQSQg0QL/3vqavhPb3LhdyST0YKQRYUROQ11WrKrNKcl75QN57AF8wtQhKkWNyQcaBzsgJ+Q5cqwLbjoDS2R0ofVE0MmI2EQ3hHDmOms5bGKpqSHczwNVOsZlgVoDpjHC1d7ZwW5wfzm64OWkXhKsd6eB8lJm1NCA/MVQXYHIBcP+G2qujR02mHfvVCmCzoV7UTSlpa7XfdynPpS3LxvzZ2xvA6WS689aTJbMnekmCkymKTFGM28ObdXYKQ5xURYGolDYXme0KpSrxO4McBDCpOF04fTRXme0KpFzq1tSALHMOBwx4PsXrazMZhsoMuGZAf+TNjb6oFr2/B3h6Gg6qjEtw4Aaw1scHwMMDwPu7/T1mQMWA9lWEjTiCz88S0f2+v78F4DS6uQEXYsASXIojsqWV6kB7pfW6v785Z0szYDmQPaJCJKMV8+UFHClnwIP2si0gP2zTVNZXNTClzRHMr+llT97AOYD8HBwr828czBG0mYXn6ng0XZXNPuq2lY+POLn0xUJT/qGcFsxfbsWxqdxKmK0uWDmzC22gw1AKh7p4qFcYnhB9k6I9Cfg9m/Pu87MvhXyCO7WjuORurjN6v4RSfxUIgAs7Q925Dco5zNKAIZiEl7xxb0HuFoBLwVYo+Tjn+cwOx5R9eKnHb38gQ5zmSISfGBG4EMq5TeIyaui6kv8DOiaiHLF4KJgHI4Wyn16BbFv9yu2/Idg/f0GQj560g/UNLr2sjzCty8YAAAAASUVORK5CYII=" alt="Youtube" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="data:image/png;base64,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" alt="Instagram" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOTSURBVHgBzZlNSFRRFMf/9zkfVgoD1UKNeEEQfQgjtVAsnLaVoEGkbrKoxhah7SICkyBqpdZCc5MR+EFEhm5aOYIfuUpBaeFmJEsphQeaHyO+27mveTJPZ8Z5b6aZ94OZN+/eOzP/Offcc889w2CRkuqOMjDVy7bgYxK81OQJPwQKwIJc5UEwNsEZC4x13x2CBZiZwb6KN55QdqieMd4QISYhOEeQLgFIjiejXbdnE31fQgKFsM19oUb6mgakABLbmajQrL0GlNS013PHVp/QiRTBGLkEVysKCsuVuamBybhj43WWVr9uTpXV4tAy0l33IFZnVIHalGZvfKReH9ICm3CuuS4G+m4qO3ukaMM33aHB9IkTcK9mkCjsEqhNq8S9SDdkkNLq9uadzYZFQuJu0K95jsxRfOT0FWVuemBcb9j2weKqNjkLTEytDIvcunoWRafycVw+iNz9biyvbmDh1wq+fvuBl+/GEv0YxbnmPqb7o0NvJXGNyYh75PfhUtkJQ5sQmSu7sbK2ARNQzN2gmAttZWs+KKxH4mphkQvn5F3iIpkJLsEkDSKSQBeoWS8Jik7m72qbX1ymqf2JmdkleizCLGJLFVd9in1IgrzDuYb7hd/LuFbfhWQI7/dN0r+sxLrvCXL2uwz3wnopwCO0SYxzH+yKqnodYLAclN+31mjXnANGCwqf1PsEz9oHyR/nYRaKgT4HPcmwyE7fi9lnKuuMgBJhWsVcxn9m5U8IVqDf5RGr2FRmHIm+GPIOGS25QjvI8moo4t6aQMLDaIPmSJJXj8u1LU5HxL/7T/uRCkSgVmBfFLsLDEqcslnYFK4KgYwHYFfoTC2BS7a1oAR1SAqf+G3nhxRagsM99wJausU5a4Hd4FSFQDgfdGW7WmE3qPKgXcRToFPk//axoiiN6GWR7WOn0+1qgg18Ufiebj2BIc8oud5RL0lqRi25BVb7pdv/Vr83nIvnpvvHjxaWi+ShGJlAZS1jPf4XkU1RMzVKIAaRwmpWYrCJkW5/0c7WqLUZp9tdifRugQFRPIrWkfnyG03rSK8/ZvktbgHz+9TAZ/LJIL3Ua9Cpg0FRVTwc7a1rijdszworiZwsOHP5kwTmSeaAZYCs5lx3Vw5/uLNnYd3UcSZcYGoM1w5lmIEsxkmYa93VGq1QGfttFjlf1eZTIdGhn3sZY7J2+OJhNyAx9FqhoEt/QSCQpfJJsfHDAn8BK7swt3OQ39sAAAAASUVORK5CYII=" alt="Facebook" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user-icon"></div>
+          <div class="user-icon-name"></div>
+          <div class="burger-container">
+            <input type="checkbox" class="burger-toggle" />
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
+          <div class="side-menu">
+            <nav>
+              <ul class="side-navigation-menu">
+                <li class="highlighted"><a href="">About</a></li>
+                <li><a href="../map/map.html">Map</a></li>
+                <li><a href="../animal/zoos.html">Zoos</a></li>
+                <li><a href="../contact/contact.html">Contact us</a></li>
+                <li>
+                  <a
+                    href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project?node-id=0%3A1"
+                    target="_blank"
+                    >Design</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
-      <div class="header-content">
-        <nav class="navigation-menu">
-          <ul>
-            <li><a href="../landing/index.html">About</a></li>
-            <li class="highlighted"><a href="../map/map.html">Map</a></li>
-            <li><a href="../animal/zoos.html">Zoos</a></li>
-            <li><a href="../contact/contact.html">Contact us</a></li>
-            <li>
-              <a href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project?node-id=0%3A1" target="_blank">Design</a>
-            </li>
-          </ul>
-        </nav>
-        <nav class="social-media-icons">
-          <ul>
-            <li>
-              <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJYSURBVHgBzZnxVYMwEMYPn/8bJxA3YIPWCewG6AS4AW5QN0BHcILWCWgngE4AG5x3HjxQSQg0QL/3vqavhPb3LhdyST0YKQRYUROQ11WrKrNKcl75QN57AF8wtQhKkWNyQcaBzsgJ+Q5cqwLbjoDS2R0ofVE0MmI2EQ3hHDmOms5bGKpqSHczwNVOsZlgVoDpjHC1d7ZwW5wfzm64OWkXhKsd6eB8lJm1NCA/MVQXYHIBcP+G2qujR02mHfvVCmCzoV7UTSlpa7XfdynPpS3LxvzZ2xvA6WS689aTJbMnekmCkymKTFGM28ObdXYKQ5xURYGolDYXme0KpSrxO4McBDCpOF04fTRXme0KpFzq1tSALHMOBwx4PsXrazMZhsoMuGZAf+TNjb6oFr2/B3h6Gg6qjEtw4Aaw1scHwMMDwPu7/T1mQMWA9lWEjTiCz88S0f2+v78F4DS6uQEXYsASXIojsqWV6kB7pfW6v785Z0szYDmQPaJCJKMV8+UFHClnwIP2si0gP2zTVNZXNTClzRHMr+llT97AOYD8HBwr828czBG0mYXn6ng0XZXNPuq2lY+POLn0xUJT/qGcFsxfbsWxqdxKmK0uWDmzC22gw1AKh7p4qFcYnhB9k6I9Cfg9m/Pu87MvhXyCO7WjuORurjN6v4RSfxUIgAs7Q925Dco5zNKAIZiEl7xxb0HuFoBLwVYo+Tjn+cwOx5R9eKnHb38gQ5zmSISfGBG4EMq5TeIyaui6kv8DOiaiHLF4KJgHI4Wyn16BbFv9yu2/Idg/f0GQj560g/UNLr2sjzCty8YAAAAASUVORK5CYII=" alt="Youtube">
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAWISURBVHgBzVlfaFtVGP9OdkM7Vmmk4rZ2rNlkrTCwsV2LMNYk4J7mYIKohQ0nduKDsFbwZVYb3ZwPiq7gg9g9dGxgxQfR6pNCkw4Em7Wmgg/tkKVC11ZaSLWjLU3v8fud5NYkvefmT2vwB+Gce8859/7u7zvfd75zIqhEjLRe9UtT+qSgAAnykZQeIciDNikpwffiJEVcEMWEEOH26KUIlQBRTOdhX8jjMtwXJckui0yhkMSETQq7TQod/6VnutBxBRFMETN6uXcX7QCkSQOFEs1LMNL6/kUpZahYxfIBigom6R/rueHUz5Fg5NiVT3ZKNS0kXfPf6enWNdsShEmFYXwt4ABlAKsZk+vJYDAWSuS2uewGCLcxXC5y6n1EPghi17aFIMyKAVRmQBA1pXLvZ15EWq6+RC5zQPcQ46EKqn2hjTwt9VRZW01GVSXfq6R8WJ1N0Or9JVqMTNJCZIrWZpcceosuf/Stvi0Eh30feIXbHBYkvXbD6l5so/oLJwoilA/xz0foj+u37Rs5yJvJ5CFrPhqbTHeZvTpyBztPkPfVdlVfGp+mhTCrMLdEyb9XlTI6QHHrg/Yc2Ut1HW1Uub9aPWuDx858Gd06iMOZirlE3alLSqnncm/cs3sJHtj2zeuqPjP4M/3+8Y+0HTz2xkllDXzc6JlPuVyz7WeuJx+GispJoJ7ugTX+RlVCqVLJgVDzrVfo0VNP8DN+oMTYtFIW93XAkqrK1JU+pNT4G1QJ9fKhgtXGLxdQraphHx3oSBFaZEcBqpvrHZ4m1QJhqKyETK+u2+7a1Asf3P3Tth1ToK6jlfaeatqcbzDfAnvsdP9t5bEzg6NKLXgxAK9WY2urSQuei+Bm8DobcFrwKvbrl2BM/KbPzm7xbFzve6aJPKzQb29+pcyKnwV8gOpX5RwROGvyGRJRnPIj+ddK1jWUO/rRc4oM5ufU5SFanppTbZ4WLx3uPskKefgDztHY2etZsc+q5wtZnFcGXCTsQ0su1pezvQ0xsZLVBbnxc/1q4sMj8VsIT9I4k1plIiBxgKdAKRBC+lxCkpdKQI3/cVVO94/YhgqYcfLdb1Ud87MkSI6JVEKeB/MiCAOLI5PafpZjQUU7784LBG36D2E5w3bgwtpHRQJzyzIrPFmH6uaDqgRR5wRBA+bGJhZFEwTmv59QZeM7pzfNnQnca+w9reoL6cBcAuIuduUYlYCZL0aVigglzTc72WmObBKDcs23OpWXow8cKZt8YRmRJBE3OFEMc/2MrhNegJfuZiKZZoKZJ167qeIcSB798HnbseiTa95dVRVUCLCndgkSjgpuLK9oH/rg7jzHu36a/+7XrFCD+hzfG+M29NHBWvJ0MMmMGNjxc6qd0IWbFQ7EWO4qNWECSk6+N8S1IWXSQl6MxAHI4zjx4J23w+kwI67peiFBBay0ywkqtZ/N73N16ZUFK44OvASHUSqCZnK9T9dxZjCqTIZ9yOHup2m7UGt0Wmkn73a7KYRyM09w2qQjVUJOB6zeT6j0aXkqNbcQ45LLa9oXWasOSMEK+FAAno10zA6s3kAg2vNyFsH0+cs93VxEclB/oZ22i1TYiSjLaBA33BQ4/lPq3CZ728nnMMxfOx+hBlR4JNCg6k65YiYhRAI4EzIeqK/bh1CK0Xn/6L/nNVtSwbKcx+hgc05jm6uGW6/w/rh8Rx9pxPzRnidzb9pmM3yQ8ywOdKhMYDHC5p5kUNOmx//h+M0xH1QDhes8f0ecdhoqzeNzGAdyQN6E1T966Ya5yxXkzGKAdgqsmlmVPJR5SKRDcYfoT/EB0wbOcOBAhW22MkhBMSa23hcMhwrOQYsimInhY5d5S+jy4yxRYmeIzZcV5NXfECLBG7IY/00RNqU5gYWfSsA/CgVTD0aJ2YEAAAAASUVORK5CYII=" alt="Instagram">
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOTSURBVHgBzZlNSFRRFMf/9zkfVgoD1UKNeEEQfQgjtVAsnLaVoEGkbrKoxhah7SICkyBqpdZCc5MR+EFEhm5aOYIfuUpBaeFmJEsphQeaHyO+27mveTJPZ8Z5b6aZ94OZN+/eOzP/Offcc889w2CRkuqOMjDVy7bgYxK81OQJPwQKwIJc5UEwNsEZC4x13x2CBZiZwb6KN55QdqieMd4QISYhOEeQLgFIjiejXbdnE31fQgKFsM19oUb6mgakABLbmajQrL0GlNS013PHVp/QiRTBGLkEVysKCsuVuamBybhj43WWVr9uTpXV4tAy0l33IFZnVIHalGZvfKReH9ICm3CuuS4G+m4qO3ukaMM33aHB9IkTcK9mkCjsEqhNq8S9SDdkkNLq9uadzYZFQuJu0K95jsxRfOT0FWVuemBcb9j2weKqNjkLTEytDIvcunoWRafycVw+iNz9biyvbmDh1wq+fvuBl+/GEv0YxbnmPqb7o0NvJXGNyYh75PfhUtkJQ5sQmSu7sbK2ARNQzN2gmAttZWs+KKxH4mphkQvn5F3iIpkJLsEkDSKSQBeoWS8Jik7m72qbX1ymqf2JmdkleizCLGJLFVd9in1IgrzDuYb7hd/LuFbfhWQI7/dN0r+sxLrvCXL2uwz3wnopwCO0SYxzH+yKqnodYLAclN+31mjXnANGCwqf1PsEz9oHyR/nYRaKgT4HPcmwyE7fi9lnKuuMgBJhWsVcxn9m5U8IVqDf5RGr2FRmHIm+GPIOGS25QjvI8moo4t6aQMLDaIPmSJJXj8u1LU5HxL/7T/uRCkSgVmBfFLsLDEqcslnYFK4KgYwHYFfoTC2BS7a1oAR1SAqf+G3nhxRagsM99wJausU5a4Hd4FSFQDgfdGW7WmE3qPKgXcRToFPk//axoiiN6GWR7WOn0+1qgg18Ufiebj2BIc8oud5RL0lqRi25BVb7pdv/Vr83nIvnpvvHjxaWi+ShGJlAZS1jPf4XkU1RMzVKIAaRwmpWYrCJkW5/0c7WqLUZp9tdifRugQFRPIrWkfnyG03rSK8/ZvktbgHz+9TAZ/LJIL3Ua9Cpg0FRVTwc7a1rijdszworiZwsOHP5kwTmSeaAZYCs5lx3Vw5/uLNnYd3UcSZcYGoM1w5lmIEsxkmYa93VGq1QGfttFjlf1eZTIdGhn3sZY7J2+OJhNyAx9FqhoEt/QSCQpfJJsfHDAn8BK7swt3OQ39sAAAAASUVORK5CYII=" alt="Facebook">
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div class="user-icon">
+    </header>
+    <section class="map-section">
+      <h2 class="map-tittle">
+        Find where are<br class="desktop-break" />
+        the<br class="mobile-break" />
+        animals live
+      </h2>
+      <div class="map-img">
+        <img src="/assets/Map-CehVuEwN.png" alt="map-img" />
+
+        <div class="map-marker marker-1">
+          <img
+            class="marker-default"
+            src="/assets/ar-loc-BsABLokA.svg"
+            alt="arangutang"
+          />
+          <img
+            class="marker-hover"
+            src="/assets/an-loc-white-xcZJgG6O.png"
+            alt="location"
+          />
         </div>
-        <div class="user-icon-name"></div>
-        <div class="burger-container">
-          <input type="checkbox" class="burger-toggle">
-          <div class="burger-line"></div>
-          <div class="burger-line"></div>
-          <div class="burger-line"></div>
+
+        <div class="map-marker marker-2">
+          <img
+            class="marker-default"
+            src="/assets/coala-loc-TOVq0A-O.svg"
+            alt="coala"
+          />
+          <img
+            class="marker-hover"
+            src="/assets/an-loc-white-xcZJgG6O.png"
+            alt="location"
+          />
         </div>
-        <div class="side-menu">
+
+        <div class="map-marker marker-3">
+          <img
+            class="marker-default"
+            src="/assets/croc-loc-BZismC1f.svg"
+            alt="crocodile"
+          />
+          <img
+            class="marker-hover"
+            src="/assets/an-loc-white-xcZJgG6O.png"
+            alt="location"
+          />
+        </div>
+
+        <div class="map-marker marker-4">
+          <img
+            class="marker-default"
+            src="/assets/lion-BHTj5l5b.svg"
+            alt="lion"
+          />
+          <img
+            class="marker-hover"
+            src="/assets/an-loc-white-xcZJgG6O.png"
+            alt="location"
+          />
+        </div>
+
+        <div class="map-marker marker-5">
+          <img
+            class="marker-default"
+            src="/assets/mon-loc-DmMYcaTg.svg"
+            alt="monkey"
+          />
+          <img
+            class="marker-hover"
+            src="/assets/an-loc-white-xcZJgG6O.png"
+            alt="location"
+          />
+        </div>
+
+        <div class="map-marker marker-6">
+          <img
+            class="marker-default"
+            src="/assets/panda-loc-Vrg4qqJs.svg"
+            alt="panda"
+          />
+          <img
+            class="marker-hover"
+            src="/assets/an-loc-white-xcZJgG6O.png"
+            alt="location"
+          />
+        </div>
+
+        <div class="map-marker marker-7">
+          <img
+            class="marker-default"
+            src="/assets/tygr-loc-4Hx3PEgo.svg"
+            alt="tygr"
+          />
+          <img
+            class="marker-hover"
+            src="/assets/an-loc-white-xcZJgG6O.png"
+            alt="location"
+          />
+        </div>
+
+        <div class="map-marker marker-8">
+          <img
+            class="marker-default"
+            src="data:image/png;base64,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"
+            alt="eagle"
+          />
+          <img
+            class="marker-hover"
+            src="/assets/an-loc-white-xcZJgG6O.png"
+            alt="location"
+          />
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-logos">
+            <img src="data:image/png;base64,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" alt="logo" />
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAP5SURBVHgB3VqBcdswDIRyHcAbWBsknUDKBGknsDuBkwnsTqB0ArsTpJ1A6gR2JqA6QbQBCoRkTKsSCcqynfbvcJQsECQoAiAEJzASEHFKTU50Y9qJQxa1oZ2hKkmS33Bp0OQnREsihcOhiAqzEGdXICMqcXysz6IQDZISPeHpsT6ZQiR4QfSC54MimsGYQL2HL4VCMsckoAB7nBK0J7ok2MPdkodr+hh6FXlHSlh4lfEpsoVhSvBAFeh48dx6NoXDOBOLHSnyUcw90CZKojxijBy1dxrFZpKOAdhTbECOimjuRmiSkYFe+RT2K18b4lV9dniZZ8kyQI57kvGt9ynqOKGEK8OueNHqW6DMRStsxQq6vsO4sac+RdZCQcoKQn1MOcY9Lwcu5JPvbUigcK9EzMCnkJkd8zbc7bDA8dDeppItWg59G4uOBRgj6hcdcjNh30nsZLbQb1slDodPruSAunQ7KEGH3DPgBIfZikKP90HZTlExzCUEgPJ9beF3oXFvZXpFvBmEsQkxUICqqfkEcsyFae6jgCeX2serQaEgP0CZJ1sK5Myc69CbLiSGWhphN+Zesh0K76Dh/jaW3Jj70Pba8tZKA3Jr01oFNgF+3mYPoM9gXbK+QhhLMy+77XcB/kmMIvZIn9MK3EEYn52+Vk7uS44YJPsa9gfI1LQhW3pVJISmJZTxiG4g6oCZ8K3pz5QLjfuHcy3NWaIUcZESLUIdjSebE60kSqA28BQG4APoifo0T03b9PzuBSnwE+RIW/cNCHElYE5NWzu/8fUDjAxSmh3BrjUOI+Qpa4ki1sh/mdbud/FqRcJ1EjaTzAN96tiA+CL0WEeBPRc6h0kUBsQ5hrEwAs/2odm4YZsChzCTHhqf4EJA2Y6ZXhkXWQfkie0BdaZZeJ4vmQfkCI1dv7l2I7wPCmXnK85JSqdf1sGTOc+3GAiqjlzlmV/RZu6CNGdIzcTaCzBp8SgctkipR5lpm7nsYAp6qMAghcO37uFRQmWyjr5rCWMwZzD9Qkds9jqhHEVkMx1y3hYgaU8KdJZXEa1AOwG3oGmv2QB31siM0que8RunbxdWJqLbOVw7vA38bex8qOQgvaF+XzolYlzerfAwi+O+a5R9hOAxDgqgGFeXVNjajl0fsTn4SfJkd4XuWx+xc2p4ZVM4XN2a6Jl4K1cB0G8zBzk43/8e5MLhZQXR8QW1l7zDYd/DZGUFZ7BjCz18iq1hH2xTQ7mRO2qh5/8vvTHekTJeJcTAf6A8HaPMDMephUhxUBEbWxkbK04NPi2c7T8paxwfJUZUhsdWiO1H4XAo1GnEEHf8hgRGAuoysy1L29J06rA0DlWgPyxUJrE7Gn8A9Bm5Hgjm3ukAAAAASUVORK5CYII=" alt="yem-logo" />
+            <img src="data:image/png;base64,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" alt="rss-logo" />
+          </div>
           <nav>
-            <ul class="side-navigation-menu">
-              <li class="highlighted"><a href="">About</a></li>
+            <ul class="footer-menu">
+              <li><a href="./index.html">About</a></li>
               <li><a href="../map/map.html">Map</a></li>
               <li><a href="../animal/zoos.html">Zoos</a></li>
               <li><a href="../contact/contact.html">Contact us</a></li>
-              <li><a href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project?node-id=0%3A1"
-                  target="_blank">Design</a></li>
+            </ul>
+          </nav>
+          <button class="donation-btn footer-button-donate">
+            Donate for volunteers
+            <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector" />
+          </button>
+        </div>
+        <div class="footer-contacts">
+          <div class="autors">
+            <p>© 2021 DinaK</p>
+            <p>© Yem Digital</p>
+            <p>© RSSchool</p>
+          </div>
+          <nav class="social-media-icons footer-social-media-icons">
+            <ul>
+              <li>
+                <a
+                  href="https://youtube.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJYSURBVHgBzZnxVYMwEMYPn/8bJxA3YIPWCewG6AS4AW5QN0BHcILWCWgngE4AG5x3HjxQSQg0QL/3vqavhPb3LhdyST0YKQRYUROQ11WrKrNKcl75QN57AF8wtQhKkWNyQcaBzsgJ+Q5cqwLbjoDS2R0ofVE0MmI2EQ3hHDmOms5bGKpqSHczwNVOsZlgVoDpjHC1d7ZwW5wfzm64OWkXhKsd6eB8lJm1NCA/MVQXYHIBcP+G2qujR02mHfvVCmCzoV7UTSlpa7XfdynPpS3LxvzZ2xvA6WS689aTJbMnekmCkymKTFGM28ObdXYKQ5xURYGolDYXme0KpSrxO4McBDCpOF04fTRXme0KpFzq1tSALHMOBwx4PsXrazMZhsoMuGZAf+TNjb6oFr2/B3h6Gg6qjEtw4Aaw1scHwMMDwPu7/T1mQMWA9lWEjTiCz88S0f2+v78F4DS6uQEXYsASXIojsqWV6kB7pfW6v785Z0szYDmQPaJCJKMV8+UFHClnwIP2si0gP2zTVNZXNTClzRHMr+llT97AOYD8HBwr828czBG0mYXn6ng0XZXNPuq2lY+POLn0xUJT/qGcFsxfbsWxqdxKmK0uWDmzC22gw1AKh7p4qFcYnhB9k6I9Cfg9m/Pu87MvhXyCO7WjuORurjN6v4RSfxUIgAs7Q925Dco5zNKAIZiEl7xxb0HuFoBLwVYo+Tjn+cwOx5R9eKnHb38gQ5zmSISfGBG4EMq5TeIyaui6kv8DOiaiHLF4KJgHI4Wyn16BbFv9yu2/Idg/f0GQj560g/UNLr2sjzCty8YAAAAASUVORK5CYII=" alt="Youtube" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="data:image/png;base64,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" alt="Instagram" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOTSURBVHgBzZlNSFRRFMf/9zkfVgoD1UKNeEEQfQgjtVAsnLaVoEGkbrKoxhah7SICkyBqpdZCc5MR+EFEhm5aOYIfuUpBaeFmJEsphQeaHyO+27mveTJPZ8Z5b6aZ94OZN+/eOzP/Offcc889w2CRkuqOMjDVy7bgYxK81OQJPwQKwIJc5UEwNsEZC4x13x2CBZiZwb6KN55QdqieMd4QISYhOEeQLgFIjiejXbdnE31fQgKFsM19oUb6mgakABLbmajQrL0GlNS013PHVp/QiRTBGLkEVysKCsuVuamBybhj43WWVr9uTpXV4tAy0l33IFZnVIHalGZvfKReH9ICm3CuuS4G+m4qO3ukaMM33aHB9IkTcK9mkCjsEqhNq8S9SDdkkNLq9uadzYZFQuJu0K95jsxRfOT0FWVuemBcb9j2weKqNjkLTEytDIvcunoWRafycVw+iNz9biyvbmDh1wq+fvuBl+/GEv0YxbnmPqb7o0NvJXGNyYh75PfhUtkJQ5sQmSu7sbK2ARNQzN2gmAttZWs+KKxH4mphkQvn5F3iIpkJLsEkDSKSQBeoWS8Jik7m72qbX1ymqf2JmdkleizCLGJLFVd9in1IgrzDuYb7hd/LuFbfhWQI7/dN0r+sxLrvCXL2uwz3wnopwCO0SYxzH+yKqnodYLAclN+31mjXnANGCwqf1PsEz9oHyR/nYRaKgT4HPcmwyE7fi9lnKuuMgBJhWsVcxn9m5U8IVqDf5RGr2FRmHIm+GPIOGS25QjvI8moo4t6aQMLDaIPmSJJXj8u1LU5HxL/7T/uRCkSgVmBfFLsLDEqcslnYFK4KgYwHYFfoTC2BS7a1oAR1SAqf+G3nhxRagsM99wJausU5a4Hd4FSFQDgfdGW7WmE3qPKgXcRToFPk//axoiiN6GWR7WOn0+1qgg18Ufiebj2BIc8oud5RL0lqRi25BVb7pdv/Vr83nIvnpvvHjxaWi+ShGJlAZS1jPf4XkU1RMzVKIAaRwmpWYrCJkW5/0c7WqLUZp9tdifRugQFRPIrWkfnyG03rSK8/ZvktbgHz+9TAZ/LJIL3Ua9Cpg0FRVTwc7a1rijdszworiZwsOHP5kwTmSeaAZYCs5lx3Vw5/uLNnYd3UcSZcYGoM1w5lmIEsxkmYa93VGq1QGfttFjlf1eZTIdGhn3sZY7J2+OJhNyAx9FqhoEt/QSCQpfJJsfHDAn8BK7swt3OQ39sAAAAASUVORK5CYII=" alt="Facebook" />
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
       </div>
-    </div>
-  </header>
-  <section class="map-section">
-    <h2 class="map-tittle">Find where are<br class="desktop-break"> the<br class="mobile-break"> animals live</h2>
-    <div class="map-img">
-      <img src="/online-zoo/assets/Map-CehVuEwN.png" alt="map-img">
-
-      <div class="map-marker marker-1">
-        <img class="marker-default" src="/online-zoo/assets/ar-loc-BsABLokA.svg" alt="arangutang">
-        <img class="marker-hover" src="/online-zoo/assets/an-loc-white-xcZJgG6O.png" alt="location">
-      </div>
-
-      <div class="map-marker marker-2">
-        <img class="marker-default" src="/online-zoo/assets/coala-loc-TOVq0A-O.svg" alt="coala">
-        <img class="marker-hover" src="/online-zoo/assets/an-loc-white-xcZJgG6O.png" alt="location">
-      </div>
-
-       <div class="map-marker marker-3">
-        <img class="marker-default" src="/online-zoo/assets/croc-loc-BZismC1f.svg" alt="crocodile">
-        <img class="marker-hover" src="/online-zoo/assets/an-loc-white-xcZJgG6O.png" alt="location">
-      </div>
-
-      <div class="map-marker marker-4">
-        <img class="marker-default" src="/online-zoo/assets/lion-BHTj5l5b.svg" alt="lion">
-        <img class="marker-hover" src="/online-zoo/assets/an-loc-white-xcZJgG6O.png" alt="location">
-      </div>
-
-      <div class="map-marker marker-5">
-        <img class="marker-default" src="/online-zoo/assets/mon-loc-DmMYcaTg.svg" alt="monkey">
-        <img class="marker-hover" src="/online-zoo/assets/an-loc-white-xcZJgG6O.png" alt="location">
-      </div>
-
-      <div class="map-marker marker-6">
-        <img class="marker-default" src="/online-zoo/assets/panda-loc-Vrg4qqJs.svg" alt="panda">
-        <img class="marker-hover" src="/online-zoo/assets/an-loc-white-xcZJgG6O.png" alt="location">
-      </div>
-
-      <div class="map-marker marker-7">
-        <img class="marker-default" src="/online-zoo/assets/tygr-loc-4Hx3PEgo.svg" alt="tygr">
-        <img class="marker-hover" src="/online-zoo/assets/an-loc-white-xcZJgG6O.png" alt="location">
-      </div>
-
-      <div class="map-marker marker-8">
-        <img class="marker-default" src="data:image/png;base64,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" alt="eagle">
-        <img class="marker-hover" src="/online-zoo/assets/an-loc-white-xcZJgG6O.png" alt="location">
-      </div>
-    </div>
-  </section>
-  <footer>
-    <div class="footer-container">
-      <div class="footer-content">
-        <div class="footer-logos">
-          <img src="data:image/png;base64,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" alt="logo">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAP5SURBVHgB3VqBcdswDIRyHcAbWBsknUDKBGknsDuBkwnsTqB0ArsTpJ1A6gR2JqA6QbQBCoRkTKsSCcqynfbvcJQsECQoAiAEJzASEHFKTU50Y9qJQxa1oZ2hKkmS33Bp0OQnREsihcOhiAqzEGdXICMqcXysz6IQDZISPeHpsT6ZQiR4QfSC54MimsGYQL2HL4VCMsckoAB7nBK0J7ok2MPdkodr+hh6FXlHSlh4lfEpsoVhSvBAFeh48dx6NoXDOBOLHSnyUcw90CZKojxijBy1dxrFZpKOAdhTbECOimjuRmiSkYFe+RT2K18b4lV9dniZZ8kyQI57kvGt9ynqOKGEK8OueNHqW6DMRStsxQq6vsO4sac+RdZCQcoKQn1MOcY9Lwcu5JPvbUigcK9EzMCnkJkd8zbc7bDA8dDeppItWg59G4uOBRgj6hcdcjNh30nsZLbQb1slDodPruSAunQ7KEGH3DPgBIfZikKP90HZTlExzCUEgPJ9beF3oXFvZXpFvBmEsQkxUICqqfkEcsyFae6jgCeX2serQaEgP0CZJ1sK5Myc69CbLiSGWhphN+Zesh0K76Dh/jaW3Jj70Pba8tZKA3Jr01oFNgF+3mYPoM9gXbK+QhhLMy+77XcB/kmMIvZIn9MK3EEYn52+Vk7uS44YJPsa9gfI1LQhW3pVJISmJZTxiG4g6oCZ8K3pz5QLjfuHcy3NWaIUcZESLUIdjSebE60kSqA28BQG4APoifo0T03b9PzuBSnwE+RIW/cNCHElYE5NWzu/8fUDjAxSmh3BrjUOI+Qpa4ki1sh/mdbud/FqRcJ1EjaTzAN96tiA+CL0WEeBPRc6h0kUBsQ5hrEwAs/2odm4YZsChzCTHhqf4EJA2Y6ZXhkXWQfkie0BdaZZeJ4vmQfkCI1dv7l2I7wPCmXnK85JSqdf1sGTOc+3GAiqjlzlmV/RZu6CNGdIzcTaCzBp8SgctkipR5lpm7nsYAp6qMAghcO37uFRQmWyjr5rCWMwZzD9Qkds9jqhHEVkMx1y3hYgaU8KdJZXEa1AOwG3oGmv2QB31siM0que8RunbxdWJqLbOVw7vA38bex8qOQgvaF+XzolYlzerfAwi+O+a5R9hOAxDgqgGFeXVNjajl0fsTn4SfJkd4XuWx+xc2p4ZVM4XN2a6Jl4K1cB0G8zBzk43/8e5MLhZQXR8QW1l7zDYd/DZGUFZ7BjCz18iq1hH2xTQ7mRO2qh5/8vvTHekTJeJcTAf6A8HaPMDMephUhxUBEbWxkbK04NPi2c7T8paxwfJUZUhsdWiO1H4XAo1GnEEHf8hgRGAuoysy1L29J06rA0DlWgPyxUJrE7Gn8A9Bm5Hgjm3ukAAAAASUVORK5CYII=" alt="yem-logo">
-          <img src="data:image/png;base64,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" alt="rss-logo">
-        </div>
-        <nav>
-          <ul class="footer-menu">
-            <li><a href="./index.html">About</a></li>
-            <li><a href="../map/map.html">Map</a></li>
-            <li><a href="../animal/zoos.html">Zoos</a></li>
-            <li><a href="../contact/contact.html">Contact us</a></li>
-          </ul>
-        </nav>
-        <button class="donation-btn footer-button-donate">Donate for volunteers
-          <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector">
-        </button>
-      </div>
-      <div class="footer-contacts">
-        <div class="autors">
-          <p>© 2021 DinaK </p>
-          <p>© Yem Digital </p>
-          <p>© RSSchool</p>
-        </div>
-        <nav class="social-media-icons footer-social-media-icons">
-          <ul>
-            <li>
-              <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJYSURBVHgBzZnxVYMwEMYPn/8bJxA3YIPWCewG6AS4AW5QN0BHcILWCWgngE4AG5x3HjxQSQg0QL/3vqavhPb3LhdyST0YKQRYUROQ11WrKrNKcl75QN57AF8wtQhKkWNyQcaBzsgJ+Q5cqwLbjoDS2R0ofVE0MmI2EQ3hHDmOms5bGKpqSHczwNVOsZlgVoDpjHC1d7ZwW5wfzm64OWkXhKsd6eB8lJm1NCA/MVQXYHIBcP+G2qujR02mHfvVCmCzoV7UTSlpa7XfdynPpS3LxvzZ2xvA6WS689aTJbMnekmCkymKTFGM28ObdXYKQ5xURYGolDYXme0KpSrxO4McBDCpOF04fTRXme0KpFzq1tSALHMOBwx4PsXrazMZhsoMuGZAf+TNjb6oFr2/B3h6Gg6qjEtw4Aaw1scHwMMDwPu7/T1mQMWA9lWEjTiCz88S0f2+v78F4DS6uQEXYsASXIojsqWV6kB7pfW6v785Z0szYDmQPaJCJKMV8+UFHClnwIP2si0gP2zTVNZXNTClzRHMr+llT97AOYD8HBwr828czBG0mYXn6ng0XZXNPuq2lY+POLn0xUJT/qGcFsxfbsWxqdxKmK0uWDmzC22gw1AKh7p4qFcYnhB9k6I9Cfg9m/Pu87MvhXyCO7WjuORurjN6v4RSfxUIgAs7Q925Dco5zNKAIZiEl7xxb0HuFoBLwVYo+Tjn+cwOx5R9eKnHb38gQ5zmSISfGBG4EMq5TeIyaui6kv8DOiaiHLF4KJgHI4Wyn16BbFv9yu2/Idg/f0GQj560g/UNLr2sjzCty8YAAAAASUVORK5CYII=" alt="Youtube">
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                <img src="data:image/png;base64,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" alt="Instagram">
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOTSURBVHgBzZlNSFRRFMf/9zkfVgoD1UKNeEEQfQgjtVAsnLaVoEGkbrKoxhah7SICkyBqpdZCc5MR+EFEhm5aOYIfuUpBaeFmJEsphQeaHyO+27mveTJPZ8Z5b6aZ94OZN+/eOzP/Offcc889w2CRkuqOMjDVy7bgYxK81OQJPwQKwIJc5UEwNsEZC4x13x2CBZiZwb6KN55QdqieMd4QISYhOEeQLgFIjiejXbdnE31fQgKFsM19oUb6mgakABLbmajQrL0GlNS013PHVp/QiRTBGLkEVysKCsuVuamBybhj43WWVr9uTpXV4tAy0l33IFZnVIHalGZvfKReH9ICm3CuuS4G+m4qO3ukaMM33aHB9IkTcK9mkCjsEqhNq8S9SDdkkNLq9uadzYZFQuJu0K95jsxRfOT0FWVuemBcb9j2weKqNjkLTEytDIvcunoWRafycVw+iNz9biyvbmDh1wq+fvuBl+/GEv0YxbnmPqb7o0NvJXGNyYh75PfhUtkJQ5sQmSu7sbK2ARNQzN2gmAttZWs+KKxH4mphkQvn5F3iIpkJLsEkDSKSQBeoWS8Jik7m72qbX1ymqf2JmdkleizCLGJLFVd9in1IgrzDuYb7hd/LuFbfhWQI7/dN0r+sxLrvCXL2uwz3wnopwCO0SYxzH+yKqnodYLAclN+31mjXnANGCwqf1PsEz9oHyR/nYRaKgT4HPcmwyE7fi9lnKuuMgBJhWsVcxn9m5U8IVqDf5RGr2FRmHIm+GPIOGS25QjvI8moo4t6aQMLDaIPmSJJXj8u1LU5HxL/7T/uRCkSgVmBfFLsLDEqcslnYFK4KgYwHYFfoTC2BS7a1oAR1SAqf+G3nhxRagsM99wJausU5a4Hd4FSFQDgfdGW7WmE3qPKgXcRToFPk//axoiiN6GWR7WOn0+1qgg18Ufiebj2BIc8oud5RL0lqRi25BVb7pdv/Vr83nIvnpvvHjxaWi+ShGJlAZS1jPf4XkU1RMzVKIAaRwmpWYrCJkW5/0c7WqLUZp9tdifRugQFRPIrWkfnyG03rSK8/ZvktbgHz+9TAZ/LJIL3Ua9Cpg0FRVTwc7a1rijdszworiZwsOHP5kwTmSeaAZYCs5lx3Vw5/uLNnYd3UcSZcYGoM1w5lmIEsxkmYa93VGq1QGfttFjlf1eZTIdGhn3sZY7J2+OJhNyAx9FqhoEt/QSCQpfJJsfHDAn8BK7swt3OQ39sAAAAASUVORK5CYII=" alt="Facebook">
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </footer>
-  <div class="overlay"></div>
-  <div class="modal-donation-container">
-    <div class="modal-donation-content donation-first-step">
-      <h2 class="header-modal-donation">make your donation</h2>
-      <p class="header-text">Donation Information:</p>
-      <form class="donation-form">
-        <p class="amount-text"><span>*</span> Choose your donation amount:</p>
-        <div class="donate-btn-container">
-          <button type="button" class="together-donate-btn">$10</button>
-          <button type="button" class="together-donate-btn">$20</button>
-          <button type="button" class="together-donate-btn">$30</button>
-          <button type="button" class="together-donate-btn">$50</button>
-          <button type="button" class="together-donate-btn">$80</button>
-          <button type="button" class="together-donate-btn">$100</button>
-        </div>
-        <div class="other-amount-input-container">
-          <button type="button" class="other-amount-btn">Other amount</button>
-          <input type="text" name="other-sum-input" id="other-sum-input" class="other-sum-input">
-        </div>
-        <div class="select-container">
-          <button type="button" class="special-pet-btn">for special pet</button>
-          <select name="pets" id="pet-select" class="select-pets">
-            <option value="">Choose your favourite</option>
-            <option value="dog">Lukas the Panda</option>
-            <option value="cat">Andy the Lemur</option>
-            <option value="hamster">Glen the Gorilla</option>
-            <option value="parrot">Mike the Alligator</option>
-            <option value="spider">Sam & Lora the eagles family</option>
-            <option value="goldfish">Shake the Lion</option>
-            <option value="goldfish">Senja the Tiger</option>
-          </select>
-        </div>
-        <div class="container-checkbox">
-          <input type="checkbox" name="monthly-recurring" class="monthly-recurring" id="monthly-recurring">
-          <label for="monthly-recurring" class="monthly-recurring-label">Make this a monthly recurring gift</label>
-        </div>
-        <div class="popup-btn-container">
-          <div class="popup-circe-container">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
+    </footer>
+    <div class="overlay"></div>
+    <div class="modal-donation-container">
+      <div class="modal-donation-content donation-first-step">
+        <h2 class="header-modal-donation">make your donation</h2>
+        <p class="header-text">Donation Information:</p>
+        <form class="donation-form">
+          <p class="amount-text"><span>*</span> Choose your donation amount:</p>
+          <div class="donate-btn-container">
+            <button type="button" class="together-donate-btn">$10</button>
+            <button type="button" class="together-donate-btn">$20</button>
+            <button type="button" class="together-donate-btn">$30</button>
+            <button type="button" class="together-donate-btn">$50</button>
+            <button type="button" class="together-donate-btn">$80</button>
+            <button type="button" class="together-donate-btn">$100</button>
           </div>
-          <button type="submit" class="popup-btn-next">next
-            <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector">
-          </button>
-        </div>
-      </form>
-    </div>
-    <div class="modal-donation-content donation-second-step">
-      <h2 class="header-modal-donation">make your donation</h2>
-      <p class="header-text">Billing Information:</p>
-      <form method="post" class="donation-form form-contact" id="donation-form">
-        <label for="name"><span>*</span>Your Name</label>
-        <input type="text" name="name" id="name" autocomplete="name" placeholder="First and last name" required>
-        <div class="error-message" id="name-error"></div>
-        <label for="email"><span>*</span>Your Email Address</label>
-        <input type="email" name="email" id="email" autocomplete="email" placeholder="Enter your email" required>
-        <div class="error-message" id="email-error"></div>
-        <p class="second-form-text">You will receive emails from the Online Zoo, including updates and news on the latest discoveries and translations. You can unsubscribe at any time.</p>
-        <div class="popup-btn-container">
-          <div class="popup-circe-container">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
+          <div class="other-amount-input-container">
+            <button type="button" class="other-amount-btn">Other amount</button>
+            <input
+              type="text"
+              name="other-sum-input"
+              id="other-sum-input"
+              class="other-sum-input"
+            />
           </div>
-          <button class="back-btn">Back</button>
-          <button type="submit" class="popup-btn-next">next
-            <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector">
-          </button>
-        </div>
-      </form>
-    </div>
-    <div class="modal-donation-content donation-third-step">
-      <h2 class="header-modal-donation">make your donation</h2>
-      <p class="header-text">Payment Information:</p>
-      <form class="donation-form">
-        <div class="credential-container">
-          <div class="card-number">
-            <label class="amount-text"><span>*</span> Credit Card Number</label>
-            <input type="text" name="other-sum-input" id="other-sum-input">
+          <div class="select-container">
+            <button type="button" class="special-pet-btn">
+              for special pet
+            </button>
+            <select name="pets" id="pet-select" class="select-pets">
+              <option value="">Choose your favourite</option>
+              <option value="dog">Lukas the Panda</option>
+              <option value="cat">Andy the Lemur</option>
+              <option value="hamster">Glen the Gorilla</option>
+              <option value="parrot">Mike the Alligator</option>
+              <option value="spider">Sam & Lora the eagles family</option>
+              <option value="goldfish">Shake the Lion</option>
+              <option value="goldfish">Senja the Tiger</option>
+            </select>
           </div>
-          <div>
-            <label class="amount-text"><span>*</span> CVV Number</label>
-            <input type="text" name="other-sum-input" id="other-sum-input">
+          <div class="container-checkbox">
+            <input
+              type="checkbox"
+              name="monthly-recurring"
+              class="monthly-recurring"
+              id="monthly-recurring"
+            />
+            <label for="monthly-recurring" class="monthly-recurring-label"
+              >Make this a monthly recurring gift</label
+            >
           </div>
-        </div>
-        <p>*<span>*</span> Expiration Date</p>
-        <div class="select-container">
-          <select name="pets" id="pet-select" class="select-date">
-            <option value="">Month</option>
-            <option value="dog">Lukas the Panda</option>
-            <option value="cat">Andy the Lemur</option>
-            <option value="hamster">Glen the Gorilla</option>
-            <option value="parrot">Mike the Alligator</option>
-            <option value="spider">Sam & Lora the eagles family</option>
-            <option value="goldfish">Shake the Lion</option>
-            <option value="goldfish">Senja the Tiger</option>
-          </select>
-          <select name="pets" id="pet-select" class="select-date">
-            <option value="">Year</option>
-            <option value="dog">Lukas the Panda</option>
-            <option value="cat">Andy the Lemur</option>
-            <option value="hamster">Glen the Gorilla</option>
-            <option value="parrot">Mike the Alligator</option>
-            <option value="spider">Sam & Lora the eagles family</option>
-            <option value="goldfish">Shake the Lion</option>
-            <option value="goldfish">Senja the Tiger</option>
-          </select>
-        </div>
-        <div class="popup-btn-container">
-          <div class="popup-circe-container">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
+          <div class="popup-btn-container">
+            <div class="popup-circe-container">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+            <button type="submit" class="popup-btn-next">
+              next
+              <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector" />
+            </button>
           </div>
-          <button class="back-btn">Back</button>
-          <button type="submit" class="complete-btn">Complete donation
-            <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector">
-          </button>
-        </div>
-      </form>
+        </form>
+      </div>
+      <div class="modal-donation-content donation-second-step">
+        <h2 class="header-modal-donation">make your donation</h2>
+        <p class="header-text">Billing Information:</p>
+        <form
+          method="post"
+          class="donation-form form-contact"
+          id="donation-form"
+        >
+          <label for="name"><span>*</span>Your Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            autocomplete="name"
+            placeholder="First and last name"
+            required
+          />
+          <div class="error-message" id="name-error"></div>
+          <label for="email"><span>*</span>Your Email Address</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            autocomplete="email"
+            placeholder="Enter your email"
+            required
+          />
+          <div class="error-message" id="email-error"></div>
+          <p class="second-form-text">
+            You will receive emails from the Online Zoo, including updates and
+            news on the latest discoveries and translations. You can unsubscribe
+            at any time.
+          </p>
+          <div class="popup-btn-container">
+            <div class="popup-circe-container">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+            <button class="back-btn">Back</button>
+            <button type="submit" class="popup-btn-next">
+              next
+              <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector" />
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-donation-content donation-third-step">
+        <h2 class="header-modal-donation">make your donation</h2>
+        <p class="header-text">Payment Information:</p>
+        <form class="donation-form">
+          <div class="credential-container">
+            <div class="card-number">
+              <label class="amount-text"
+                ><span>*</span> Credit Card Number</label
+              >
+              <input type="text" name="other-sum-input" id="other-sum-input" />
+            </div>
+            <div>
+              <label class="amount-text"><span>*</span> CVV Number</label>
+              <input type="text" name="other-sum-input" id="other-sum-input" />
+            </div>
+          </div>
+          <p>*<span>*</span> Expiration Date</p>
+          <div class="select-container">
+            <select name="pets" id="pet-select" class="select-date">
+              <option value="">Month</option>
+              <option value="dog">Lukas the Panda</option>
+              <option value="cat">Andy the Lemur</option>
+              <option value="hamster">Glen the Gorilla</option>
+              <option value="parrot">Mike the Alligator</option>
+              <option value="spider">Sam & Lora the eagles family</option>
+              <option value="goldfish">Shake the Lion</option>
+              <option value="goldfish">Senja the Tiger</option>
+            </select>
+            <select name="pets" id="pet-select" class="select-date">
+              <option value="">Year</option>
+              <option value="dog">Lukas the Panda</option>
+              <option value="cat">Andy the Lemur</option>
+              <option value="hamster">Glen the Gorilla</option>
+              <option value="parrot">Mike the Alligator</option>
+              <option value="spider">Sam & Lora the eagles family</option>
+              <option value="goldfish">Shake the Lion</option>
+              <option value="goldfish">Senja the Tiger</option>
+            </select>
+          </div>
+          <div class="popup-btn-container">
+            <div class="popup-circe-container">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+            <button class="back-btn">Back</button>
+            <button type="submit" class="complete-btn">
+              Complete donation
+              <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector" />
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-   <div class="popup-user">
-    <div class="close-popup-user">
-      <div class="line-close-popup line-close1"></div>
-      <div class="line-close-popup line-close2"></div>
+    <div class="popup-user">
+      <div class="close-popup-user">
+        <div class="line-close-popup line-close1"></div>
+        <div class="line-close-popup line-close2"></div>
+      </div>
+      <h3>Please Sign in or registration</h3>
+      <button class="sign_in-btn">Sign in</button>
+      <button class="registration-btn">Registration</button>
     </div>
-    <h3>Please Sign in or registration</h3>
-    <button class="sign_in-btn">Sign in</button>
-    <button class="registration-btn">Registration</button>
-  </div>
-  <div class="user-menu">
-    <div class="close-popup-user-menu">
-      <div class="line-close-popup line-close1"></div>
-      <div class="line-close-popup line-close2"></div>
+    <div class="user-menu">
+      <div class="close-popup-user-menu">
+        <div class="line-close-popup line-close1"></div>
+        <div class="line-close-popup line-close2"></div>
+      </div>
+      <h2 class="tittle-user-menu">
+        Hi <span class="user-name">!</span>Welcome to user menu
+      </h2>
+      <h3>User name: <span class="user-menu-name">name</span></h3>
+      <h3>User email: <span class="user-menu-email">email</span></h3>
+      <button class="sign_out-btn">Sign out</button>
     </div>
-    <h2 class="tittle-user-menu">Hi <span class="user-name">!</span>Welcome to user menu</h2>
-    <h3>User name: <span class="user-menu-name">name</span></h3>
-    <h3>User email: <span class="user-menu-email">email</span></h3>
-    <button class="sign_out-btn">Sign out</button>
-  </div>
-  <div class="login-popup">
-    <h3>Login in to your account</h3>
-    <form method="post" class="form-contact form-login" id="form-login">
+    <div class="login-popup">
+      <h3>Login in to your account</h3>
+      <form method="post" class="form-contact form-login" id="form-login">
         <label for="login"><span>*</span>Your Login</label>
-        <input type="text" name="login" id="log-in" autocomplete="login" placeholder="Enter your login" required>
+        <input
+          type="text"
+          name="login"
+          id="log-in"
+          autocomplete="login"
+          placeholder="Enter your login"
+          required
+        />
         <div class="error-message" id="log-in-error"></div>
 
         <label for="password"><span>*</span>Your password</label>
-        <input type="password" name="password" id="password-login" placeholder="Enter your password" required>
+        <input
+          type="password"
+          name="password"
+          id="password-login"
+          placeholder="Enter your password"
+          required
+        />
         <div class="error-message" id="password-error-login"></div>
 
         <button class="submit-login-form" id="submit-login-form" type="submit">
           log in
-          <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector">
+          <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector" />
         </button>
         <div class="form-login-error-global"></div>
-    </form>
-  </div>
-  <div class="registration-popup">
-    <h3>Please, feel registration form</h3>
-    <form method="post" class="form-contact form-registration" id="registration-form">
-      <label for="login"><span>*</span>Your Login</label>
-      <input type="text" name="login" id="login" autocomplete="login" placeholder="Enter your login" required>
-      <div class="error-message" id="login-error"></div>
+      </form>
+    </div>
+    <div class="registration-popup">
+      <h3>Please, feel registration form</h3>
+      <form
+        method="post"
+        class="form-contact form-registration"
+        id="registration-form"
+      >
+        <label for="login"><span>*</span>Your Login</label>
+        <input
+          type="text"
+          name="login"
+          id="login"
+          autocomplete="login"
+          placeholder="Enter your login"
+          required
+        />
+        <div class="error-message" id="login-error"></div>
 
-      <label for="name"><span>*</span>Your Name</label>
-      <input type="text" name="name" id="name" autocomplete="name" placeholder="First and last name" required>
-      <div class="error-message" id="name-error"></div>
+        <label for="name"><span>*</span>Your Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          autocomplete="name"
+          placeholder="First and last name"
+          required
+        />
+        <div class="error-message" id="name-error"></div>
 
-      <label for="email"><span>*</span>Your Email Address</label>
-      <input type="email" name="email" id="email" autocomplete="email" placeholder="Enter your email" required>
-      <div class="error-message" id="email-error"></div>
+        <label for="email"><span>*</span>Your Email Address</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          autocomplete="email"
+          placeholder="Enter your email"
+          required
+        />
+        <div class="error-message" id="email-error"></div>
 
-      <label for="password"><span>*</span>Your password</label>
-      <input type="password" name="password" id="password" placeholder="Enter your password" required>
-      <div class="error-message" id="password-error"></div>
+        <label for="password"><span>*</span>Your password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter your password"
+          required
+        />
+        <div class="error-message" id="password-error"></div>
 
-      <label for="confirm-password"><span>*</span>Confirm password</label>
-      <input type="password" name="confirm-password" id="confirm-password" placeholder="Enter your password" required>
-      <div class="error-message" id="confirm-password-error"></div>
+        <label for="confirm-password"><span>*</span>Confirm password</label>
+        <input
+          type="password"
+          name="confirm-password"
+          id="confirm-password"
+          placeholder="Enter your password"
+          required
+        />
+        <div class="error-message" id="confirm-password-error"></div>
 
-      <button class="submit-registration-form" type="submit">
-        registration
-        <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector">
-      </button>
-      <div class="form-error-global" id="form-error-global"></div>
-    </form>
-  </div>
-</body>
+        <button class="submit-registration-form" type="submit">
+          registration
+          <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector" />
+        </button>
+        <div class="form-error-global" id="form-error-global"></div>
+      </form>
+    </div>
+  </body>
 </html>
