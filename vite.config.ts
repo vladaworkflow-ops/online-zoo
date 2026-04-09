@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import * as path from 'path';
 
 export default defineConfig({
-  base: '/online-zoo/',
+  base: '/',
   root: 'src',
   envDir: '../',
   server: {
