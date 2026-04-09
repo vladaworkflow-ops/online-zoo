@@ -801,18 +801,17 @@
 }
 
 .live-cam-button {
+  @include m.size(240px, 74px);
   background-color: transparent;
   color: v.$bg-orange-col;
   @include m.font(20px, 600);
   line-height: 1.5;
   gap: 10px;
   transition: 0.3s ease;
-  margin-left: 20px;
   @media screen and (max-width: v.$desktop-small) {
   }
   @media screen and (max-width: v.$tablet) {
     width: 240px;
-    margin-left: 100px;
   }
 
   @media screen and (max-width: v.$tablet) {
@@ -821,7 +820,6 @@
 }
 
 .live-cam-button:hover {
-  @include m.size(240px, 74px);
   @include m.position(row, center, center, center);
   border-radius: 5px;
   align-self: center;
@@ -832,4 +830,40 @@
   @media screen and (max-width: v.$desktop-small) {
     margin-bottom: 35px;
   }
+}
+
+#modal-map {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  @include m.position(column, flex-start, center, center);
+  @include m.size(920px, auto);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  color: black;
+  border-radius: 5px;
+  z-index: 1001;
+  padding: 30px 20px 50px;
+  gap: 50px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: #1a1a1a38;
+}
+
+#map {
+  width: 600px;
+  height: 400px;
+}
+
+#closeMap {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  background-color: transparent;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
 }
