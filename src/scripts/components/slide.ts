@@ -15,6 +15,8 @@ function createCarousel({
   const prevBtn = document.querySelector(prevBtnSelector) as HTMLElement;
   const nextBtn = document.querySelector(nextBtnSelector) as HTMLElement;
 
+  if (!container || !prevBtn || !nextBtn) return;
+
   function moveRight() {
     const firstSlide = container.querySelector(slideSelector) as HTMLElement;
     container.appendChild(firstSlide);
