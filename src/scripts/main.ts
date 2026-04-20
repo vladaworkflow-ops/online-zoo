@@ -10,3 +10,5 @@ import './components/renderThinkCards';
 import './popup/donation-popup-validation';
 import './popup/donation-credential';
 import './components/renderDonation';
+import './utils/map';
+import './utils/zoos';

@@ -1,6 +1,6 @@
-const animalContainer = document.querySelectorAll('.animal-container');
-const menuAnimalContainer = document.querySelectorAll('.menu-animal');
-const sidePanel = document.querySelector('.side-panel');
+const animalContainer = document.querySelectorAll('.animal-container') as NodeListOf<HTMLElement>;
+const menuAnimalContainer = document.querySelectorAll('.menu-animal') as NodeListOf<HTMLElement>;
+const sidePanel = document.querySelector('.side-panel') as HTMLElement;
 
 function handleViewAnimal() {
   animalContainer.forEach((container, idx) => {
@@ -36,5 +36,3 @@ const toggleButton = document.querySelector('.handle-side-button');
 toggleButton?.addEventListener('click', () => {
   sidePanel?.classList.toggle('expandable');
 });
-
-console.log('zoos loaded');

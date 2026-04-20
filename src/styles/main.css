@@ -827,7 +827,7 @@ body {
     height: 45px;
   }
 }
-.donation-block .donation-content #donation-btn-input {
+.donation-block .donation-content .donation-btn-input {
   margin-left: 20px;
 }
 @media screen and (max-width: 1200px) {

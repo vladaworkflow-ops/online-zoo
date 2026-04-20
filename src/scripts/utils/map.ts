@@ -1,8 +1,8 @@
-const btnsViewMap = document.querySelectorAll('.live-cam-button');
-const modal = document.getElementById('modal-map');
-const closeBtn = document.getElementById('closeMap');
+const btnsViewMap = document.querySelectorAll('.live-cam-button') as NodeListOf<HTMLButtonElement>;
+const modal = document.getElementById('modal-map') as HTMLElement;
+const closeBtn = document.getElementById('closeMap') as HTMLButtonElement;
 
-let map = null;
+let map: google.maps.Map | null = null;
 const position = { lat: -34.397, lng: 150.644 };
 
 function initMap() {
@@ -29,10 +29,12 @@ function openModal() {
   if (!modal) return;
 
   modal.style.visibility = 'visible';
-  modal.style.opacity = 1;
+  modal.style.opacity = '1';
 
   setTimeout(() => {
     initMap();
+
+    if (!map) return;
 
     google.maps.event.trigger(map, 'resize');
     map.setCenter(position);
@@ -42,7 +44,7 @@ function openModal() {
 function closeModal() {
   if (!modal) return;
   modal.style.visibility = 'hidden';
-  modal.style.opacity = 0;
+  modal.style.opacity = '0';
 }
 
 btnsViewMap.forEach(btn => {

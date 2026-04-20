@@ -22,16 +22,16 @@ const donationBtn = document.querySelectorAll(
 export const modalDonation = document.querySelector(
   '.modal-donation-container',
 ) as HTMLElement;
-const donationBtnIcon = document.querySelector(
-  '#donation-btn-icon',
-) as HTMLElement;
-const donationBtnInput = document.querySelector(
-  '#donation-btn-input',
-) as HTMLInputElement;
+const donationBtnIcon = document.querySelectorAll(
+  '.donation-btn-icon',
+)  as NodeListOf<HTMLElement>;
+const donationBtnInput = document.querySelectorAll(
+  '.donation-btn-input',
+) as NodeListOf<HTMLInputElement>;
 
-const initialValue = donationBtnInput?.value;
+//const initialValue = donationBtnInput?.value;
 
-donationBtnInput?.addEventListener('blur', () => {
+/* donationBtnInput?.addEventListener('blur', () => {
   if (donationBtnInput.value.trim() === '') {
     donationBtnInput.value = initialValue;
   }
@@ -39,6 +39,20 @@ donationBtnInput?.addEventListener('blur', () => {
 
 donationBtnInput?.addEventListener('focus', () => {
   donationBtnInput.value = '';
+}); */
+
+donationBtnInput.forEach((input) => {
+  const initialValue = input.value;
+
+  input.addEventListener('focus', () => {
+    input.value = '';
+  });
+
+  input.addEventListener('blur', () => {
+    if (input.value.trim() === '') {
+      input.value = initialValue;
+    }
+  });
 });
 
 export function openDonationModal() {
@@ -46,13 +60,24 @@ export function openDonationModal() {
   modalDonation.classList.add('active-modal');
 }
 
-donationBtn.forEach((btn: HTMLElement) => {
+/* donationBtn.forEach((btn: HTMLElement) => {
   if (!overlay && !modalDonation) return;
 
   btn.addEventListener('click', () => {
     openDonationModal();
   });
-});
+}); */
+
+if (overlay && modalDonation) {
+  donationBtn.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement;
+
+    if (target.closest('.donation-btn-input')) return;
+      openDonationModal();
+   });
+  });
+}
 
 togetherBtn.forEach((btn: HTMLElement, indx: number) => {
   if (!overlay && !modalDonation) return;
@@ -65,9 +90,17 @@ togetherBtn.forEach((btn: HTMLElement, indx: number) => {
 });
 
 if (donationBtnIcon && overlay && modalDonation) {
-  donationBtnIcon.addEventListener('click', (event) => {
+
+  /* donationBtnIcon.addEventListener('click', (event) => {
     event.stopPropagation();
     openDonationModal();
+  }); */
+
+  donationBtnIcon.forEach((icon) => {
+  icon.addEventListener('click', (event) => {
+    event.stopPropagation();
+    openDonationModal();
+    });
   });
 }
 
@@ -95,4 +128,3 @@ closeModalBtn?.addEventListener('click', () => {
   overlay.classList.remove('active-modal');
   modal.classList.remove('active-modal');
 });
-

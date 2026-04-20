@@ -301,12 +301,12 @@
                 donating bamboo for our pandas.
               </p>
             </div>
-            <div class="donation-button-container donation-btn">
+            <div class="donation-btn donation-button-container">
               <h4>Quick Donate</h4>
               <button>
-                $ Donation Amount
-                <span class="icon-wrapper">
-                  <img src="../../assets/icons/vector.svg" alt="vector" />
+                <input type="text" value="$ Donation Amount" class="donation-btn-input" name="donationAmount">
+                <span class="icon-wrapper donation-btn-icon">
+                  <img src="../../assets/icons/vector.svg" alt="vector">
                 </span>
               </button>
             </div>
@@ -1256,9 +1256,7 @@
       <button id="closeMap">X</button>
       <div id="map"></div>
     </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDw66LMJVyviKeuM-EToILfVcC_PQzDEI"></script>
-    <script type="module" src="./map.js"></script>
-    <script type="module" src="/scripts/main.ts"></script>
-    <script type="module" src="./zoos.js" defer></script>
+    <script type="module" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDw66LMJVyviKeuM-EToILfVcC_PQzDEI"></script>
+    <script type="module" src="../../scripts/main.ts" defer></script>
   </body>
 </html>

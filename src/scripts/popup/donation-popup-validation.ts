@@ -17,7 +17,7 @@ export const otherAmount = document.querySelector(
   '.other-amount-btn',
 ) as HTMLButtonElement;
 const inputBtnSum = document.querySelector(
-  '#donation-btn-input',
+  '.donation-btn-input',
 ) as HTMLInputElement;
 export const petSelect = document.getElementById(
   'pet-select',
