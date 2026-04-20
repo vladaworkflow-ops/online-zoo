@@ -827,9 +827,6 @@ body {
     height: 45px;
   }
 }
-.donation-block .donation-content .donation-btn-input {
-  margin-left: 20px;
-}
 @media screen and (max-width: 1200px) {
   .donation-block .donation-content {
     width: 83.3333333333%;
@@ -850,6 +847,10 @@ body {
   .donation-block .donation-content {
     width: 320px;
   }
+}
+
+.donation-btn-input {
+  margin-left: 20px;
 }
 
 .meet-section {
@@ -3310,6 +3311,7 @@ footer.footer-content.footer-button-donate:hover {
   }
 }
 .slide-cam-container .slide-cam-elements .slide-cam-card {
+  border: 2px solid transparent;
   border-radius: 5px;
 }
 @media screen and (max-width: 640px) {

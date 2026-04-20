@@ -362,10 +362,6 @@ body {
       }
     }
 
-    .donation-btn-input {
-      margin-left: 20px;
-    }
-
     @media screen and (max-width: v.$desktop-small) {
       width: calc(1000px / 1200px) * 100%;
     }
@@ -379,6 +375,10 @@ body {
       width: v.$mobile;
     }
   }
+}
+
+.donation-btn-input {
+  margin-left: 20px;
 }
 
 .meet-section {

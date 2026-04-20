@@ -460,6 +460,7 @@
     }
 
     .slide-cam-card {
+      border: 2px solid transparent;
       border-radius: 5px;
       @media screen and (max-width: v.$tablet) {
         width: 135px;
