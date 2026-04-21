@@ -1,6 +1,7 @@
 const btnsViewMap = document.querySelectorAll('.live-cam-button') as NodeListOf<HTMLButtonElement>;
 const modal = document.getElementById('modal-map') as HTMLElement;
 const closeBtn = document.getElementById('closeMap') as HTMLButtonElement;
+import pandaIcon from '/assets/icons/location/panda-loc.svg';
 
 let map: google.maps.Map | null = null;
 const position = { lat: -34.397, lng: 150.644 };
@@ -19,7 +20,7 @@ function initMap() {
     position,
     map,
     icon: {
-    url: '/assets/icons/location/panda-loc.svg',
+    url: pandaIcon,
     scaledSize: new google.maps.Size(80, 80),
     },
   });
