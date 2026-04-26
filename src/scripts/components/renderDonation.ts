@@ -1,6 +1,7 @@
 import { Donation, DonationsByUser } from '../../types/user';
 import { modalDonateBtn, openDonationModal } from '../popup/donation-popup';
 import {
+  clearActiveButtons,
   donationForm,
   inputSum,
   otherAmount,
@@ -53,7 +54,7 @@ export function repeatDonation(animal: string, amount: string) {
     return btnValue === amount;
   });
 
-  modalDonateBtn.forEach((btn) => btn.classList.remove('active'));
+  clearActiveButtons();
   otherAmount.classList.remove('active');
 
   if (matchedButton) {

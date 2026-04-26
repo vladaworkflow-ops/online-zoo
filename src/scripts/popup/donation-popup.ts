@@ -1,4 +1,9 @@
 import { userMenu } from '../utils/user-menu';
+import {
+  clearActiveButtons,
+  inputSum,
+  otherAmount,
+} from './donation-popup-validation';
 
 const togetherOpenBtn = document.querySelectorAll(
   '.cam-button',
@@ -24,22 +29,10 @@ export const modalDonation = document.querySelector(
 ) as HTMLElement;
 const donationBtnIcon = document.querySelectorAll(
   '.donation-btn-icon',
-)  as NodeListOf<HTMLElement>;
+) as NodeListOf<HTMLElement>;
 const donationBtnInput = document.querySelectorAll(
   '.donation-btn-input',
 ) as NodeListOf<HTMLInputElement>;
-
-//const initialValue = donationBtnInput?.value;
-
-/* donationBtnInput?.addEventListener('blur', () => {
-  if (donationBtnInput.value.trim() === '') {
-    donationBtnInput.value = initialValue;
-  }
-});
-
-donationBtnInput?.addEventListener('focus', () => {
-  donationBtnInput.value = '';
-}); */
 
 donationBtnInput.forEach((input) => {
   const initialValue = input.value;
@@ -56,26 +49,19 @@ donationBtnInput.forEach((input) => {
 });
 
 export function openDonationModal() {
+  clearActiveButtons();
   overlay.classList.add('active-modal');
   modalDonation.classList.add('active-modal');
 }
 
-/* donationBtn.forEach((btn: HTMLElement) => {
-  if (!overlay && !modalDonation) return;
-
-  btn.addEventListener('click', () => {
-    openDonationModal();
-  });
-}); */
-
 if (overlay && modalDonation) {
   donationBtn.forEach((btn) => {
     btn.addEventListener('click', (event) => {
-    const target = event.target as HTMLElement;
+      const target = event.target as HTMLElement;
 
-    if (target.closest('.donation-btn-input')) return;
+      if (target.closest('.donation-btn-input')) return;
       openDonationModal();
-   });
+    });
   });
 }
 
@@ -84,22 +70,17 @@ togetherBtn.forEach((btn: HTMLElement, indx: number) => {
 
   btn.addEventListener('click', () => {
     openDonationModal();
+    otherAmount.classList.remove('active');
     modal.classList.remove('active-modal');
     modalDonateBtn[indx + 1].classList.add('active');
   });
 });
 
 if (donationBtnIcon && overlay && modalDonation) {
-
-  /* donationBtnIcon.addEventListener('click', (event) => {
-    event.stopPropagation();
-    openDonationModal();
-  }); */
-
   donationBtnIcon.forEach((icon) => {
-  icon.addEventListener('click', (event) => {
-    event.stopPropagation();
-    openDonationModal();
+    icon.addEventListener('click', (event) => {
+      event.stopPropagation();
+      openDonationModal();
     });
   });
 }
@@ -108,6 +89,7 @@ togetherOpenBtn.forEach((btn: HTMLElement) => {
   btn.addEventListener('click', () => {
     overlay.classList.add('active-modal');
     modal.classList.add('active-modal');
+    inputSum.value = '';
   });
 });
 

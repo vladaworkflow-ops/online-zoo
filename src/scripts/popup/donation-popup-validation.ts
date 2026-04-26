@@ -1,6 +1,7 @@
 import { modalDonateBtn } from './donation-popup';
 import { authState } from '../api/auth';
 
+const modalDonateBtn = document.querySelectorAll('.modal-donate-btn');
 export const donationFirstStep = document.querySelector(
   '.donation-first-step',
 ) as HTMLDivElement;
@@ -72,23 +73,29 @@ export const donationForm: DonationForm = {
   year: '',
 };
 
+export function clearActiveButtons() {
+  modalDonateBtn.forEach((btn) => {
+    btn.classList.remove('active');
+  });
+}
+
 modalDonateBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
-    modalDonateBtn.forEach((b) => b.classList.remove('active'));
+    clearActiveButtons();
+
     otherAmount.classList.remove('active');
+    inputSum.value = '';
 
     btn.classList.add('active');
     donationForm.chooseBtnSum = btn.textContent;
+
     updateBtnNextState();
-    console.log('BTN TEXT:', btn.textContent);
   });
 });
 
 otherAmount.addEventListener('click', () => {
-  modalDonateBtn.forEach((btn) => {
-    btn.classList.remove('active');
-  });
   otherAmount.classList.add('active');
+  clearActiveButtons();
   inputSum.focus();
   updateBtnNextState();
 });
@@ -107,8 +114,15 @@ function validateInputSum() {
   }
 }
 
+inputSum.addEventListener('focus', () => {
+  clearActiveButtons();
+  otherAmount.classList.add('active');
+});
+
 inputSum.addEventListener('input', () => {
   validateInputSum();
+  otherAmount.classList.add('active');
+  clearActiveButtons();
 });
 
 inputBtnSum.addEventListener('input', () => {

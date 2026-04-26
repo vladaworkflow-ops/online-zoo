@@ -8,7 +8,7 @@ import { saveDonation } from '../utils/saveDonation';
 import { authState } from '../api/auth';
 import { getDonations, renderDonations } from '../components/renderDonation';
 import { updateUserMenu } from '../utils/user-menu';
-const form = document.getElementById('donation-form') as HTMLFormElement;
+export const form = document.getElementById('donation-form') as HTMLFormElement;
 const cardNumber = document.getElementById('credit-card') as HTMLInputElement;
 const cvv = document.getElementById('cvv') as HTMLInputElement;
 const month = document.getElementById('month-select') as HTMLSelectElement;
