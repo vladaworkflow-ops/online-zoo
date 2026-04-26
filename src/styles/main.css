@@ -1,6 +1,6 @@
 .thinks-section {
   width: 100%;
-  background-image: url("../assets/images/bg-thinks.png");
+  background-image: url('../assets/images/bg-thinks.png');
   background-color: #20113d;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -96,7 +96,11 @@
     padding-left: 0;
   }
 }
-.thinks-section .user-think-container .user-think-content .user-think-text .think-title {
+.thinks-section
+  .user-think-container
+  .user-think-content
+  .user-think-text
+  .think-title {
   font-size: 54px;
   font-weight: 600;
   text-transform: uppercase;
@@ -105,32 +109,52 @@
   margin-bottom: 45px;
 }
 @media screen and (max-width: 1200px) {
-  .thinks-section .user-think-container .user-think-content .user-think-text .think-title {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .user-think-text
+    .think-title {
     margin-bottom: 30px;
     padding-right: 150px;
   }
 }
 @media screen and (max-width: 320px) {
-  .thinks-section .user-think-container .user-think-content .user-think-text .think-title {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .user-think-text
+    .think-title {
     font-size: 26px;
     padding-bottom: 30px;
     padding-right: 0;
     margin-bottom: 0;
   }
 }
-.thinks-section .user-think-container .user-think-content .user-think-text .think-paragraph {
+.thinks-section
+  .user-think-container
+  .user-think-content
+  .user-think-text
+  .think-paragraph {
   font-size: 26px;
   line-height: 1.3;
   font-weight: 400;
   padding-right: 30px;
 }
 @media screen and (max-width: 1200px) {
-  .thinks-section .user-think-container .user-think-content .user-think-text .think-paragraph {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .user-think-text
+    .think-paragraph {
     padding-right: 0;
   }
 }
 @media screen and (max-width: 320px) {
-  .thinks-section .user-think-container .user-think-content .user-think-text .think-paragraph {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .user-think-text
+    .think-paragraph {
     font-size: 18px;
     line-height: 1.5;
     padding: 0 20px;
@@ -146,12 +170,18 @@
   flex-wrap: wrap;
 }
 @media screen and (max-width: 1200px) {
-  .thinks-section .user-think-container .user-think-content .comments-container {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .comments-container {
     padding-left: 140px;
   }
 }
 @media screen and (max-width: 640px) {
-  .thinks-section .user-think-container .user-think-content .comments-container {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .comments-container {
     width: fit-content;
     display: flex;
     flex-direction: row;
@@ -165,13 +195,20 @@
   }
 }
 @media screen and (max-width: 320px) {
-  .thinks-section .user-think-container .user-think-content .comments-container {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .comments-container {
     margin: 0 10px 0;
     height: 549px;
     padding-left: 0;
   }
 }
-.thinks-section .user-think-container .user-think-content .comments-container .comments-content {
+.thinks-section
+  .user-think-container
+  .user-think-content
+  .comments-container
+  .comments-content {
   width: 515px;
   height: 463px;
   border-radius: 5px;
@@ -179,32 +216,60 @@
   background-color: #fff;
   padding: 20px 50px 70px;
 }
-.thinks-section .user-think-container .user-think-content .comments-container .comments-content .comments-icon {
+.thinks-section
+  .user-think-container
+  .user-think-content
+  .comments-container
+  .comments-content
+  .comments-icon {
   padding: 25px 10px;
 }
 @media screen and (max-width: 640px) {
-  .thinks-section .user-think-container .user-think-content .comments-container .comments-content {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .comments-container
+    .comments-content {
     width: 523px;
     height: 100%;
     padding: 50px 30px 0;
     text-align: center;
   }
-  .thinks-section .user-think-container .user-think-content .comments-container .comments-content .comments-icon {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .comments-container
+    .comments-content
+    .comments-icon {
     display: none;
   }
-  .thinks-section .user-think-container .user-think-content .comments-container .comments-content .comments-icon-tabl {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .comments-container
+    .comments-content
+    .comments-icon-tabl {
     display: block;
   }
 }
 @media screen and (max-width: 320px) {
-  .thinks-section .user-think-container .user-think-content .comments-container .comments-content {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .comments-container
+    .comments-content {
     width: 300px;
     width: 300px;
     height: 549px;
     padding: 20px 20px 50px;
   }
 }
-.thinks-section .user-think-container .user-think-content .comments-container .comments-content .comments-title {
+.thinks-section
+  .user-think-container
+  .user-think-content
+  .comments-container
+  .comments-content
+  .comments-title {
   font-size: 26px;
   line-height: 1.3;
   font-weight: 500;
@@ -214,7 +279,12 @@
   gap: 60px;
 }
 @media screen and (max-width: 640px) {
-  .thinks-section .user-think-container .user-think-content .comments-container .comments-content .comments-title {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .comments-container
+    .comments-content
+    .comments-title {
     max-width: 70%;
     font-size: 26px;
     line-height: 1.3;
@@ -222,48 +292,95 @@
   }
 }
 @media screen and (max-width: 320px) {
-  .thinks-section .user-think-container .user-think-content .comments-container .comments-content .comments-title {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .comments-container
+    .comments-content
+    .comments-title {
     max-width: 100%;
     flex-direction: column;
     gap: 0;
     padding: 0 40px 20px;
   }
 }
-.thinks-section .user-think-container .user-think-content .comments-container .comments-content .comments-title .comments-icon-tabl {
+.thinks-section
+  .user-think-container
+  .user-think-content
+  .comments-container
+  .comments-content
+  .comments-title
+  .comments-icon-tabl {
   display: none;
 }
 @media screen and (max-width: 640px) {
-  .thinks-section .user-think-container .user-think-content .comments-container .comments-content .comments-title .comments-icon-tabl {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .comments-container
+    .comments-content
+    .comments-title
+    .comments-icon-tabl {
     display: block;
   }
 }
-.thinks-section .user-think-container .user-think-content .comments-container .comments-content .comment-text {
+.thinks-section
+  .user-think-container
+  .user-think-content
+  .comments-container
+  .comments-content
+  .comment-text {
   font-size: 18px;
   line-height: 1.5;
   height: 180px;
 }
 @media screen and (max-width: 640px) {
-  .thinks-section .user-think-container .user-think-content .comments-container .comments-content .comment-text {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .comments-container
+    .comments-content
+    .comment-text {
     height: 0;
   }
 }
 @media screen and (max-width: 320px) {
-  .thinks-section .user-think-container .user-think-content .comments-container .comments-content .comment-text {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .comments-container
+    .comments-content
+    .comment-text {
     height: 273px;
   }
 }
-.thinks-section .user-think-container .user-think-content .comments-container .comments-content .comment-user-name {
+.thinks-section
+  .user-think-container
+  .user-think-content
+  .comments-container
+  .comments-content
+  .comment-user-name {
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 600;
 }
 @media screen and (max-width: 640px) {
-  .thinks-section .user-think-container .user-think-content .comments-container .comments-content .comment-user-name {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .comments-container
+    .comments-content
+    .comment-user-name {
     padding-top: 150px;
   }
 }
 @media screen and (max-width: 320px) {
-  .thinks-section .user-think-container .user-think-content .comments-container .comments-content .comment-user-name {
+  .thinks-section
+    .user-think-container
+    .user-think-content
+    .comments-container
+    .comments-content
+    .comment-user-name {
     padding-top: 0;
   }
 }
@@ -285,7 +402,11 @@
   margin-right: 280px;
   cursor: pointer;
 }
-.thinks-section .user-think-container .comments-arrows .arrow-container .arrows {
+.thinks-section
+  .user-think-container
+  .comments-arrows
+  .arrow-container
+  .arrows {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -296,11 +417,19 @@
   background-color: transparent;
   color: white;
 }
-.thinks-section .user-think-container .comments-arrows .arrow-container .arrows:hover {
+.thinks-section
+  .user-think-container
+  .comments-arrows
+  .arrow-container
+  .arrows:hover {
   background-color: white;
   color: #20113d;
 }
-.thinks-section .user-think-container .comments-arrows .arrow-container .arr-left {
+.thinks-section
+  .user-think-container
+  .comments-arrows
+  .arrow-container
+  .arr-left {
   transform: rotate(180deg);
 }
 @media screen and (max-width: 1200px) {
@@ -388,7 +517,7 @@
 body {
   width: 1920px;
   min-height: 100vh;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -417,7 +546,7 @@ body {
   height: 790px;
   background-size: cover;
   background-position: bottom center;
-  background-image: url("../assets/images/bg-watch.png");
+  background-image: url('../assets/images/bg-watch.png');
   padding-left: 260px;
   padding-top: 130px;
   padding-bottom: 130px;
@@ -430,7 +559,7 @@ body {
     padding-left: 40px;
     padding-top: 100px;
     background-position: bottom right;
-    background-image: url("../assets/images/bg-watch-small-d.png");
+    background-image: url('../assets/images/bg-watch-small-d.png');
   }
 }
 @media screen and (max-width: 640px) {
@@ -765,7 +894,10 @@ body {
     padding: 0;
   }
 }
-.donation-block .donation-content .donation-button-container:hover .icon-wrapper {
+.donation-block
+  .donation-content
+  .donation-button-container:hover
+  .icon-wrapper {
   background-color: #d26004;
 }
 .donation-block .donation-content .donation-button-container h4 {
@@ -792,7 +924,11 @@ body {
   background-color: inherit;
   border: 1px solid #fff;
 }
-.donation-block .donation-content .donation-button-container button .icon-wrapper {
+.donation-block
+  .donation-content
+  .donation-button-container
+  button
+  .icon-wrapper {
   display: flex;
   justify-content: center;
   width: 80px;
@@ -802,14 +938,23 @@ body {
   border: 1px solid #fff;
   border-left: none;
 }
-.donation-block .donation-content .donation-button-container button .icon-wrapper img {
+.donation-block
+  .donation-content
+  .donation-button-container
+  button
+  .icon-wrapper
+  img {
   width: 25px;
   height: 22;
   max-width: 100%;
   max-height: 100%;
 }
 @media screen and (max-width: 320px) {
-  .donation-block .donation-content .donation-button-container button .icon-wrapper {
+  .donation-block
+    .donation-content
+    .donation-button-container
+    button
+    .icon-wrapper {
     width: 60px;
     height: 45px;
   }
@@ -1044,7 +1189,7 @@ body {
   }
 }
 .meet-section .meet-slide-container .slide-animal-card .crocodile {
-  background-image: url("../assets/images/cards/crocodale-card.png");
+  background-image: url('../assets/images/cards/crocodale-card.png');
   background-size: 120%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1873,7 +2018,7 @@ body {
 .care-bg-container {
   width: 1400px;
   height: 652px;
-  background-image: url("../assets/images/care-bg.png");
+  background-image: url('../assets/images/care-bg.png');
   margin: 0 260px 150px;
 }
 @media screen and (max-width: 1200px) {
@@ -2293,7 +2438,7 @@ header {
 .user-icon {
   width: 65px;
   height: 50px;
-  background-image: url("../../assets/icons/user-in.png");
+  background-image: url('../../assets/icons/user-in.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -3440,26 +3585,46 @@ footer.footer-content.footer-button-donate:hover {
     font-size: 26px;
   }
 }
-.animal-container .cam-donation-block .donation-content .donation-text .donation-text-paragraph {
+.animal-container
+  .cam-donation-block
+  .donation-content
+  .donation-text
+  .donation-text-paragraph {
   font-size: 18px;
   line-height: 1.5;
   width: 100%;
 }
 @media screen and (max-width: 640px) {
-  .animal-container .cam-donation-block .donation-content .donation-text .donation-text-paragraph {
+  .animal-container
+    .cam-donation-block
+    .donation-content
+    .donation-text
+    .donation-text-paragraph {
     padding: 0;
   }
 }
-.animal-container .cam-donation-block .donation-content .donation-button-container:hover .icon-wrapper {
+.animal-container
+  .cam-donation-block
+  .donation-content
+  .donation-button-container:hover
+  .icon-wrapper {
   background-color: #d26004;
 }
-.animal-container .cam-donation-block .donation-content .donation-button-container h4 {
+.animal-container
+  .cam-donation-block
+  .donation-content
+  .donation-button-container
+  h4 {
   font-size: 26px;
   line-height: 1.3;
   font-weight: 500;
   margin-bottom: 10px;
 }
-.animal-container .cam-donation-block .donation-content .donation-button-container button {
+.animal-container
+  .cam-donation-block
+  .donation-content
+  .donation-button-container
+  button {
   width: 320px;
   height: 74px;
   display: flex;
@@ -3477,7 +3642,12 @@ footer.footer-content.footer-button-donate:hover {
   background-color: inherit;
   border: 1px solid #fff;
 }
-.animal-container .cam-donation-block .donation-content .donation-button-container button .icon-wrapper {
+.animal-container
+  .cam-donation-block
+  .donation-content
+  .donation-button-container
+  button
+  .icon-wrapper {
   display: flex;
   justify-content: center;
   width: 80px;
@@ -3487,25 +3657,44 @@ footer.footer-content.footer-button-donate:hover {
   border: 1px solid #fff;
   border-left: none;
 }
-.animal-container .cam-donation-block .donation-content .donation-button-container button .icon-wrapper img {
+.animal-container
+  .cam-donation-block
+  .donation-content
+  .donation-button-container
+  button
+  .icon-wrapper
+  img {
   width: 25px;
   height: 22;
   max-width: 100%;
   max-height: 100%;
 }
 @media screen and (max-width: 320px) {
-  .animal-container .cam-donation-block .donation-content .donation-button-container button .icon-wrapper {
+  .animal-container
+    .cam-donation-block
+    .donation-content
+    .donation-button-container
+    button
+    .icon-wrapper {
     width: 60px;
     height: 45px;
   }
 }
 @media screen and (max-width: 640px) {
-  .animal-container .cam-donation-block .donation-content .donation-button-container button {
+  .animal-container
+    .cam-donation-block
+    .donation-content
+    .donation-button-container
+    button {
     width: 365px;
   }
 }
 @media screen and (max-width: 320px) {
-  .animal-container .cam-donation-block .donation-content .donation-button-container button {
+  .animal-container
+    .cam-donation-block
+    .donation-content
+    .donation-button-container
+    button {
     font-size: 16px;
     font-weight: 600;
     width: 300px;
@@ -4140,7 +4329,10 @@ footer.footer-content.footer-button-donate:hover {
     gap: 20px;
   }
 }
-.modal-donation-container .donation-form .donate-btn-container .modal-donate-btn {
+.modal-donation-container
+  .donation-form
+  .donate-btn-container
+  .modal-donate-btn {
   width: 80px;
   height: 100%;
   background-color: #80cfc8;
@@ -4149,18 +4341,27 @@ footer.footer-content.footer-button-donate:hover {
   cursor: pointer;
 }
 @media screen and (max-width: 640px) {
-  .modal-donation-container .donation-form .donate-btn-container .modal-donate-btn {
+  .modal-donation-container
+    .donation-form
+    .donate-btn-container
+    .modal-donate-btn {
     width: 135px;
     height: 65px;
   }
 }
 @media screen and (max-width: 320px) {
-  .modal-donation-container .donation-form .donate-btn-container .modal-donate-btn {
+  .modal-donation-container
+    .donation-form
+    .donate-btn-container
+    .modal-donate-btn {
     width: 130px;
     height: 50px;
   }
 }
-.modal-donation-container .donation-form .donate-btn-container .modal-donate-btn:hover {
+.modal-donation-container
+  .donation-form
+  .donate-btn-container
+  .modal-donate-btn:hover {
   background-color: #05786e;
 }
 .modal-donation-container .donation-form .modal-donate-btn.active {
@@ -4194,7 +4395,10 @@ footer.footer-content.footer-button-donate:hover {
     flex-direction: column-reverse;
   }
 }
-.modal-donation-container .donation-form .container-checkbox .monthly-recurring {
+.modal-donation-container
+  .donation-form
+  .container-checkbox
+  .monthly-recurring {
   width: 30px;
   height: 30px;
   border: 1px solid black;
@@ -4206,13 +4410,19 @@ footer.footer-content.footer-button-donate:hover {
   -webkit-appearance: checkbox;
   appearance: auto;
 }
-.modal-donation-container .donation-form .container-checkbox .monthly-recurring-label {
+.modal-donation-container
+  .donation-form
+  .container-checkbox
+  .monthly-recurring-label {
   font-size: 18px;
   line-height: 1.5;
   font-weight: 400;
 }
 @media screen and (max-width: 320px) {
-  .modal-donation-container .donation-form .container-checkbox .monthly-recurring-label {
+  .modal-donation-container
+    .donation-form
+    .container-checkbox
+    .monthly-recurring-label {
     font-size: 16px;
     padding: 0 20px 10px;
   }
@@ -4542,7 +4752,7 @@ footer.footer-content.footer-button-donate:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  background-image: url("../assets/images/together-bg.png");
+  background-image: url('../assets/images/together-bg.png');
   background-repeat: no-repeat;
   border-radius: 5px;
   z-index: 1001;
@@ -4591,7 +4801,10 @@ footer.footer-content.footer-button-donate:hover {
     padding: 0;
   }
 }
-.modal-together-container .modal-together-content .modal-together-text .tittle-modal-together {
+.modal-together-container
+  .modal-together-content
+  .modal-together-text
+  .tittle-modal-together {
   font-size: 54px;
   font-weight: 600;
   text-transform: uppercase;
@@ -4600,28 +4813,43 @@ footer.footer-content.footer-button-donate:hover {
   color: #f58021;
 }
 @media screen and (max-width: 1200px) {
-  .modal-together-container .modal-together-content .modal-together-text .tittle-modal-together {
+  .modal-together-container
+    .modal-together-content
+    .modal-together-text
+    .tittle-modal-together {
     padding: 0 202px 0 270px;
   }
 }
 @media screen and (max-width: 640px) {
-  .modal-together-container .modal-together-content .modal-together-text .tittle-modal-together {
+  .modal-together-container
+    .modal-together-content
+    .modal-together-text
+    .tittle-modal-together {
     font-size: 42px;
     padding: 0 57px 0 57px;
   }
 }
-.modal-together-container .modal-together-content .modal-together-text .paragraph-together {
+.modal-together-container
+  .modal-together-content
+  .modal-together-text
+  .paragraph-together {
   font-size: 18px;
   line-height: 1.5;
 }
 @media screen and (max-width: 1200px) {
-  .modal-together-container .modal-together-content .modal-together-text .paragraph-together {
+  .modal-together-container
+    .modal-together-content
+    .modal-together-text
+    .paragraph-together {
     text-align: center;
     padding: 0 255px 30px 290px;
   }
 }
 @media screen and (max-width: 640px) {
-  .modal-together-container .modal-together-content .modal-together-text .paragraph-together {
+  .modal-together-container
+    .modal-together-content
+    .modal-together-text
+    .paragraph-together {
     padding: 0 57px 20px 57px;
   }
 }
@@ -4931,7 +5159,7 @@ textarea {
   margin: 0;
 }
 
-input[type=checkbox] {
+input[type='checkbox'] {
   -webkit-appearance: auto;
   -moz-appearance: auto;
   appearance: auto;

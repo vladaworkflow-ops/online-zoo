@@ -35,10 +35,10 @@ const order = [
   'cheetah.jpg',
 ];
 
-const modules = import.meta.glob(
-  '../assets/images/cards/*.{png,jpg,jpeg}',
-  { eager: true, import: 'default' }
-) as Record<string, string>;
+const modules = import.meta.glob('../assets/images/cards/*.{png,jpg,jpeg}', {
+  eager: true,
+  import: 'default',
+}) as Record<string, string>;
 
 export const cardData = Object.entries(modules)
   .sort(([a], [b]) => {

@@ -1,4 +1,6 @@
-const btnsViewMap = document.querySelectorAll('.live-cam-button') as NodeListOf<HTMLButtonElement>;
+const btnsViewMap = document.querySelectorAll(
+  '.live-cam-button',
+) as NodeListOf<HTMLButtonElement>;
 const modal = document.getElementById('modal-map') as HTMLElement;
 const closeBtn = document.getElementById('closeMap') as HTMLButtonElement;
 import pandaIcon from '/assets/icons/location/panda-loc.svg';
@@ -20,8 +22,8 @@ function initMap() {
     position,
     map,
     icon: {
-    url: pandaIcon,
-    scaledSize: new google.maps.Size(80, 80),
+      url: pandaIcon,
+      scaledSize: new google.maps.Size(80, 80),
     },
   });
 }
@@ -48,7 +50,7 @@ function closeModal() {
   modal.style.opacity = '0';
 }
 
-btnsViewMap.forEach(btn => {
+btnsViewMap.forEach((btn) => {
   btn.addEventListener('click', openModal);
 });
 

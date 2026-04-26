@@ -1,5 +1,9 @@
-const animalContainer = document.querySelectorAll('.animal-container') as NodeListOf<HTMLElement>;
-const menuAnimalContainer = document.querySelectorAll('.menu-animal') as NodeListOf<HTMLElement>;
+const animalContainer = document.querySelectorAll(
+  '.animal-container',
+) as NodeListOf<HTMLElement>;
+const menuAnimalContainer = document.querySelectorAll(
+  '.menu-animal',
+) as NodeListOf<HTMLElement>;
 const sidePanel = document.querySelector('.side-panel') as HTMLElement;
 
 function handleViewAnimal() {

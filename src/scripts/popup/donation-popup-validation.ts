@@ -1,4 +1,4 @@
-import { modalDonateBtn } from './donation-popup';
+//import { modalDonateBtn } from './donation-popup';
 import { authState } from '../api/auth';
 
 const modalDonateBtn = document.querySelectorAll('.modal-donate-btn');

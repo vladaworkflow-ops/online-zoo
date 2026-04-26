@@ -14,12 +14,12 @@ This project is a modern frontend application built with a focus on clean archit
 
 ## 🧰 Tech Stack
 
-* **Bundler:** Vite
-* **Language:** TypeScript + JavaScript
-* **Styling:** SCSS (Sass preprocessor)
-* **Code Quality:** ESLint
-* **Code Formatting:** Prettier
-* **CSS Reset:** normalize.css
+- **Bundler:** Vite
+- **Language:** TypeScript + JavaScript
+- **Styling:** SCSS (Sass preprocessor)
+- **Code Quality:** ESLint
+- **Code Formatting:** Prettier
+- **CSS Reset:** normalize.css
 
 ---
 
@@ -27,9 +27,9 @@ This project is a modern frontend application built with a focus on clean archit
 
 The project uses **SCSS** as a CSS preprocessor, enabling:
 
-* Variables and mixins
-* Nested rules
-* Modular and maintainable styles
+- Variables and mixins
+- Nested rules
+- Modular and maintainable styles
 
 Additionally, **normalize.css** is included to ensure consistent styling across browsers.
 
@@ -101,10 +101,10 @@ Used for static code analysis and enforcing best practices across both TypeScrip
 
 Handles consistent code formatting:
 
-* Indentation
-* Quotes
-* Semicolons
-* Line wrapping
+- Indentation
+- Quotes
+- Semicolons
+- Line wrapping
 
 ### Sass
 
@@ -114,10 +114,10 @@ Compiles SCSS into standard CSS for browser compatibility.
 
 ## 🛠 Development Notes
 
-* SCSS is compiled manually or in watch mode depending on workflow
-* Codebase follows consistent formatting enforced by Prettier
-* ESLint ensures code quality and prevents common errors
-* Vite provides fast development and optimized builds
+- SCSS is compiled manually or in watch mode depending on workflow
+- Codebase follows consistent formatting enforced by Prettier
+- ESLint ensures code quality and prevents common errors
+- Vite provides fast development and optimized builds
 
 ---
 
@@ -125,9 +125,9 @@ Compiles SCSS into standard CSS for browser compatibility.
 
 This project is structured to provide:
 
-* ⚡ Fast development experience (Vite)
-* 🧼 Clean and consistent code (ESLint + Prettier)
-* 🎨 Scalable styling system (SCSS)
-* 🧩 Maintainable architecture
+- ⚡ Fast development experience (Vite)
+- 🧼 Clean and consistent code (ESLint + Prettier)
+- 🎨 Scalable styling system (SCSS)
+- 🧩 Maintainable architecture
 
 ---
