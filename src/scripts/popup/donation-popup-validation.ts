@@ -152,6 +152,22 @@ petSelect.addEventListener('change', () => {
   }
 });
 
+document.addEventListener('click', (e) => {
+  const target = e.target as HTMLElement;
+
+  const btn = target.closest('.cam-button');
+  if (!btn) return;
+
+  const card = btn.closest('.care-slide-animal-card');
+  const pet = card?.getAttribute('data-pet');
+
+  if (pet) {
+    petSelect.value = pet;
+    donationForm.specialPet = pet;
+    petSelect.dispatchEvent(new Event('change'));
+  }
+});
+
 checkboxMonthly.addEventListener('change', () => {
   donationForm.setMonthly = checkboxMonthly.checked;
 });
