@@ -15,7 +15,7 @@
       rel="stylesheet"
       href="https://necolas.github.io/normalize.css/latest/normalize.css"
     />
-    <script type="module" crossorigin src="../../assets/main-DWKqIEZx.js"></script>
+    <script type="module" crossorigin src="../../assets/main-DqfHZvtz.js"></script>
     <link rel="stylesheet" crossorigin href="../../assets/main-BuAEGPvP.css">
   </head>
   <body>
@@ -32,7 +32,7 @@
               <li><a href="../map/map.html">Map</a></li>
               <li><a href="../animal/zoos.html">Zoos</a></li>
               <li class="highlighted">
-                <a href="./contact.html">Contact us</a>
+                <a href="../contact/contact.html">Contact us</a>
               </li>
               <li>
                 <a
@@ -87,10 +87,8 @@
               <ul class="side-navigation-menu">
                 <li><a href="../landing/index.html">About</a></li>
                 <li><a href="../map/map.html">Map</a></li>
-                <li><a href="../animal/zoos.html">Zoos</a></li>
-                <li class="highlighted">
-                  <a href="./contact.html">Contact us</a>
-                </li>
+                <li class="highlighted"><a href="./zoos.html">Zoos</a></li>
+                <li><a href="../contact/contact.html">Contact us</a></li>
                 <li>
                   <a
                     href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project?node-id=0%3A1"
@@ -183,7 +181,7 @@ Enter your message</textarea
               <li><a href="../contact/contact.html">Contact us</a></li>
             </ul>
           </nav>
-          <button class="footer-button-donate">
+          <button class="donation-btn footer-button-donate">
             Donate for volunteers
             <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector" />
           </button>
@@ -228,5 +226,359 @@ Enter your message</textarea
         </div>
       </div>
     </footer>
+    <div class="overlay" id="overlay"></div>
+    <form method="post" class="modal-donation-container" id="donation-form">
+      <div class="donation-first-step">
+        <h2 class="header-modal-donation">make your donation</h2>
+        <p class="header-text">Donation Information:</p>
+        <div class="donation-form">
+          <p class="amount-text"><span>*</span> Choose your donation amount:</p>
+          <div class="donate-btn-container">
+            <button type="button" class="modal-donate-btn">$10</button>
+            <button type="button" class="modal-donate-btn">$20</button>
+            <button type="button" class="modal-donate-btn">$30</button>
+            <button type="button" class="modal-donate-btn">$50</button>
+            <button type="button" class="modal-donate-btn">$80</button>
+            <button type="button" class="modal-donate-btn">$100</button>
+          </div>
+          <div class="other-amount-input-container">
+            <button type="button" class="other-amount-btn">Other amount</button>
+            <input
+              type="text"
+              name="other-sum-input"
+              id="other-sum-input"
+              class="other-sum-input"
+              inputmode="numeric"
+              pattern="[0-9]*"
+            />
+          </div>
+          <div class="select-container">
+            <button type="button" class="special-pet-btn">
+              for special pet
+            </button>
+            <select name="pets" id="pet-select" class="select-pets">
+              <option value="">Choose your favourite</option>
+              <option value="giant-panda">Giant Panda</option>
+              <option value="madagascarian-lemur">Madagascarian Lemur</option>
+              <option value="gorilla-in-congo">Gorilla in Congo</option>
+              <option value="chinese-alligator">Chinese Alligator</option>
+              <option value="west-end-bald-eagles">West End Bald Eagles</option>
+              <option value="australian-koala">Australian Koala</option>
+              <option value="african-lion">African Lion</option>
+              <option value="sumatran-tiger">Sumatran Tiger</option>
+              <option value="red-panda">Red Panda</option>
+              <option value="mountain-gorilla">Mountain Gorilla</option>
+              <option value="african-elephant">African Elephant</option>
+              <option value="sea-otter">Sea Otter</option>
+              <option value="bengal-tiger">Bengal Tiger</option>
+              <option value="gray-wolf">Gray Wolf</option>
+              <option value="fennec-fox">Fennec Fox</option>
+              <option value="grizzly-bear">Grizzly Bear</option>
+              <option value="bottlenose-dolphin">Bottlenose Dolphin</option>
+              <option value="snow-leopard">Snow Leopard</option>
+              <option value="polar-bear">Polar Bear</option>
+              <option value="jaguar">Jaguar</option>
+              <option value="ring-tailed-lemur">Ring-Tailed Lemur</option>
+              <option value="white-rhinoceros">White Rhinoceros</option>
+              <option value="arctic-fox">Arctic Fox</option>
+              <option value="saltwater-crocodile">Saltwater Crocodile</option>
+              <option value="scarlet-macaw">Scarlet Macaw</option>
+              <option value="komodo-dragon">Komodo Dragon</option>
+              <option value="sloth">Sloth</option>
+              <option value="cheetah">Cheetah</option>
+            </select>
+          </div>
+          <div class="container-checkbox">
+            <input
+              type="checkbox"
+              name="monthly-recurring"
+              class="monthly-recurring"
+              id="monthly-recurring"
+            />
+            <span class="monthly-recurring-label"
+              >Make this a monthly recurring gift</span
+            >
+          </div>
+          <div class="popup-btn-container">
+            <div class="popup-circe-container">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+            <button class="popup-btn-next">
+              next
+              <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="donation-second-step">
+        <h2 class="header-modal-donation">make your donation</h2>
+        <p class="header-text">Billing Information:</p>
+        <div class="donation-form form-contact" id="donation-form">
+          <label for="name"><span>*</span>Your Name</label>
+          <input
+            type="text"
+            name="name"
+            id="donation-name"
+            autocomplete="name"
+            placeholder="First and last name"
+            required
+          />
+          <div class="error-message" id="name-error"></div>
+          <label for="email"><span>*</span>Your Email Address</label>
+          <input
+            type="email"
+            name="email"
+            id="donation-email"
+            autocomplete="email"
+            placeholder="Enter your email"
+            required
+          />
+          <div class="error-message" id="email-error"></div>
+          <p class="second-form-text">
+            You will receive emails from the Online Zoo, including updates and
+            news on the latest discoveries and translations. You can unsubscribe
+            at any time.
+          </p>
+          <div class="popup-btn-container">
+            <div class="popup-circe-container">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+            <button class="back-btn">Back</button>
+            <button class="popup-btn-next second-btn-next">
+              next
+              <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="donation-third-step">
+        <h2 class="header-modal-donation">make your donation</h2>
+        <p class="header-text">Payment Information:</p>
+        <div class="donation-form">
+          <div class="credential-container">
+            <div class="card-number">
+              <label for="credit-card"><span>*</span> Credit Card Number</label>
+              <input
+                type="text"
+                name="credit-card"
+                id="credit-card"
+                placeholder="**** **** **** ****"
+                inputmode="numeric"
+              />
+            </div>
+            <div>
+              <label for="cvv"><span>*</span> CVV Number</label>
+              <input
+                type="text"
+                name="cvv"
+                id="cvv"
+                placeholder="***"
+                inputmode="numeric"
+              />
+            </div>
+          </div>
+          <div class="save-card-container">
+            <input
+              type="checkbox"
+              name="save-card"
+              class="save-card"
+              id="save-card"
+            />
+            <span class="save-card-label">save card</span>
+          </div>
+          <p><span>*</span> Expiration Date</p>
+          <div class="select-credential-container">
+            <select
+              name="month"
+              id="month-select"
+              class="select-credential"
+              required
+            >
+              <option value="">Month</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <select
+              name="year"
+              id="year-select"
+              class="select-credential"
+              required
+            >
+              <option value="">Year</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+              <option value="2031">2031</option>
+              <option value="2032">2032</option>
+              <option value="2033">2033</option>
+              <option value="2034">2034</option>
+              <option value="2035">2035</option>
+            </select>
+          </div>
+          <div class="popup-btn-container">
+            <div class="popup-circe-container">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+            <button class="back-btn">Back</button>
+            <button type="submit" class="complete-btn">
+              Complete donation
+              <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector" />
+            </button>
+          </div>
+          <p class="errors-donation-form"></p>
+        </div>
+      </div>
+    </form>
+    <div class="popup-user">
+      <div class="close-popup-user">
+        <div class="line-close-popup line-close1"></div>
+        <div class="line-close-popup line-close2"></div>
+      </div>
+      <h3>Please Sign in or registration</h3>
+      <button class="sign_in-btn">Sign in</button>
+      <button class="registration-btn">Registration</button>
+    </div>
+    <div class="user-menu">
+      <div class="close-popup-user-menu">
+        <div class="line-close-popup line-close1"></div>
+        <div class="line-close-popup line-close2"></div>
+      </div>
+      <h2 class="tittle-user-menu">
+        Hi <span class="user-name">!</span>Welcome to Account
+      </h2>
+      <section class="account-section">
+        <h3>Profile</h3>
+        <p>Name: <span class="user-menu-name"></span></p>
+        <p>Email: <span class="user-menu-email"></span></p>
+      </section>
+      <section class="account-section">
+        <h3>Payment Methods</h3>
+        <ul class="user-card-container">
+          card:
+          <li class="user-menu-card"></li>
+        </ul>
+      </section>
+      <section class="account-section">
+        <h3>My Donations</h3>
+        <div class="donation-item"></div>
+      </section>
+      <button class="sign_out-btn">Sign out</button>
+    </div>
+    <div class="login-popup">
+      <h3>Login in to your account</h3>
+      <form method="post" class="form-contact form-login" id="form-login">
+        <label for="login"><span>*</span>Your Login</label>
+        <input
+          type="text"
+          name="login"
+          id="log-in"
+          autocomplete="login"
+          placeholder="Enter your login"
+          required
+        />
+        <div class="error-message" id="log-in-error"></div>
+
+        <label for="password"><span>*</span>Your password</label>
+        <input
+          type="password"
+          name="password"
+          id="password-login"
+          placeholder="Enter your password"
+          required
+        />
+        <div class="error-message" id="password-error-login"></div>
+
+        <button class="submit-login-form" id="submit-login-form" type="submit">
+          log in
+          <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector" />
+        </button>
+        <div class="form-login-error-global"></div>
+      </form>
+    </div>
+    <div class="registration-popup">
+      <h3>Please, feel registration form</h3>
+      <form
+        method="post"
+        class="form-contact form-registration"
+        id="registration-form"
+      >
+        <label for="login"><span>*</span>Your Login</label>
+        <input
+          type="text"
+          name="login"
+          id="login"
+          autocomplete="login"
+          placeholder="Enter your login"
+          required
+        />
+        <div class="error-message" id="login-error"></div>
+
+        <label for="name"><span>*</span>Your Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          autocomplete="name"
+          placeholder="First and last name"
+          required
+        />
+        <div class="error-message" id="name-error"></div>
+
+        <label for="email"><span>*</span>Your Email Address</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          autocomplete="email"
+          placeholder="Enter your email"
+          required
+        />
+        <div class="error-message" id="email-error"></div>
+
+        <label for="password"><span>*</span>Your password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter your password"
+          required
+        />
+        <div class="error-message" id="password-error"></div>
+
+        <label for="confirm-password"><span>*</span>Confirm password</label>
+        <input
+          type="password"
+          name="confirm-password"
+          id="confirm-password"
+          placeholder="Enter your password"
+          required
+        />
+        <div class="error-message" id="confirm-password-error"></div>
+
+        <button class="submit-registration-form" type="submit">
+          registration
+          <img src="data:image/svg+xml,%3csvg%20width='25'%20height='22'%20viewBox='0%200%2025%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.2098%200.119971C13.0277%200.199174%2012.8622%200.315255%2012.7229%200.461565C12.5833%200.607505%2012.4725%200.780876%2012.397%200.971748C12.3214%201.16262%2012.2825%201.36724%2012.2825%201.57389C12.2825%201.78055%2012.3214%201.98517%2012.397%202.17604C12.4725%202.36691%2012.5833%202.54028%2012.7229%202.68622L18.7506%209H1.6C1.17565%209%200.768688%209.21071%200.468629%209.58579C0.168571%209.96086%200%2010.4696%200%2011C0%2011.5304%200.168571%2012.0391%200.468629%2012.4142C0.768688%2012.7893%201.17565%2013%201.6%2013H18.7514L12.7229%2019.3146C12.4414%2019.6096%2012.2833%2020.0097%2012.2833%2020.4269C12.2833%2020.8441%2012.4414%2021.2443%2012.7229%2021.5393C13.0045%2021.8343%2013.3863%2022%2013.7845%2022C14.1826%2022%2014.5645%2021.8343%2014.846%2021.5393L23.842%2012.1127C23.9816%2011.9668%2024.0924%2011.7934%2024.168%2011.6026C24.2436%2011.4117%2024.2825%2011.2071%2024.2825%2011.0004C24.2825%2010.7938%2024.2436%2010.5891%2024.168%2010.3983C24.0924%2010.2074%2023.9816%2010.034%2023.842%209.88808L14.846%200.461565C14.7067%200.315255%2014.5413%200.199174%2014.3591%200.119971C14.177%200.0407677%2013.9817%200%2013.7845%200C13.5873%200%2013.392%200.0407677%2013.2098%200.119971Z'%20fill='white'/%3e%3c/svg%3e" alt="vector" />
+        </button>
+        <div class="form-error-global" id="form-error-global"></div>
+      </form>
+    </div>
   </body>
 </html>
