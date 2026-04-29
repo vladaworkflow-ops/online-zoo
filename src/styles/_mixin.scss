@@ -1,0 +1,37 @@
+@use '_variables' as v;
+
+@mixin font($f, $w) {
+  font-size: $f;
+  font-weight: $w;
+}
+
+@mixin position($fd, $jc, $ac, $ai: flex-start) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin h2($f: v.$fz-h2, $w: 600, $c: v.$bg-blue-col) {
+  font-size: $f;
+  font-weight: $w;
+  text-transform: uppercase;
+  color: $c;
+}
+
+@mixin btn-template($w: 360px, $h: 74px) {
+  @include size($w, $h);
+  @include position(row, center, center, center);
+  @include font(18px, 600);
+  gap: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+// @include modules.

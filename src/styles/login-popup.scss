@@ -1,0 +1,50 @@
+@use '_variables' as v;
+@use '_mixin' as m;
+
+.login-popup.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.login-popup {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  @include m.position(column, flex-start, center, center);
+  @include m.size(920px, auto);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 5px;
+  z-index: 1001;
+  padding: 30px 0 50px;
+  gap: 50px;
+
+  @media screen and (max-width: v.$tablet) {
+    @include m.size(600px, auto);
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: auto;
+  }
+
+  @media screen and (max-width: v.$mobile) {
+    @include m.size(300px, 100auto);
+    border-radius: 0;
+    max-height: 90%;
+  }
+}
+
+.submit-login-form:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-login-error-global {
+  margin: 20px auto 0;
+  text-align: center;
+  color: red;
+}

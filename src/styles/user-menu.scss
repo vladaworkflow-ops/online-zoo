@@ -1,0 +1,142 @@
+@use '_variables' as v;
+@use '_mixin' as m;
+
+.user-menu.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.user-menu {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  @include m.position(column, flex-start, center, flex-start);
+  @include m.size(920px, auto);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  color: black;
+  border-radius: 5px;
+  z-index: 1001;
+  padding: 30px 20px 50px;
+  gap: 50px;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  @media screen and (max-width: v.$tablet) {
+    @include m.size(600px, auto);
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: auto;
+  }
+
+  @media screen and (max-width: v.$mobile) {
+    @include m.size(300px, 100auto);
+    border-radius: 0;
+    max-height: 90%;
+  }
+
+  h3 {
+    border-bottom: 1px solid v.$bg-blue-col;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.tittle-user-menu {
+  @include m.h2(36px);
+  align-self: center;
+}
+
+.submit-registration-form {
+  @include m.btn-template;
+  background-color: v.$bg-orange-col;
+  align-self: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.sign_out-btn,
+.submit-login-form,
+.sign_in-btn,
+.registration-btn {
+  @include m.btn-template;
+  background-color: v.$bg-orange-col;
+  align-self: center;
+
+  &:hover {
+    cursor: pointer;
+    background-color: v.$bg-orange-hover;
+  }
+}
+.sign_out-btn {
+  flex-shrink: 0;
+}
+
+.user-icon {
+  width: 65px;
+  height: 50px;
+  background-image: url('../../assets/icons/user-in.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.user-menu-name,
+.user-menu-email {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.repeat-donation {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: v.$bg-blue-col;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.repeat-donation:hover {
+  background: v.$bg-blue-hover;
+}
+
+.account-section {
+  padding: 20px;
+  border: 1px solid v.$bg-blue-col;
+  width: 100%;
+
+  p {
+    font-weight: 600;
+    padding-bottom: 5px;
+  }
+
+  input {
+    -moz-appearance: auto;
+    -webkit-appearance: checkbox;
+    appearance: auto;
+  }
+}
+
+.user-menu-card {
+  margin-top: 10px;
+}
+
+.clear-cards-btn {
+  width: 30px;
+  height: 30px;
+  background-color: v.$bg-blue-col;
+  border-radius: 5px;
+  color: #fff;
+  margin-left: 15px;
+
+  &:hover {
+    background-color: v.$bg-blue-hover;
+  }
+}
